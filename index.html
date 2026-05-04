@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L'Abeille Olivetaine - Association d'apiculture. Agissons ensemble pour la biodiversité.">
+    <title>L'Abeille Olivetaine | Accueil</title>
+    
+    <!-- ECO-DESIGN: Inline CSS to avoid extra HTTP requests. Using system fonts. -->
+    <style>
+        :root {
+            /* Light theme with natural, earthy colors */
+            --color-primary: #d97706; /* Amber/Honey */
+            --color-primary-hover: #b45309;
+            --color-bg: #fcfaf8; /* Off-white, easier on the eyes than pure white */
+            --color-surface: #ffffff;
+            --color-text: #1f2937;
+            --color-text-muted: #4b5563;
+            --color-border: #e5e7eb;
+            --radius-md: 0.5rem;
+            --radius-lg: 1rem;
+            --spacing-sm: 0.5rem;
+            --spacing-md: 1rem;
+            --spacing-lg: 2rem;
+            --spacing-xl: 4rem;
+        }
+
+        /* Dark mode support for OLED energy saving */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --color-bg: #111827;
+                --color-surface: #1f2937;
+                --color-text: #f9fafb;
+                --color-text-muted: #d1d5db;
+                --color-border: #374151;
+            }
+        }
+
+        /* Reset & Typography */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Layout */
+        .container {
+            width: 100%;
+            max-width: 1024px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-md);
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: var(--color-surface);
+            border-bottom: 1px solid var(--color-border);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .nav-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 4rem;
+        }
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: var(--spacing-sm);
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--color-primary);
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            gap: var(--spacing-lg);
+            list-style: none;
+        }
+        .nav-item {
+            text-decoration: none;
+            color: var(--color-text);
+            font-weight: 500;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .nav-item:hover, .nav-item.active {
+            color: var(--color-primary);
+        }
+
+        /* Main Content */
+        main { min-height: calc(100vh - 8rem); }
+        .view-section {
+            display: none; /* Hidden by default, toggled by JS */
+            padding: var(--spacing-xl) 0;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .view-section.active { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Typography Utilities */
+        h1 { font-size: 2.5rem; margin-bottom: var(--spacing-md); line-height: 1.2; }
+        h2 { font-size: 1.75rem; margin-bottom: var(--spacing-md); }
+        p { margin-bottom: var(--spacing-md); color: var(--color-text-muted); }
+        .text-center { text-align: center; }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-md);
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+        }
+        .btn-primary:hover { background-color: var(--color-primary-hover); }
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--color-primary);
+            color: var(--color-primary);
+        }
+        .btn-outline:hover { background-color: var(--color-primary); color: white; }
+        
+        .btn-group { display: flex; gap: var(--spacing-md); flex-wrap: wrap; }
+
+        /* Cards (News) */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        .card {
+            background-color: var(--color-surface);
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-lg);
+            padding: var(--spacing-lg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        .card-date { font-size: 0.875rem; color: var(--color-primary); margin-bottom: var(--spacing-sm); display: block; font-weight: 600;}
+
+        /* Forms (Donate) */
+        .form-group { margin-bottom: var(--spacing-md); }
+        .form-label { display: block; margin-bottom: var(--spacing-sm); font-weight: 500; }
+        .form-input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid var(--color-border);
+            border-radius: var(--radius-md);
+            background-color: var(--color-bg);
+            color: var(--color-text);
+            font-family: inherit;
+        }
+        .amount-selector {
+            display: flex;
+            gap: var(--spacing-sm);
+            margin-bottom: var(--spacing-md);
+            flex-wrap: wrap;
+        }
+        .amount-btn {
+            flex: 1;
+            min-width: 80px;
+            padding: 1rem;
+            background-color: var(--color-surface);
+            border: 2px solid var(--color-border);
+            border-radius: var(--radius-md);
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 1.25rem;
+            color: var(--color-text);
+        }
+        .amount-btn.selected {
+            border-color: var(--color-primary);
+            background-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--color-surface);
+            border-top: 1px solid var(--color-border);
+            padding: var(--spacing-lg) 0;
+            text-align: center;
+            color: var(--color-text-muted);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive Mobile Menu */
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; fill: var(--color-text); }
+        @media (max-width: 768px) {
+            .mobile-menu-btn { display: block; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 4rem;
+                left: 0;
+                width: 100%;
+                background-color: var(--color-surface);
+                flex-direction: column;
+                padding: var(--spacing-md);
+                border-bottom: 1px solid var(--color-border);
+            }
+            .nav-links.show { display: flex; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ECO-DESIGN: Semantic HTML structure -->
+    <header class="navbar">
+        <div class="container nav-content">
+            <!-- Inline SVG Logo to save HTTP Request -->
+            <a class="nav-logo" onclick="appRouter.navigate('home')">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 12a7 7 0 1 0 14 0 7 7 0 1 0-14 0Z"></path>
+                    <path d="M12 5v14"></path>
+                    <path d="M5 12h14"></path>
+                    <path d="m8.5 8.5 7 7"></path>
+                    <path d="m15.5 8.5-7 7"></path>
+                </svg>
+                L'Abeille Olivetaine
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <svg width="24" height="24" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a class="nav-item active" data-target="home">Accueil</a></li>
+                    <li><a class="nav-item" data-target="news">Actualités</a></li>
+                    <li><a class="nav-item" data-target="donate">Faire un don</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <!-- ================= HOME VIEW ================= -->
+        <section id="home" class="view-section active">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1>Bienvenue à L'Abeille Olivetaine</h1>
+                <p style="font-size: 1.25rem;">
+                    Association loi 1901 pour la promotion de l'apiculture, la protection des abeilles et la préservation de la biodiversité locale dans la région d'Olivet.
+                </p>
+                <div class="btn-group" style="justify-content: center; margin-top: var(--spacing-lg);">
+                    <button class="btn btn-primary" onclick="appRouter.navigate('donate')">Soutenir nos actions</button>
+                    <button class="btn btn-outline" onclick="appRouter.navigate('news')">Nos actualités</button>
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: var(--spacing-xl);">
+                <div class="card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="margin-bottom: 1rem;">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    </svg>
+                    <h3>Protection</h3>
+                    <p>Nous œuvrons activement pour la sauvegarde des pollinisateurs en milieu urbain et rural.</p>
+                </div>
+                <div class="card">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2" style="margin-bottom: 1rem;">
+                        <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                    </svg>
+                    <h3>Formation</h3>
+                    <p>Découvrez nos formations et ateliers pour apprendre les bases d'une apiculture respectueuse.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= NEWS VIEW ================= -->
+        <section id="news" class="view-section">
+            <h1 class="text-center">Actualités</h1>
+            <p class="text-center" style="max-width: 600px; margin: 0 auto 2rem auto;">
+                Tenez-vous informés de la vie du rucher école, de nos événements et des alertes sanitaires (frelons asiatiques, météo).
+            </p>
+
+            <div class="grid">
+                <!-- ECO-DESIGN: Eliminated images for news cards to save bandwidth. Replaced with clear typography. -->
+                <article class="card">
+                    <span class="card-date">12 Mai 2026</span>
+                    <h3>Récolte de printemps au Rucher</h3>
+                    <p>Les conditions météorologiques ont été favorables cette année. Rejoignez-nous ce week-end pour l'extraction du miel de printemps. Prévoir des vêtements adaptés.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-date">04 Mai 2026</span>
+                    <h3>Campagne de piégeage : Frelon Asiatique</h3>
+                    <p>Il est temps de mettre en place vos pièges sélectifs. Une distribution gratuite d'appâts aura lieu à la maison des associations d'Olivet ce mercredi.</p>
+                </article>
+
+                <article class="card">
+                    <span class="card-date">28 Avril 2026</span>
+                    <h3>Nouvelle session d'initiation</h3>
+                    <p>Les inscriptions pour la session d'initiation à l'apiculture 2026-2027 sont officiellement ouvertes. Places limitées à 15 personnes.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ================= DONATE VIEW ================= -->
+        <section id="donate" class="view-section">
+            <div style="max-width: 600px; margin: 0 auto;">
+                <h1 class="text-center">Faire un don</h1>
+                <p class="text-center">
+                    Votre soutien financier est essentiel pour maintenir le rucher école et organiser nos campagnes de sensibilisation.
+                </p>
+
+                <!-- ECO-DESIGN: Simplified form. Removed massive trackers, complex step-by-step logic. Replaced with clear, minimal UI. -->
+                <div class="card" style="margin-top: var(--spacing-lg);">
+                    <form id="donationForm" onsubmit="handleDonationSubmit(event)">
+                        
+                        <div class="form-group">
+                            <span class="form-label">Fréquence du don</span>
+                            <div class="btn-group" style="margin-bottom: var(--spacing-md);">
+                                <button type="button" class="btn btn-primary" id="btn-onetime" onclick="setFrequency('onetime')" style="flex:1;">Don ponctuel</button>
+                                <button type="button" class="btn btn-outline" id="btn-monthly" onclick="setFrequency('monthly')" style="flex:1;">Don mensuel</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <span class="form-label">Sélectionnez un montant</span>
+                            <div class="amount-selector" id="amountSelector">
+                                <button type="button" class="amount-btn selected" data-amount="25">25 €</button>
+                                <button type="button" class="amount-btn" data-amount="50">50 €</button>
+                                <button type="button" class="amount-btn" data-amount="100">100 €</button>
+                                <button type="button" class="amount-btn" data-amount="custom">Libre</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="customAmountGroup" style="display: none;">
+                            <label for="customAmount" class="form-label">Montant libre (€)</label>
+                            <input type="number" id="customAmount" class="form-input" min="1" placeholder="Ex: 30">
+                        </div>
+
+                        <div class="form-group" style="background-color: var(--color-bg); padding: 1rem; border-radius: var(--radius-md); margin-top: 1rem; border: 1px dashed var(--color-border);">
+                            <strong>Avantage fiscal :</strong> 
+                            <span id="taxDeductionText">Un don de 25€ ne vous coûte que 8,50€ après réduction d'impôt (66%).</span>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: var(--spacing-md); font-size: 1.1rem;">
+                            Je donne <span id="submitAmount">25</span> €
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 L'Abeille Olivetaine - Eco-conçu avec ❤️ pour le Hackathon Coda</p>
+            <p>Empreinte carbone minimisée : 0 requête externe, 0 ressource superflue.</p>
+        </div>
+    </footer>
+
+    <!-- ECO-DESIGN: Clean, modular Vanilla JS logic -->
+    <script>
+        /**
+         * Simple SPA Router to handle view navigation without page reloads
+         */
+        const appRouter = {
+            currentView: 'home',
+            
+            init() {
+                // Attach click listeners to nav items
+                document.querySelectorAll('.nav-item').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.navigate(e.target.dataset.target);
+                        
+                        // Close mobile menu if open
+                        const mobileMenu = document.getElementById('navLinks');
+                        if (mobileMenu.classList.contains('show')) {
+                            mobileMenu.classList.remove('show');
+                        }
+                    });
+                });
+
+                // Mobile menu toggle
+                document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+                    document.getElementById('navLinks').classList.toggle('show');
+                });
+            },
+
+            navigate(viewId) {
+                if(this.currentView === viewId) return;
+
+                // Update active view
+                document.getElementById(this.currentView).classList.remove('active');
+                document.getElementById(viewId).classList.add('active');
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-item').forEach(link => {
+                    link.classList.toggle('active', link.dataset.target === viewId);
+                });
+
+                this.currentView = viewId;
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                document.title = `L'Abeille Olivetaine | ${viewId.charAt(0).toUpperCase() + viewId.slice(1)}`;
+            }
+        };
+
+        /**
+         * Donation Form Logic
+         */
+        let donationState = {
+            frequency: 'onetime',
+            amount: 25
+        };
+
+        function setFrequency(freq) {
+            donationState.frequency = freq;
+            const btnOneTime = document.getElementById('btn-onetime');
+            const btnMonthly = document.getElementById('btn-monthly');
+
+            if (freq === 'onetime') {
+                btnOneTime.className = 'btn btn-primary';
+                btnMonthly.className = 'btn btn-outline';
+            } else {
+                btnOneTime.className = 'btn btn-outline';
+                btnMonthly.className = 'btn btn-primary';
+            }
+        }
+
+        function updateTaxDeduction() {
+            const costAfterTaxes = (donationState.amount * 0.34).toFixed(2);
+            document.getElementById('taxDeductionText').textContent = 
+                `Un don de ${donationState.amount}€ ne vous coûte que ${costAfterTaxes}€ après réduction d'impôt (66%).`;
+            document.getElementById('submitAmount').textContent = donationState.amount;
+        }
+
+        function initDonationForm() {
+            const amountBtns = document.querySelectorAll('.amount-btn');
+            const customInputGroup = document.getElementById('customAmountGroup');
+            const customInput = document.getElementById('customAmount');
+
+            amountBtns.forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    // Reset selection
+                    amountBtns.forEach(b => b.classList.remove('selected'));
+                    e.target.classList.add('selected');
+
+                    const val = e.target.dataset.amount;
+                    if (val === 'custom') {
+                        customInputGroup.style.display = 'block';
+                        donationState.amount = customInput.value ? parseInt(customInput.value) : 0;
+                    } else {
+                        customInputGroup.style.display = 'none';
+                        donationState.amount = parseInt(val);
+                    }
+                    updateTaxDeduction();
+                });
+            });
+
+            customInput.addEventListener('input', (e) => {
+                const val = parseInt(e.target.value);
+                donationState.amount = isNaN(val) ? 0 : val;
+                updateTaxDeduction();
+            });
+        }
+
+        function handleDonationSubmit(event) {
+            event.preventDefault();
+            if(donationState.amount <= 0) {
+                alert("Veuillez saisir un montant valide.");
+                return;
+            }
+            
+            // Eco-design: Standard browser alert instead of heavy modal libraries for quick feedback
+            const freqText = donationState.frequency === 'onetime' ? 'ponctuel' : 'mensuel';
+            alert(`Merci pour votre intention de don ${freqText} de ${donationState.amount}€. \n\n(Ceci est une simulation éco-conçue)`);
+        }
+
+        // Initialize application
+        document.addEventListener('DOMContentLoaded', () => {
+            appRouter.init();
+            initDonationForm();
+        });
+
+    </script>
+</body>
+</html>
