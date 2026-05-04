@@ -12,12 +12,12 @@
     <header class="navbar">
         <div class="container nav-content">
             <a href="#" class="nav-logo" data-target="home">
-                <img src="logo.png" alt="Logo" width="50" height="50">
+                <img src="logo.png" alt="Logo">
                 <span>L'Abeille Olivetaine</span>
             </a>
             
             <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                     <line x1="3" y1="12" x2="21" y2="12"></line>
                     <line x1="3" y1="6" x2="21" y2="6"></line>
                     <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -28,8 +28,10 @@
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#" class="nav-item active" data-target="home">Accueil</a></li>
                     <li><a href="#" class="nav-item" data-target="about">Qui sommes-nous</a></li>
+                    <li><a href="#" class="nav-item" data-target="apiculture">Conseils Apicoles</a></li>
                     <li><a href="#" class="nav-item" data-target="news">Actualités</a></li>
-                    <li><a href="#" class="nav-item" data-target="donate">Faire un don</a></li>
+                    <li><a href="#" class="nav-item" data-target="membership">Adhésion</a></li>
+                    <li><a href="#" class="nav-item" data-target="donate">Don</a></li>
                     <li><a href="#" class="nav-item" data-target="contact">Contact</a></li>
                 </ul>
             </nav>
@@ -44,11 +46,12 @@
         <section id="home" class="view-section active">
             <div class="hero">
                 <div class="hero-content">
-                    <h1>Agissons pour la <span class="text-gradient">biodiversité</span></h1>
-                    <p>L'Abeille Olivetaine est une association engagée pour la promotion de l'apiculture durable et la préservation des pollinisateurs à Olivet.</p>
-                    <div style="display:flex; gap:1.5rem; margin-top:3rem;">
-                        <a href="#" class="btn btn-primary nav-item" data-target="donate">Soutenir l'asso</a>
-                        <a href="#" class="btn btn-outline nav-item" data-target="about">Découvrir</a>
+                    <h1>Bienvenue à <span class="text-gradient">L'Abeille Olivetaine</span></h1>
+                    <p>Créée en 2010 à Olivet (Loiret), notre association vous accueille sur son site internet et son rucher-école.</p>
+                    <p style="margin-top: 1rem; color: var(--color-text-muted);">Ce site Web a pour objectif de vous informer sur nos formations, nos activités, nos animations, mais également sur l'assistance et les conseils que nous pouvons vous apporter.</p>
+                    <div class="hero-actions">
+                        <a href="#" class="btn btn-primary nav-item" data-target="membership">Devenir Adhérent</a>
+                        <a href="#" class="btn btn-outline nav-item" data-target="about">Notre Mission</a>
                     </div>
                 </div>
                 <div class="hero-image">
@@ -74,10 +77,10 @@
 
         <!-- SECTION: QUI SOMMES-NOUS -->
         <section id="about" class="view-section">
-            <div style="max-width:900px; margin:0 auto; text-align:center;">
-                <h1 style="font-size:4rem; margin-bottom:2rem;">Notre Histoire</h1>
-                <p style="font-size:1.4rem; color:var(--color-text-muted); margin-bottom:4rem;">
-                    Fondée en 2017 par une équipe de passionnés, l'Abeille Olivetaine est née de la volonté de protéger les abeilles en milieu urbain et péri-urbain.
+            <div class="section-header">
+                <h1>Notre Histoire</h1>
+                <p class="lead-text">
+                    Fondée en 2010 par une équipe de passionnés, l'Abeille Olivetaine est née de la volonté de protéger les abeilles en milieu urbain et péri-urbain.
                 </p>
                 
                 <div class="grid">
@@ -91,7 +94,7 @@
                     </div>
                 </div>
 
-                <div style="margin-top:5rem; text-align:left; background:white; padding:4rem; border-radius:var(--radius-lg); border:1px solid var(--color-border);">
+                <div class="card-feature-list">
                     <h2 style="margin-bottom:2rem;">Nos Valeurs</h2>
                     <ul style="list-style:none; display:grid; gap:2rem;">
                         <li><strong>🌿 Respect de l'environnement</strong> : Utilisation de méthodes apicoles douces et respectueuses du cycle naturel.</li>
@@ -102,9 +105,48 @@
             </div>
         </section>
 
-        <!-- SECTION: ACTUALITÉS -->
+        <!-- SECTION: CONSEILS APICOLES -->
+        <section id="apiculture" class="view-section">
+            <div class="section-header">
+                <h1>Conseils Apicoles</h1>
+                <p class="lead-text">Le marquage des reines : un outil essentiel pour le suivi de vos colonies.</p>
+            </div>
+            
+            <div class="grid">
+                <article class="card">
+                    <h3>Le code couleur international</h3>
+                    <p>Les apiculteurs qui marquent leurs reines une fois fécondées utilisent un marquage reconnu au niveau international.</p>
+                    <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 1rem;">
+                        <div style="background: #ffffff; padding: 1rem; border-radius: var(--radius-md); border-left: 5px solid #ffffff; box-shadow: var(--shadow-sm);">Année en 0 ou 5 : <strong>Blanc</strong></div>
+                        <div style="background: #ffff00; padding: 1rem; border-radius: var(--radius-md); border-left: 5px solid #ffff00; box-shadow: var(--shadow-sm);">Année en 1 ou 6 : <strong>Jaune</strong></div>
+                        <div style="background: #ff0000; padding: 1rem; border-radius: var(--radius-md); border-left: 5px solid #ff0000; box-shadow: var(--shadow-sm);">Année en 2 ou 7 : <strong>Rouge</strong></div>
+                        <div style="background: #00ff00; padding: 1rem; border-radius: var(--radius-md); border-left: 5px solid #00ff00; box-shadow: var(--shadow-sm);">Année en 3 ou 8 : <strong>Vert</strong></div>
+                        <div style="background: #0000ff; padding: 1rem; border-radius: var(--radius-md); border-left: 5px solid #0000ff; box-shadow: var(--shadow-sm); color: white;">Année en 4 ou 9 : <strong>Bleu</strong></div>
+                    </div>
+                </article>
+                <article class="card">
+                    <h3>Cycles de vie</h3>
+                    <p>Même s'il devient de plus en plus rare que les reines vivent 5 ans, le code couleur revient cycliquement tous les 5 ans.</p>
+                    <p style="margin-top: 1rem;"><strong>En 2026</strong>, la couleur officielle pour le marquage des reines sera le <span style="color: #d9b706; font-weight: bold;">JAUNE</span>.</p>
+                </article>
+            </div>
+        </section>
         <section id="news" class="view-section">
-            <h1 class="text-center" style="font-size:3.5rem; margin-bottom:4rem;">Actualités du Rucher</h1>
+            <h1 class="text-center" style="margin-bottom:4rem;">Actualités du Rucher</h1>
+            
+            <div style="background: #fffbeb; border: 1px solid #fde68a; padding: 2rem; border-radius: var(--radius-lg); margin-bottom: 4rem; display: flex; gap: 2rem; align-items: center;">
+                <div style="font-size: 3rem;">🐝</div>
+                <div>
+                    <h3 style="color: #92400e; margin-bottom: 0.5rem;">Déclaration Obligatoire des Ruches 2025</h3>
+                    <p style="color: #92400e; margin-bottom: 1rem;">La période de déclaration est désormais ouverte (depuis le 01/09/2025).</p>
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                        <a href="https://mesdemarches.agriculture.gouv.fr" target="_blank" class="btn btn-primary" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">Faire ma déclaration (3 min)</a>
+                        <a href="#" class="btn btn-outline" style="padding: 0.7rem 1.5rem; font-size: 0.9rem;">Obtenir un numéro SIRET</a>
+                    </div>
+                    <p style="margin-top: 1rem; font-size: 0.85rem; color: #b45309;"><em>Note : Tout apiculteur vendant ou donnant son miel hors cercle familial doit avoir un SIRET.</em></p>
+                </div>
+            </div>
+
             <div class="grid">
                 <article class="card">
                     <div style="font-weight:700; color:var(--color-primary); margin-bottom:1rem;">12 MAI 2026</div>
@@ -127,6 +169,28 @@
             </div>
         </section>
 
+        <!-- SECTION: ADHÉSION -->
+        <section id="membership" class="view-section">
+            <div class="section-header">
+                <h1>Adhérer à l'association</h1>
+                <p class="lead-text">Rejoignez une communauté de passionnés et soutenez nos actions locales.</p>
+            </div>
+            
+            <div class="card" style="max-width: 800px; margin: 0 auto; text-align: left;">
+                <div style="display: grid; gap: 2rem;">
+                    <div>
+                        <h3>Pourquoi nous rejoindre ?</h3>
+                        <p>En adhérant à l'Abeille Olivetaine, vous accédez à notre rucher-école, à nos formations et vous participez activement à la protection de la biodiversité à Olivet.</p>
+                    </div>
+                    <div style="background: var(--color-bg); padding: 2rem; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+                        <h4>Processus d'adhésion</h4>
+                        <p>L'adhésion se fait annuellement. Vous recevrez par email toutes les informations pour le règlement de votre cotisation et l'accès aux activités membres.</p>
+                        <button class="btn btn-primary" style="margin-top: 2rem; width: 100%;">Commencer mon adhésion en ligne</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- SECTION: DONATION -->
         <section id="donate" class="view-section">
             <div style="max-width:650px; margin:0 auto; text-align:center;">
@@ -135,7 +199,7 @@
                 
                 <div class="card">
                     <form onsubmit="donation.submit(event)">
-                        <div style="display:flex; gap:1rem; margin-bottom:2.5rem;">
+                        <div class="donation-freq">
                             <button type="button" id="btn-onetime" class="btn btn-primary" onclick="donation.setFrequency('onetime')" style="flex:1">Don Ponctuel</button>
                             <button type="button" id="btn-monthly" class="btn btn-outline" onclick="donation.setFrequency('monthly')" style="flex:1">Don Mensuel</button>
                         </div>

@@ -77,7 +77,15 @@ class AppRouter {
             this.menu.close();
             
             // Update Page Title
-            const titles = { 'home': 'Accueil', 'about': 'Mission', 'news': 'Actu', 'donate': 'Don', 'contact': 'Contact' };
+            const titles = { 
+                'home': 'Accueil', 
+                'about': 'Mission', 
+                'news': 'Actu', 
+                'donate': 'Don', 
+                'contact': 'Contact',
+                'apiculture': 'Conseils',
+                'membership': 'Adhésion'
+            };
             document.title = `L'Abeille Olivetaine | ${titles[viewId] || 'Accueil'}`;
         }
     }
