@@ -1,0 +1,2035 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)https://www.abeille-olivetaine.fr/page/2641155-agenda -->
+<html lang="fr" data-mci-setup="true"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+		<!-- META -->
+		                <meta name="robots" content="index, follow">
+                    <meta property="og:type" content="website">
+                    <meta property="og:site_name" content="AssoConnect">
+                    <title>Agenda | L'Abeille Olivetaine</title>
+                    <meta property="og:title" content="Agenda | L&#39;Abeille Olivetaine">
+                    <meta name="description" content="Accueil - Agenda -">
+        <meta property="og:description" content="Accueil - Agenda -">
+                    <meta property="og:locale" content="fr_FR">
+                    <meta property="og:url" content="https://www.abeille-olivetaine.fr/page/2641155-agenda">
+                    <meta property="og:image" content="https://app.assoconnect.com/services/storage?id=4028184&amp;type=picture&amp;secret=MHc3XwKHlDvFROkJmBlEzYG2XEsyvu1ayNFleZYs&amp;timestamp=1776223766">
+                    <meta property="og:image:width" content="540">
+                    <meta property="og:image:height" content="282">
+    <meta name="viewport" property="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="google-signin-use_fedcm" content="true">
+    <link rel="canonical" href="https://www.abeille-olivetaine.fr/page/2641155-agenda" data-cmp-info="10">
+
+		<!-- Favicon -->
+					<link rel="icon" type="image/png" href="https://app.assoconnect.com/services/storage?id=4080014&amp;type=picture&amp;secret=3gSYfjLJRW3QgLlKhjD2rYuiEuApwMSefq8m9RqI&amp;timestamp=1776237694" data-cmp-ab="2" data-cmp-info="10">
+		
+		<!-- https://dev.twitter.com/web/overview/widgets-webpage-properties -->
+		<meta name="twitter:widgets:csp" content="on">
+
+		<!-- CSS -->
+		
+
+<!-- jQuery UI -->
+<!-- Le CSS de jQuery UI utilise des chemins relatifs pour les images, on ne peut donc pas l'inclure dans le CSS global -->
+<link rel="stylesheet" href="./Agenda _ L&#39;Abeille Olivetaine_files/jquery-ui.css" integrity="sha512-Ikr9iIb48ljzg7k903d77p0AITNsf4DxtxK4g5R4UiqHpCdroXAX0zqr0uPSWskJOJ1pQoAOXCb8WPkohWY3Bw==" crossorigin="anonymous" data-cmp-ab="2" data-cmp-info="10">
+
+<!-- Layout -->
+<link rel="stylesheet" href="./Agenda _ L&#39;Abeille Olivetaine_files/common.-.layout.-.public-horizontal.DESKTOP.css" data-cmp-ab="2" data-cmp-info="10">
+
+<!-- Template -->
+<style>/**
+ * Breaking points pour les media queries
+ */
+/**
+ * Différentes fonctions less utilisées dans le site
+ */
+/**
+ * Arrondir les coins
+ */
+/**
+ * Ajouter une bordure
+ */
+/**
+ * Ombre sur le texte
+ */
+/**
+ * Ombre sur les box
+ */
+/**
+ * Taille de la box prenant en compte ou non les bordures et le padding
+ */
+/**
+ * Effet de transition lors du changement d'état
+ */
+/**
+ * Effet de rebond
+ */
+@keyframes bounce {
+  20% {
+    transform: translateY(10px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  90% {
+    transform: translateY(-5px);
+  }
+}
+#agendaWrapper #agendaList {
+  min-height: 600px;
+}
+#agendaWrapper #agendaEvent {
+  min-height: 600px;
+  display: none;
+}
+#agendaWrapper #agendaEvent #agendaEventReturn {
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+#agendaWrapper #agendaEvent #agendaEventReturn > * {
+  vertical-align: middle;
+  display: inline-block;
+}
+#agendaWrapper #agendaEvent #agendaEventReturn > div {
+  margin-right: 10px;
+}
+#agendaWrapper #agendaEvent #agendaEventButtonWrapper {
+  display: none;
+}
+#agendaWrapper .agenda {
+  padding: 20px;
+}
+#agendaWrapper .agenda h1 {
+  margin: 0;
+}
+#agendaWrapper .agenda h3 {
+  margin: 10px 0;
+}
+#agendaWrapper .agenda ul {
+  padding-left: 10px;
+  list-style: none;
+}
+#agendaWrapper .agenda ul li {
+  position: relative;
+}
+#agendaWrapper .agenda ul li .eventColor {
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  padding: 0;
+  margin: 0 10px 0 0;
+  cursor: default;
+  position: absolute;
+}
+#agendaWrapper .agenda ul li a {
+  margin-left: 25px;
+}
+#calendar .fc-content {
+  cursor: pointer;
+}
+.agendaListEvent:hover {
+  text-decoration: underline;
+}
+#agendaList h3,
+#agendaList .eventColor {
+  border-bottom: 1px solid #333333;
+}
+</style>
+
+<!-- Google Font -->
+    <!-- :400,700 for bold -->
+    <link href="./Agenda _ L&#39;Abeille Olivetaine_files/css" rel="stylesheet" data-cmp-vendor="335" data-cmp-info="10" data-cmp-ab="2">
+            <style>
+            html, body {font-family: "Lato", Roboto, sans-serif;}
+        </style>
+    
+
+<!-- Choices.js -->
+
+<!-- ContentTools -->
+
+<!-- Cropper -->
+
+<!-- FullCalendar -->
+	<link rel="stylesheet" href="./Agenda _ L&#39;Abeille Olivetaine_files/fullcalendar.min.css" integrity="sha256-k/XH0jQNUqCBfNghzfD7A72TNvFCtpIRh98Ie9XvMC0=" crossorigin="anonymous" data-cmp-ab="2" data-cmp-info="10">
+	<link rel="stylesheet" href="./Agenda _ L&#39;Abeille Olivetaine_files/fullcalendar.print.min.css" integrity="sha256-AyrcNH9SgHmnBauvVnFlmlYzoI6x18EN8JombFm3t14=" crossorigin="anonymous" media="print" data-cmp-ab="2" data-cmp-info="10">
+
+<!-- Simplelightbox -->
+
+<!-- Leaflet -->
+<!-- Leaflet MarkerCluster -->
+
+<style nonce="">
+	#teamblue-widget-container {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 0;
+		height: 0;
+		overflow: hidden;
+	}
+</style>
+
+		<!-- JS -->
+		<script data-cmp-ab="2" src="./Agenda _ L&#39;Abeille Olivetaine_files/core-fr.js.télécharger" charset="UTF-8" data-cmp-info="2"></script><script async="" src="./Agenda _ L&#39;Abeille Olivetaine_files/eaf21570-70f8-4ba0-a750-f2c4d7c78a13.js.télécharger" data-cmp-info="13" data-cmp-ab="2"></script><script async="" nonce="" data-cmp-info="13" data-cmp-ab="1">
+	// Browser check
+	// https://stackoverflow.com/a/55655928/7671937
+	function isCrappyIE() {
+		var ua = window.navigator.userAgent;
+		var crappyIE = false;
+		var msie = ua.indexOf('MSIE ');
+		if (msie > 0) { // IE 10 or older => return version number
+			crappyIE = true;
+		}
+		var trident = ua.indexOf('Trident/');
+		if (trident > 0) { // IE 11 => return version number
+			crappyIE = true;
+		}
+		return crappyIE;
+	}
+
+	if(isCrappyIE()) {
+		alert("Vous utilisez une ancienne version d'Internet Explorer qui n'est plus maintenue. Pour le confort de votre navigation, merci d'utiliser un navigateur \u00e0 jour. ");
+	}
+</script>
+
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+	var SIZE_FIXED			= "fixed";
+	var SIZE_FREE			= "free";
+	var SIZE_MIN			= "min";
+	var SIZE_MIN_WIDTH		= "min-width";
+	var SIZE_MIN_HEIGHT		= "min-height";
+	var SIZE_MAX			= "max";
+	var SIZE_MAX_WIDTH		= "max-width";
+	var SIZE_MAX_HEIGHT		= "max-height";
+	var ORIGINAL_WIDTH		= 1200;
+	var ORIGINAL_HEIGHT		= 628;
+	var SIZE_STANDARD		= "standard";
+	var SIZE_USER			= "user";
+	var SIZE_VENDOR			= "vendor";
+	var THUMB_WIDTH			= 352;
+	var THUMB_HEIGHT		= 184;
+	var USER_NORMAL			= 200;
+</script>
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+    var HOST_PUBLIC = "https:\/\/webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net\/legacy";
+    var HOST_SPARK = "https:\/\/webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net\/legacy\/spark";
+    var SPARK_VERSION = "8632646";
+    var SPARK_FORM_UPLOAD_MAX_SIZE = 10485760;
+    var URI_CLIENT = "\/page\/2641155-agenda";
+    var URI_SERVER = "\/page\/index";
+    var VENDOR_ID = 436781;
+    var _GIFS = [];
+    var RECAPTCHA = "6Ldy5hwUAAAAAGrMqPOdhVGOLd79KcXDcHg7mjgH";
+    var MAPBOX_TOKEN = "pk.eyJ1IjoiYXNzb2Nvbm5lY3QiLCJhIjoiY2pycTlxaGh0MDEyMTQzcGZ0eTlidmdmciJ9.-lrrOF0HPATIKSl8luHqwA";
+    var CSP_NONCE = "1d2d5a5f-ff4e-4181-a1c7-7bb6587479ef";
+    var I18N_CURRENCY = "EUR";
+    var I18N_LOCALE = "fr-FR";
+    var I18N_TIMEZONE = "Europe\/Paris";
+    var SITE_CODE = "a";
+</script>
+
+<!-- Translator Method -->
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/intl-messageformat.min.js.télécharger" integrity="sha256-jkYwyAJTaU4esUDFkWA92xz+ARjXOmPO8ul5jjY3MWk=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+  window.trans = function trans(key, params) {
+      // Translation key not found
+      if(window.translations.hasOwnProperty(key) === false) {
+          return key;
+      }
+
+      var translation = window.translations[key];
+
+      var translator = new IntlMessageFormat.IntlMessageFormat(translation, I18N_LOCALE);
+
+      return translator.format(params);
+  };
+
+  window.transCurrency = new Intl.NumberFormat(
+      I18N_LOCALE,
+      { style: 'currency', currency: "EUR"}
+  ).format;
+
+  window.transDate = new Intl.DateTimeFormat(I18N_LOCALE, {
+      timeZone: I18N_TIMEZONE,
+  }).format;
+
+  window.transDateFromYMD = function(value) {
+      value = String(value).replaceAll('-', '');
+      // YYYYMMDD or YYYYMMDDHHiiss
+      if (String(value).length !== 8 && String(value).length !== 14) {
+          return ''
+      }
+
+      var date = new Date(value.substr(0, 4) + "-" + value.substr(4, 2) + "-" + value.substr(6, 2));
+
+      // Invalid date
+      if (isNaN(date)) {
+          return ''
+      }
+
+      return transAbsoluteDate(date);
+  }
+
+  window.transDateTime = new Intl.DateTimeFormat(I18N_LOCALE, {
+      timeZone: I18N_TIMEZONE,
+      year: "numeric",
+      month: "2-digit",
+      day: "2-digit",
+      hour: "numeric",
+      minute: "numeric",
+      second: "numeric",
+  }).format;
+
+  // Trans date created with new Date('1986-06-02')
+  window.transAbsoluteDate = new Intl.DateTimeFormat(I18N_LOCALE, {
+      timeZone: "UTC",
+  }).format;
+
+  // Trans date formatted as YYYYMMDDHHiiss
+  window.transAbsoluteDateYMD = function (value) {
+      // YYYYMMDD or YYYYMMDDHHiiss
+      if (String(value).length !== 8 && String(value).length !== 14) {
+          return ''
+      }
+
+      var date = new Date(value.substr(0, 4) + "-" + value.substr(4, 2) + "-" + value.substr(6, 2));
+
+      // Invalid date
+      if (isNaN(date)) {
+          return ''
+      }
+
+      return transAbsoluteDate(date);
+  }
+
+      window.translations = Object.assign({"ckeditor.subtitle":"Sous-titre","ckeditor.title":"Titre","ckeditor.maintitle":"Titre principal","form.select.placeholder":"Choisissez","form.uploadPicture.complete.delete":"Supprimer","form.uploadPicture.prepareInput.button":"Se\u0301lectionner","form.uploadPicture.prepareInput.drop":"Ajouter une image","form.uploadPicture.prepareInput.send":"S\u00e9lectionner","form.uploadPicture.prepareInput.size":"Taille recommand\u00e9e : {width} x {height} px","jquery.ajax.error":"Une erreur est survenue. Cette erreur peut \u00eatre due \u00e0 votre connexion.\nN'h\u00e9sitez pas \u00e0 nous contacter si cette erreur persiste.\n","jquery.ajax.forbidden":"Vous n'avez pas les droits suffisants pour effectuer cette action.","popup.blocked":"Vous devez autoriser les popup pour ce site afin de voir la pr\u00e9visualisation du formulaire","registration.addedMail":"Votre inscription \u00e0 la Newsletter est confirm\u00e9e. \u00c0 tr\u00e8s bient\u00f4t pour de nouvelles actualit\u00e9s.","registration.addMail":"Veuillez indiquer une adresse email.","registration.failed":"Abonnement \u00e9chou\u00e9 !","registration.mailAlreadyExisting":"Cette adresse email est d\u00e9j\u00e0 abonn\u00e9e \u00e0 la newsletter.","spark.dirty.onBeforeUnload":"Vous avez modifi\u00e9 des informations. En quittant cette page sans les enregistrer vous risquez de les perdre.","spark.form.bic.helper.country":"Le BIC est probablement incorrect : v\u00e9rifiez les 5\u00e8me et 6\u00e8me caract\u00e8res ({country}).","spark.form.bic.helper.incorrect":"Le code BIC est incorrect.","spark.form.country.helper.incorrect":"Le pays est incorrect.","spark.form.date.helper.format":"La date est incorrecte (format JJ\/MM\/AAAA).","spark.form.date.helper.futureDateNotAllowed":"Date dans le futur","spark.form.date.helper.yearInTwoDigits":"L'ann\u00e9e doit \u00eatre sur 4 chiffres","spark.form.date.helper.yearStartsWithZero":"L'ann\u00e9e ne peut pas commencer par un z\u00e9ro","spark.form.datetime.checkLegalAge.error.age":"Le responsable l\u00e9gal doit \u00eatre majeur","spark.form.datetime.update.error.incorrect":"La date saisie est incorrecte.","spark.form.datetime.update.error.max":"La date doit \u00eatre ant\u00e9rieure au {max}","spark.form.datetime.update.error.min":"La date doit \u00eatre post\u00e9rieure au {min}","spark.form.domain.check.error":"Le domaine saisi est incorrect.","spark.form.iban.helper.country":"Le pays est inconnu.","spark.form.iban.helper.incorrect":"Les caract\u00e8res autoris\u00e9s sont les chiffres 0 \u00e0 9 et les lettres A \u00e0 Z.","spark.form.iban.helper.invalid":"L'IBAN est incorrect.","spark.form.iban.helper.length":"La longueur est incorrecte.","spark.form.mail.check.question":"Nous avons d\u00e9tect\u00e9 une potentielle erreur de frappe. Est-ce que votre adresse email est {suggest} ?","spark.form.mail.check.yes":"Oui, corriger l'adresse","spark.form.mail.check.no":"Non, conserver l\u2019adresse renseign\u00e9e","spark.form.mail.confirm.error":"Les deux emails sont diff\u00e9rents.","spark.form.mail.helper.at":"Cet email ne contient pas le signe arobase (@)","spark.form.mail.helper.domain":"Le nom de domaine de l'adresse email est incorrect.","spark.form.mail.helper.empty":"Veuillez indiquer une adresse email.","spark.form.mail.helper.incorrect":"Cet email est incorrect.","spark.form.mail.helper.invalid":"Cet email contient des caract\u00e8res invalides.","spark.form.model.addressSearch.city":"Ville","spark.form.model.addressSearch.country":"Pays","spark.form.model.addressSearch.location":"Nom du lieu","spark.form.model.addressSearch.notFound":"Adresse introuvable ?","spark.form.model.addressSearch.placeholder":"Recherchez ici l'adresse que vous souhaitez enregistrer","spark.form.model.addressSearch.postal":"Code postal","spark.form.model.addressSearch.reset":"Supprimer l'adresse ou en saisir une nouvelle","spark.form.model.addressSearch.street1":"Rue","spark.form.model.addressSearch.street2":"Compl\u00e9ment","spark.form.model.category":"Cat\u00e9gorie","spark.form.money.check.error":"Le montant saisi n'est pas correct.","spark.form.password.confirm.error":"Les deux mots de passe sont diff\u00e9rents.","spark.form.percent.check.error":"La valeur saisie n'est pas correcte.","spark.form.phone.helper.country":"Le code pays est incorrect.","spark.form.phone.helper.incorrect":"Le num\u00e9ro de t\u00e9l\u00e9phone est incorrect.","spark.form.phone.helper.length.tooLong":"Le num\u00e9ro de t\u00e9l\u00e9phone est trop long.","spark.form.phone.helper.length.tooShort":"Le num\u00e9ro de t\u00e9l\u00e9phone est trop court.","spark.form.phone.helper.mobile":"Veuillez indiquer un num\u00e9ro de t\u00e9l\u00e9phone portable.","spark.form.phone.helper.phone":"Veuillez indiquer un num\u00e9ro de t\u00e9l\u00e9phone fixe.","spark.form.phone.helper.refused":"Ce type de num\u00e9ro de t\u00e9l\u00e9phone n'est pas accept\u00e9.","spark.form.phone.helper.unknown":"Le num\u00e9ro de t\u00e9l\u00e9phone n'est pas reconnu.","spark.form.postal.helper.country.required":"Le pays doit \u00eatre indiqu\u00e9.","spark.form.postal.helper.country.unknown":"Le pays {country} est inconnu.","spark.form.postal.helper.incorrect":"Le code postal est incorrect.","spark.form.postal.helper.required":"Le code postal doit \u00eatre indiqu\u00e9.","spark.form.postal.helper.unused":"Ce pays n'utilise pas de codes postaux.","spark.form.textCount.update.character":"caract\u00e8re","spark.form.upload.check.error.limit":"Vous avez atteint la limite de {limit} fichiers.","spark.form.upload.check.error.size":"Le fichier est trop gros (max : {size} {unit}).","spark.form.upload.check.error.type":"Le type du fichier n'est pas accept\u00e9.","spark.form.upload.DOMProgress.text":"Chargement en cours","spark.form.upload.prepare.button.select":"Se\u0301lectionner","spark.form.upload.prepare.drop":"Ajouter un fichier","spark.form.upload.uploadFile.callback.error":"Une erreur s'est produite lors du t\u00e9l\u00e9chargement.","spark.form.url.check.error":"L'url saisie est incorrecte.","spark.notification.button.nextNotice":"Erreur suivante","spark.notification.button.prevNotice":"Erreur pr\u00e9c\u00e9dente","spark.template.accordion.button.title":"Afficher","spark.template.button.cancel":"Annuler","spark.template.button.close":"Fermer","spark.template.button.continue":"Continuer","spark.template.button.delete":"Supprimer","spark.template.button.edit":"Modifier","spark.template.button.submit":"Envoyer","spark.template.button.view":"Voir","spark.template.confirm.confirmText.label":"Veuillez saisir \"{ confirmText }\"","spark.template.confirm.error":"Le texte renseign\u00e9 est incorrect","spark.template.editable.create.button.submit":"Confirmer","spark.template.editable.create.save.error":"Impossible d'enregistrer les modifications.","spark.template.loading.text":"Chargement en cours ...","spark.template.notification.save":"Enregistr\u00e9","spark.template.table.count.checked.all.button":"Les {nbDisplayed} lignes de cette page sont s\u00e9lectionn\u00e9es. <u>S\u00e9lectionner les {truncatedNb} lignes<\/u>.","spark.template.table.count.checked.all.buttonUntruncated":"Les {nbDisplayed} lignes de cette page sont s\u00e9lectionn\u00e9es. <u>S\u00e9lectionner toutes les lignes<\/u>.","spark.template.table.count.checked.all.text":"Toutes les lignes sont s\u00e9lectionn\u00e9es.","spark.template.table.count.checked.truncated":"{nbChecked} ligne(s) s\u00e9lectionn\u00e9e(s) sur {nbTotal}.","spark.template.table.count.checked.untruncated":"{nbChecked} ligne(s) s\u00e9lectionn\u00e9e(s) sur un grand nombre.","spark.template.table.count.displayed.empty":"Aucune ligne","spark.template.table.count.displayed.rows":"{nbDisplayed} ligne(s).","spark.template.table.count.displayed.truncated":"{nbDisplayed} ligne(s) affich\u00e9e(s) sur {truncatedNb}.","spark.template.table.count.displayed.untruncated":"{nbDisplayed} ligne(s) affich\u00e9e(s) sur un grand nombre.","spark.template.table.exports.empty":"Le tableau est vide !","spark.template.table.warning.partialSorting":"Vous venez d\u2019afficher maximum 50 lignes suppl\u00e9mentaires. Le tri ne s\u2019applique pas sur les lignes nouvellement charg\u00e9es. Relancez votre tri sur toutes les lignes affich\u00e9es.","fraud.quickEmails.probationLimit":"Vous ne pouvez pas contacter autant de personnes. Il vous reste {remaining} emails \u00e0 envoyer aujourd'hui."},window.translations);
+    window.translations = Object.assign({"humanSearch.and":" et ","humanSearch.date.after":"\"{name}\" est apr\u00e8s le {startDate}","humanSearch.date.before":"\"{name}\" est avant le {endDate}","humanSearch.date.between":"\"{name}\" est entre le {startDate} et le {endDate}","humanSearch.is":" est ","humanSearch.number.between":"\"{name}\" entre {start} et {end}","humanSearch.or":" ou ","template.alert.error":"Une erreur s'est produite lors de votre recherche. Veuillez r\u00e9essayer.","template.text.published":"Publi\u00e9 le {date}","text.empty.document":"Aucun document fourni","text.searchUserInfos.administrativeArea1":"R\u00e9gion","text.searchUserInfos.administrativeArea2":"D\u00e9partement","text.searchUserInfos.birthday":"Date de naissance","text.searchUserInfos.city":"Ville","text.searchUserInfos.country":"Pays","text.searchUserInfos.sex":"Sexe","text.searchUserInfos.street1":"Adresse","text.searchUserInfos.street2":"Compl\u00e9ment d'adresse"},window.translations);
+</script>
+
+<!-- jQuery -->
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/jquery.min.js.télécharger" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/jquery-ui.min.js.télécharger" integrity="sha512-MSOo1aY+3pXCOCdGAYoBZ6YGI0aragoQsg1mKKBHXCYPIWxamwOE7Drh+N5CPgGI5SA9IEKJiPjdfqWFWmZtRA==" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/jquery-ui-i18n.min.js.télécharger" integrity="sha256-q/EiPw4hDxf7AKJEkIHWBspsML3nLL0VB729yuwz+cc=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/bootstrap-switch.min.js.télécharger" integrity="sha256-sAkXLwDFSAB/S09JCOWRvnoOnhGYDu9VqMnbCKAhMzI=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/jquery.mousewheel.min.js.télécharger" integrity="sha256-+ZWJyex7JtGOxCSSRu/QgpDkiTWQEqBuE2O8xHMVZCQ=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+
+<!-- Layout -->
+<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/common.-.layout.-.public.js.télécharger" data-cmp-info="13" data-cmp-ab="2"></script>
+
+<!-- CKEditor -->
+
+<!-- intl-tel-input -->
+
+<!-- reCAPTCHA -->
+
+<!-- Validator -->
+
+<!-- Algolia -->
+	<!-- Placé à l'extérieur pour l'annuaire -->
+	<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+		var ALGOLIA_CONFIG = {
+			allowTyposOnNumericTokens:	false,
+			facets:						[],
+			facetFilters:				[],
+			query:						"",
+			page:						0,
+			numericFilters:				[],
+			removeWordsIfNoResults:		"lastWords",
+			tagFilters:					[],
+			typoTolerance:				"strict",
+			advancedSyntax:				true
+		};
+	</script>
+
+<!-- Charts.js -->
+
+<!-- Choices.js -->
+
+<!-- ContentTools -->
+
+<!-- Cropper -->
+
+<!-- Dompurify -->
+
+<!-- FullCalendar -->
+	<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/moment-with-locales.min.js.télécharger" integrity="sha256-/ioiJhI6NkoUDkSyBru7JZUGXGQhdml6amBC3ApTf5A=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+	<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/fullcalendar.min.js.télécharger" integrity="sha256-ffvzdyprWDmzu6FMDohWirF+ovgL0DCsJI8uPKiG+zU=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+    <script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/locale-all.js.télécharger" integrity="sha256-uWa+HbmE2gWhgwgxCwXs/P6rcL/2Su2F+fU6bg7F62c=" crossorigin="anonymous" data-cmp-info="13" data-cmp-ab="2"></script>
+
+<!-- HTML2Canvas -->
+
+<!-- Parallax -->
+
+<!-- TimeAgo -->
+
+<!-- Simplelightbox -->
+
+<!-- Leafleft -->
+<!-- Leaflet MarkerCluster -->
+
+
+
+
+
+<script data-cmp-ab="1" type="text/javascript" async="" class="_iub_cs_activate _iub_cs_activate-activated" data-iub-purposes="4" data-cmp-info="13">
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', "G-PB0RXMTS9D", {
+        send_page_view: false
+    });
+    gtag('event', 'page_view', {"send_to":"G-PB0RXMTS9D","dimension1":"AssoConnect","dimension2":"school148525","dimension4":"PROD","dimension3":"unknown","dimension5":"ENVIRONMENT"});
+
+    </script>
+<script type="text/javascript" src="./Agenda _ L&#39;Abeille Olivetaine_files/js" async="" class="_iub_cs_activate _iub_cs_activate-activated" data-iub-purposes="4" data-cmp-info="13" data-cmp-ab="2" data-cmp-vendor="2110"></script>
+
+<!-- Iubenda -->
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+            window.openIubendaCookies = function() {
+            if (window._iub && window._iub.cs && window._iub.cs.api) {
+                window._iub.cs.api.openPreferences();
+            }
+        };
+
+        var _iubendaHadConsent = false;
+        window._iub = window._iub || [];
+        window._iub.csConfiguration = window._iub.csConfiguration || {};
+        window._iub.csConfiguration.callback = {
+            onConsentGiven: function() {
+                _iubendaHadConsent = true;
+                $(".video-youtube").each(function() {
+                    var $el = $(this);
+                    $el
+                        .after($("<iframe>")
+                            .attr("src", "https://www.youtube.com/embed/" + $el.data("video-id") + "?rel=0&start=" + $el.data("video-start"))
+                            .attr("style", "width: 100%; height: 100%; border: 0px;")
+                            .attr("allow", "fullscreen")
+                        )
+                        .remove();
+                });
+            },
+            onConsentRejected: function() {
+                if (_iubendaHadConsent) {
+                    location.reload();
+                }
+            }
+        };
+
+        (function(d, s) {
+            var t = d.getElementsByTagName(s)[0], e = d.createElement(s);
+            e.async = true; e.src = "https:\/\/embeds.iubenda.com\/widgets\/eaf21570-70f8-4ba0-a750-f2c4d7c78a13.js";
+            t.parentNode.insertBefore(e, t);
+        })(document, "script");
+    </script>
+
+<!-- Tracking -->
+<script async="" nonce="" data-cmp-info="13" data-cmp-ab="1">
+    
+
+    /**
+     * RudderStack common functions
+     */
+
+    /**
+     * This method allows you to track any actions that your users might perform. Each of these actions is commonly referred to as an event.
+     *
+     * https://docs.rudderstack.com/stream-sources/rudderstack-sdk-integration-guides/rudderstack-javascript-sdk#3-4-track
+     */
+    function track(event, properties, options, callback) {
+                    if(window.rudderanalytics) {
+                window.rudderanalytics.track(event, properties, options, callback);
+            }
+            }
+
+    /**
+     * This method lets you record information about the web page being viewed by the user.
+     *
+     */
+    function trackPage(event, properties, options, callback) {
+                    if(window.rudderanalytics) {
+                window.rudderanalytics.track(event, properties, options, callback);
+            }
+            }
+
+    /**
+     * This method allows you to track any click that your users might perform on a link.
+     *
+     * @param {string} selector	jQuery selector of the tracked link
+     * Otherwise same params of the track function: https://docs.rudderstack.com/stream-sources/rudderstack-sdk-integration-guides/rudderstack-javascript-sdk#3-4-track
+     */
+    function trackLink(selector, event, properties, options, callback) {
+                    $(selector).on("click", function(e) {
+                if(window.rudderanalytics) {
+                    var _this = $(this);
+                    window.rudderanalytics.track(event, properties, options, callback);
+                    // Wait for the tracking request to have time to go
+                    var timeoutDelay = 300;
+                    setTimeout(function() {
+                        var href = _this.attr("href");
+                        var target = _this.attr("target");
+                        // New tab
+                        if (target) {
+                            window.open(href, target || '_blank');
+                        }
+                        // Current tab
+                        else {
+                            window.location.href = href;
+                        }
+                    }, timeoutDelay);
+                    return false;
+                }
+            });
+            }
+
+    // GTM
+    </script>
+	<style>.ms-editor-squiggler{display:none!important;visibility:hidden!important}#editor-critique-card-id{display:none!important;opacity:0!important;pointer-events:none;visibility:hidden!important}.AsanaMain .TaskRow-taskName,.AsanaMain .TaskName-input{min-height:21px!important}span.SpellingError{background-image:none!important;pointer-events:none!important}.EditMode span.SpellingError,.EditMode span.SpellingErrorV2,.EditMode span.SpellingErrorV2Themed,.EditMode span.ContextualSpellingAndGrammarError,.EditMode span.ContextualSpellingAndGrammarErrorV2,.EditMode span.ContextualSpellingAndGrammarErrorV2Themed,.EditMode span.AdvancedProofingIssue,.EditMode span.AdvancedProofingIssueV2,.EditMode span.AdvancedProofingIssueV2Themed,.EditingSurfaceBody span.SpellingError,.EditingSurfaceBody span.SpellingErrorV2,.EditingSurfaceBody span.SpellingErrorV2Themed,.EditingSurfaceBody span.ContextualSpellingAndGrammarError,.EditingSurfaceBody span.ContextualSpellingAndGrammarErrorV2,.EditingSurfaceBody span.ContextualSpellingAndGrammarErrorV2Themed,.EditingSurfaceBody span.AdvancedProofingIssue,.EditingSurfaceBody span.AdvancedProofingIssueV2,.EditingSurfaceBody span.AdvancedProofingIssueV2Themed{background-image:none!important;border-bottom:none!important;pointer-events:none!important}.SpellingErrorHighlight,.GrammarErrorHighlight,.CritiqueIndicatorHighlight,.ReactiveRewriteIndicatorHighlight,.Themed .SpellingErrorHighlight,.Themed .GrammarErrorHighlight,.Themed .CritiqueIndicatorHighlight,.Themed .ReactiveRewriteIndicatorHighlight{background-color:unset!important}div.ms-Callout.ms-Tooltip[tabindex="-1"][id*=OfficeContextualTooltip],div.ms-Callout[aria-labelledby=header-SharedSpellingCritique],div.ms-Callout[aria-labelledby=header-SharedGrammarCritique],div.ms-Callout[aria-labelledby=header-SharedSuggestionCritique],div#LeftStatusBarRegion-ControlsGroup button#ToggleProofing{display:none!important}.sketchy-text-spelling-error-underline-overlay{display:none}.reposition__StyledWrapperDiv-sc-mjfw5a-0{z-index:9999999}div[class*=IndividualSlideEditText-module-textEditor-] .ql-container.ql-snow{overflow:hidden}@font-face{font-family:Inter;font-style:normal;font-weight:400;src:local("Inter-Regular"),url(https://assets.merci-app.com/fonts/Inter-Regular.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Inter-Regular.woff2) format("woff")}@font-face{font-family:Inter;font-style:normal;font-weight:500;src:local("Inter-Medium"),url(https://assets.merci-app.com/fonts/Inter-Medium.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Inter-Medium.woff) format("woff")}@font-face{font-family:Inter;font-style:normal;font-weight:600;src:local("Inter-SemiBold"),url(https://assets.merci-app.com/fonts/Inter-SemiBold.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Inter-SemiBold.woff) format("woff")}@font-face{font-family:Inter;font-style:normal;font-weight:700;src:local("Inter-Bold"),url(https://assets.merci-app.com/fonts/Inter-Bold.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Inter-Bold.woff) format("woff")}@font-face{font-family:Inter;font-style:normal;font-weight:800;src:local("Inter-ExtraBold"),url(https://assets.merci-app.com/fonts/Inter-ExtraBold.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Inter-ExtraBold.woff) format("woff")}@font-face{font-family:Tropiline;font-style:normal;font-weight:700;src:local("Tropiline-Bold"),url(https://assets.merci-app.com/fonts/Tropiline-Bold.woff2) format("woff2"),url(https://assets.merci-app.com/fonts/Tropiline-Bold.woff) format("woff")}.kix-spellcheck-with-explanation-bubble,.kix-spell-bubble{display:none!important}</style></head>
+	<body class="mci-c4f7c3b940b2fda375c61f1064b5e7f6" spellcheck="false">
+		<!-- Layout -->
+		<div id="layoutWrapper" class="nav">
+
+<!-- Vielle version IE -->
+
+<!-- Thème -->
+<style nonce="">
+
+	/**
+	 * Couleur principale
+	 */
+
+	/* Transforme @blue et @body en blanc en fonction de la couleur du menu */
+	
+	/* Color */
+	h1,
+	h3,
+	.textImportant,
+	a,
+	a:link,
+	a:visited,
+	a:active,
+	.colorBlue,
+	.checkbox input[type="checkbox"].custom-checkbox:checked + .icons,
+	.checkbox input[type="checkbox"].custom-checkbox:checked + .icons .icon-checked,
+	.radio input[type="radio"].custom-radio:checked + .icons,
+	.radio input[type="radio"].custom-radio:checked + .icons .icon-checked,
+	.accordion .accordionContent.accordionColor .accordionTitleWrapper .accordionTitle,
+	.buttonWhite,
+	.buttonWhiteAlt:active,
+	.buttonWhiteBlue,
+	.buttonTransparent:hover,
+	.radioAlt.colorWhite.radioAltSelected,
+    #thumbPostSlider .thumbPostSlide .thumbPostSlideContent h2,
+	.thumbPostWrapper h2,
+	.thumbWrapper .thumbCommon .thumbDetails .thumbName,
+	.thumbWrapper .thumbCommon .thumbDetails .thumbMore,
+	#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep:not(.button):hover,
+	#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep .breadCrumbItem.breadCrumbActive,
+	#templateTabulation .active,
+	#messagesWrapper .message .messageContent .messageIcon svg {
+		color: #121517;
+	}
+	#agendaWrapper,
+	div:not(#agendaWrapper) > #agendaEvent,
+	#agendaWrapper #agendaEvent #agendaEventName,
+	div:not(#agendaWrapper) > #agendaEvent #agendaEventName,
+	#agendaWrapper #agendaList .agendaDate,
+	#donationPicture #donationInfoWrapper #donationInfo #donationSubmitButton {
+		color: #ffffff;
+	}
+
+    /* Fix event colors */
+    #agendaEvent #agendaEventDate, #agendaEvent #agendaEventDescription, #agendaEvent #agendaEventAddress {
+        color: #ffffff;
+    }
+
+    #agendaEventReturn svg path{
+        fill: #121517;
+    }
+
+	#templateNavWrapper #templateNav ul li,
+	#templateNavWrapper #templateNav ul li a,
+	#templateNavBar,
+	#templateNavSubBarWrapper,
+	#templateNavSubBarWrapper #templateNavSubBar a,
+	#templateSubNavWrapper ul li a,
+	#agendaWrapper #agendaList .agendaListEvent.colorBodyOrWhite,
+	#agendaWrapper #agendaList h3.colorBodyOrWhite,
+	#agendaWrapper #agendaList .eventColor.colorBodyOrWhite,
+	#eventWrapper #eventDateLeftWrapper{
+		color: #ffffff;
+	}
+    #eventWrapper #eventPicture #eventCountdownWrapper #eventButton {
+        color: #ffffff;
+    }
+	.buttonWhiteBlue:hover {
+		color: #101214;
+	}
+	.buttonWhiteBlue:active,
+	.buttonTransparent:active {
+		color: #0f1113;
+	}
+	#agendaWrapper #agendaList h3.colorBodyOrWhite,
+	#agendaWrapper #agendaList .eventColor.colorBodyOrWhite {
+		border-color: #ffffff;
+	}
+	.buttonBlue,
+	.backgroundBlue {
+		color: #ffffff;
+	}
+    .backgroundTheme {
+        background-color: #4183d7;
+        color: #ffffff;
+    }
+	/* Background */
+	.backgroundBlue,
+	.accordion .accordionContent.accordionColor .accordionTitleWrapper .accordionTitleNumber,
+	.buttonBlue,
+	.dialogDotWrapper .dialogDot.dialogDotCurrent,
+	.progressbar-blue div,
+	.radioAlt.colorBlue:not(.eventColor), /* :not(.eventColor) pour ne pas modifier les puces de l'agenda */
+	#messagesWrapper .message,
+	#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper,
+	#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper,
+	#eventWrapper #eventPicture #eventCountdownWrapper #eventButton,
+	#templateNavWrapper #templateNav #navBasket {
+		background-color: #121517;
+	}
+	.formUpload .formUploadInputWrapper input:hover ~ div,
+	.buttonBlue:hover,
+	.radioAlt.colorBlue.radioAltSelected,
+	#messagesWrapper .message,
+	#eventWrapper #eventPicture #eventCountdownWrapper #eventButton:hover,
+	#templateNavWrapper #templateNav #navBasket:hover {
+		background-color: #0f1113;
+	}
+	.radioAlt.colorBlue:hover:not(.radioAltSelected):not(.eventColor) { /* :not(.eventColor) pour ne pas modifier les puces de l'agenda */
+		background-color: #14181a;
+	}
+	.dialogDotWrapper .dialogDot:hover {
+		background-color: #15191b;
+	}
+	.buttonBlue:active,
+	#eventWrapper #eventPicture #eventCountdownWrapper #eventButton:active {
+		background-color: #0e1012;
+	}
+	.dialogDotWrapper .dialogDot {
+		background-color: #171b1d;
+	}
+	.buttonWhiteBlue:active {
+		background-color: #181c1f;
+	}
+	.buttonWhiteBlue:hover {
+		background-color: #191d20;
+	}
+	/* Border */
+	.backgroundBlueLight,
+	input[type="text"]:hover,
+	input[type="search"]:hover:not(.choices__input),
+	.choices:hover,
+	input[type="password"]:hover,
+	input[type="date"]:hover,
+	input[type="tel"]:hover,
+	input[type="number"]:hover,
+	input[type="datetime-local"]:hover,
+	input[type="email"]:hover,
+	input[type="url"]:hover,
+	textarea:hover,
+	select:hover,
+	input[type="text"]:focus,
+	input[type="search"]:focus:not(.choices__input),
+	.choices.is-focused,
+	input[type="password"]:focus,
+	input[type="date"]:focus,
+	input[type="tel"]:focus,
+	input[type="number"]:focus,
+	input[type="datetime-local"]:focus,
+	input[type="email"]:focus,
+	input[type="url"]:focus,
+	textarea:focus,
+	select:focus,
+	.radioImageWrapper.radioImageChecked,
+	.accordion .accordionContent.accordionColor .accordionTitleWrapper,
+	.buttonWhiteBlue,
+	.dropdownMenu div h2,
+	.radioAlt.colorWhite.radioAltSelected,
+	#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep .breadCrumbItem.breadCrumbActive,
+	#postViewMore {
+		border-color: #121517;
+	}
+	#agendaWrapper #agendaEvent #agendaEventReturn,
+	div:not(#agendaWrapper) > #agendaEvent #agendaEventReturn {
+		border-color: #ffffff;
+	}
+	.buttonWhiteBlue:hover {
+		border-color: #131719;
+	}
+	.buttonWhiteBlue:active {
+		border-color: #14181a;
+	}
+	.radioAlt.colorWhite:hover:not(.radioAltSelected),
+	.radioAlt.colorBlue:hover:not(.radioAltSelected):not(.eventColor) { /* :not(.eventColor) pour ne pas modifier les puces de l'agenda */
+		border-color: #15191b;
+	}
+	.radioAlt.colorBlue.radioAltSelected {
+		border-color: #0c0e10;
+	}
+	.buttonWhiteAlt:active {
+		outline-color: #121517;
+	}
+	.buttonWhiteAlt:hover {
+		border-color: #15191b;
+	}
+
+	/**
+	 * Couleur du menu
+	 */
+					@media (min-width: 1151px) {
+		#templateNavWrapper,
+		#templateNavWrapper:before,
+		#templateNavBar {
+							background-color: #4183d7;
+								}
+		#templateSubNavWrapper {
+			background-color:
+									#4489e1							;
+		}
+					#templateHeaderWrapper #templateHeader #templateHeaderMargin {
+				display: none;
+			}
+			}
+	@media (max-width: 1150px) {
+		#templateNavWrapper,
+		#templateNavWrapper:before,
+		#templateNavBar,
+		#templateSubNavWrapper {
+			background-color: #4183d7;
+		}
+	}
+	#templateNavSubBarWrapper,
+	#templateNavSubBarWrapper #templateNavSubBarLeft,
+	#templateNavSubBarWrapper #templateNavSubBarRight {
+		background-color: #4489e1;
+	}
+	#agendaWrapper,
+	div:not(#agendaWrapper) > #agendaEvent,
+	#donationPicture #donationInfoWrapper #donationInfo #donationSubmitButton,
+	#eventWrapper #eventDateLeftWrapper {
+		background-color: #4183d7;
+	}
+	#eventWrapper #eventPicture #eventInfos #eventName {
+		border-color: #4183d7;
+	}
+	/* Couleur des hovers */
+			#templateNavWrapper #templateNav ul li.active,
+		#templateNavWrapper #templateNav ul li:not(.hideHover):hover {
+			background-color: #3a75c1;
+		}
+		@media (min-width: 1151px) {
+			#templateSubNavWrapper ul li.active,
+			#templateSubNavWrapper ul li:hover {
+				background: #3a75c1;
+			}
+		}
+		@media (max-width: 1150px) {
+			#templateNavSubBarWrapper #templateNavSubBar li.active {
+				background: #3a75c1;
+			}
+		}
+	
+	/**
+	 * Couleur du fond
+	 */
+	body {
+		background-color: #ffffff;
+	}
+
+	/**
+	 * Couleur du bas de page
+	 */
+	#templateFooterWrapper {
+		background-color: #47505a;
+	}
+
+	/**
+	 * Texture du menu (non applicable si le menu est transparent)
+	 */
+				#templateNavWrapper,
+		#templateNavWrapper:before,
+		#templateSubNavWrapper,
+		#templateNavBar,
+		#templateNavSubBarWrapper,
+		#templateNavSubBarWrapper #templateNavSubBarLeft,
+		#templateNavSubBarWrapper #templateNavSubBarRight {
+			background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/tweed.png");
+		}
+	
+	/**
+	 * Texture du fond
+	 */
+	body {
+		background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/_blank.png");
+	}
+
+	/**
+	 * Texture du bas de page
+	 */
+	#templateFooterWrapper {
+		background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/60-lines.png");
+	}
+
+	/**
+	 * Autres
+	 */
+
+	/* Permet d'afficher le haut de page dans l'édition */
+			#templateHeaderWrapper {
+			display: none;
+		}
+	
+	/* Hauteur du haut de page */
+						/* Cache le bloc dans le haut de page en mode réduit */
+			#templateHeaderWrapper #templateHeader #templateHeaderBlockContainer {
+				display: none;
+			}
+			#templateHeaderWrapper {
+				height: 100px
+			}
+			
+	/* Position de l'image de l'organisation dans le haut de page */
+				#templateHeaderWrapper #templateHeaderVendorPictureWrapper #templateHeaderVendorPicture {
+			text-align: left;
+		}
+	
+	/* Taille texte bloc */
+	#templateHeaderBlockTitleWrapper {
+		font-size: 26px;
+	}
+
+	/* Taille image bloc */
+	#templateHeaderBlockVendorPictureWrapper img {
+		width: 0px;
+	}
+
+	/* Type de bloc */
+	#templateHeaderWrapper #templateHeader #templateHeaderBlockContainer {
+				background-color: rgba(248, 209, 204, .5);
+	}
+
+	@media (min-width: 1151px) {
+		/* Position du logo dans le menu */
+		#templateNavWrapper #templateNav #navVendorWrapper {
+							float: left;
+					}
+
+		/* Place le haut de page sous le menu si le menu est transparent */
+		
+		/* Hauteur du menu (les ">" pour ignorer les sous-menus) */
+		#templateNavWrapper #templateNav > ul > li {
+			height: 50px;
+		}
+		#templateSubNavWrapper ul li {
+			height: 40px;
+			line-height: 40px;
+		}
+		#templateNavWrapper #templateNav > ul > #navVendorPicture > div > a > img {
+			max-height: 50px;
+		}
+
+		/* Type de bloc */
+		
+		/* La largeur du haut de page ne dépasse pas la largeur du contenu du site */
+					#templateNavWrapper,
+			#templateSubNavWrapper,
+			#templateHeaderWrapper {
+				max-width: 1131px;
+				margin-left: -webkit-calc(50% - 565.5px); /* Safari */
+				margin-left: calc(50% - 565.5px); /* 565.5 = width / 2 */
+			}
+		
+		/* Arrondi les coins du menu, du haut de page et du contenu */
+					#templateNavWrapper,
+			#templateHeaderWrapper,
+			#templateNavWrapper #templateNav ul li ul,
+			#templateSubNavWrapper,
+			#templateSubNavWrapper ul {
+				-moz-border-radius: 15px;
+				-webkit-border-radius: 15px;
+				border-radius: 15px;
+				overflow: hidden;
+			}
+			#templateNavSocialWrapper{
+				-moz-border-radius: 15px 15px 0 0;
+				-webkit-border-radius: 15px 15px 0 0;
+				border-radius: 15px 15px 0 0;
+			}
+			#templatePageWrapper:before {
+				-moz-border-radius: 15px;
+				-webkit-border-radius: 15px;
+				border-radius: 15px;
+				background: #FFF;
+			}
+		
+		/* Séparation des différents éléments */
+					#templateNavWrapper,
+			#templateSubNavWrapper ul,
+			#templateHeaderWrapper,
+			#templatePageWrapper:before,
+			#templatePage,
+			#templateFooterWrapper {
+				margin-top: 30px;
+			}
+		
+		/* Position du bloc */
+				
+		/* Texte du menu en gras */
+		
+		/* Texte du menu en majuscule */
+					#templateNavWrapper #templateNav,
+			#templateSubNavWrapper {
+				text-transform: uppercase;
+			}
+		
+		/* Cache les icônes */
+					#templateNav ._gif:not(.noHide) {
+				display: none;
+			}
+		
+		/* Espacement entre les items du menu */
+							#templateNavWrapper #templateNav ul li a,
+			#templateNavWrapper #templateNav ul li ul li a,
+			#templateSubNavWrapper ul li a {
+				padding: 0 15px;
+			}
+		
+		/* Alignement du contenu du menu */
+							#templateNavWrapper #templateNav,
+			#templateSubNavWrapper {
+				text-align: center;
+			}
+		
+		/* Hauteur du logo de l'organisation dans le haut de page */
+					#templateHeaderWrapper #templateHeaderVendorPictureWrapper #templateHeaderVendorPicture img {
+				height: 100px;
+			}
+			}
+
+	@media (max-width: 1150px) {
+	    
+		/* Cache le bloc en responsive si le site dispose d'un logo d'organisation */
+							#templateHeaderWrapper #templateHeader #templateHeaderBlockContainer {
+				display: none;
+			}
+		
+		/* Alignement du menu en fonction de la barre d'administration */
+		#templateNavWrapper {
+					top: 55px;
+				}
+
+	}
+
+	/* Fond fullscreen dans les pages personnalisées */
+			#boxes .boxLandmarkBackground {
+			width: calc(100% + 27px);
+			margin-left: -13.5px !important;
+			max-width: 1131px !important;
+		}
+	
+	/* Arrondi des champs */
+	input[type="text"],
+	input[type="search"]:not(.choices__input),
+	.choices,
+	input[type="password"],
+	input[type="date"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="url"],
+	textarea {
+					border-radius: 5px;
+			padding: 9px;
+			}
+	select {
+					border-radius: 5px;
+			}
+	.selected-flag,
+	.buttonBig,
+	.buttonLarge,
+	.buttonSmall,
+	.bootstrap-switch,
+	#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper,
+	#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper .buttonDIY,
+	#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper,
+	#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper .buttonDIY {
+					border-radius: 5px;
+			}
+	.buttonLarge {
+					padding: 10px;
+			}
+	.buttonSmall {
+			}
+</style>
+<!-- Message -->
+<!-- Affichage Spark\Notification::message -->
+<div id="messagesWrapper">
+        	</div>
+
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+    $('.message-support .messageClose').click(function(event) {
+        _spark.cookie.set("supportMessage-" + $(this).data('message-id'), "true", 1);
+    });
+</script>
+<!-- Misc Spark -->
+
+<div class="displayNone" id="sparkTemplateTableExportColumns">
+    <form id="sparkTemplateTableExportColumnsForm" method="POST"><input type="hidden" name="_form" value="sparkTemplateTableExportColumns"><input type="hidden" name="_origin" value="/page/2641155-agenda"><input type="hidden" name="_formMulti" value="69f8a200cef59|6823182bd283ffb02f7063fc21737b4ca4b2efc3"><script nonce="" data-cmp-info="13" data-cmp-ab="1">
+            $("#sparkTemplateTableExportColumnsForm").on("submit", function(){
+                var _this = $(this);
+                var renable = false;
+                if(_this.data("multi-submit-protection")){
+                    return false;
+                }
+                else{
+                    // Blocage à la prochaine soumission
+                    _this.data("multi-submit-protection", true);
+                    // Blocage & chargement sur les boutons
+                    _this.find("button[type='submit']").each(function(){
+                        var text = $(this).text();
+                        var buttonDOM = $(this);
+                        var buttonInterval;
+                        buttonDOM
+                            .addClass("disabled")
+                            .prop("disabled", true)
+                            .css("width", buttonDOM.outerWidth() + "px")
+                            .text(".")
+                            .inDOM(function() {
+                                // Il ne faut pas utiliser de gif car Safari est incompatible (fix #12514)
+                                buttonInterval = setInterval(function() {
+                                    if(buttonDOM.text().length === 3) {
+                                        buttonDOM.text(".");
+                                    }
+                                    else {
+                                        buttonDOM.text(buttonDOM.text() + ".");
+                                    }
+                                }, 300);
+                            });
+                        // Déblocage au bout de 1 seconde
+                        if(renable){
+                            window.setTimeout(function(){
+                                clearInterval(buttonInterval);
+                                buttonDOM
+                                    .prop("disabled", false)
+                                    .removeClass("disabled")
+                                    .removeAttr("style")
+                                    .text(text);
+                            }, 1000);
+                        }
+                    });
+                    // Déblocage au bout de 1 seconde
+                    if(renable){
+                        window.setTimeout(function(){
+                            _this.data("multi-submit-protection", false);
+                        }, 1000);
+                    }
+                    // Retour
+                    return true;
+                }
+            });
+        </script>    <div id="sparkTableExportColumnWrapper" class=""><div class="notice fontBold" id="sparkTableExportColumnNotice"></div>
+                <label id="sparkTableExportColumnLabel">
+                    Exporter les lignes sélectionnées
+                    
+                    
+                </label>
+                <div class="formContent">
+        
+                <div id="sparkTableExportColumn_allWrapper" class="radioWrapper displayInlineBlock valignTop marginRight10 ">
+                    <label class="radio" for="sparkTableExportColumn_all">
+                        <input type="radio" name="sparkTableExportColumn" id="sparkTableExportColumn_all" value="all" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                        <span id="sparkTableExportColumn_allLabel">Exporter toutes les colonnes</span>
+                    </label>
+                </div>
+                <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                    if(document.readyState === "complete"){
+                        $("#sparkTableExportColumn_all").radiocheck();
+                    }
+                </script>
+            
+                <div id="sparkTableExportColumn_filterWrapper" class="radioWrapper displayInlineBlock valignTop marginRight10 ">
+                    <label class="radio" for="sparkTableExportColumn_filter">
+                        <input type="radio" name="sparkTableExportColumn" id="sparkTableExportColumn_filter" value="filter" class="custom-radio"><span class="icons"><span class="icon-unchecked"></span><span class="icon-checked"></span></span>
+                        <span id="sparkTableExportColumn_filterLabel">Exporter uniquement les colonnes affichées</span>
+                    </label>
+                </div>
+                <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                    if(document.readyState === "complete"){
+                        $("#sparkTableExportColumn_filter").radiocheck();
+                    }
+                </script>
+            </div></div>    </form>
+                <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                    _spark.form.mail.initMailGroup("sparkTemplateTableExportColumns");
+                </script>
+                </div>
+
+<!-- Barre d'administration -->
+
+<!-- Barre de navigation responsive -->
+<div id="templateNavBar">
+
+	<div id="templateNavBarVendorPicture">
+		<!-- Une organisation en particulier -->
+					<a href="https://www.abeille-olivetaine.fr/">
+				<img src="./Agenda _ L&#39;Abeille Olivetaine_files/logo 2017_blanc.small.jpg" alt="L&#39;Abeille Olivetaine" data-cmp-ab="2" data-cmp-info="10">
+			</a>
+		<!-- L'organisation principale -->
+			</div>
+
+	<div id="templateNavBarToggleMenu">
+		<span>Menu</span>
+					<img src="./Agenda _ L&#39;Abeille Olivetaine_files/ico.menu2.32.white.png" class="_gif icoMenu232White" alt="icoMenu232White" title="" id="templateNavBarToggleMenuOpen" data-cmp-ab="2" data-cmp-info="10">			<img src="./Agenda _ L&#39;Abeille Olivetaine_files/ico.cross.32.white.png" class="_gif icoCross32White" alt="icoCross32White" title="" id="templateNavBarToggleMenuClose" data-cmp-ab="2" data-cmp-info="10">			</div>
+
+	<div class="clearBoth"></div>
+
+</div>
+
+			<div id="templateNavSubBarWrapper">
+			<div id="templateNavSubBarLeft">&lt;</div>
+			<div id="templateNavSubBarRight">&gt;</div>
+			<ul id="templateNavSubBar">
+									<li>
+						<a href="https://www.abeille-olivetaine.fr/page/2626976-accueil">
+							Accueil						</a>
+					</li>
+									<li>
+						<a href="https://www.abeille-olivetaine.fr/page/2626954-qui-sommes-nous">
+							Qui sommes-nous						</a>
+					</li>
+									<li>
+						<a href="https://www.abeille-olivetaine.fr/page/3009331-un-rucher-ecole">
+							Un Rucher Ecole						</a>
+					</li>
+									<li class="active">
+						<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda">
+							Agenda						</a>
+					</li>
+									<li>
+						<a href="https://www.abeille-olivetaine.fr/page/2638326-liens-utiles">
+							Liens utiles						</a>
+					</li>
+							</ul>
+		</div>
+	
+<!-- Header top -->
+
+<!-- Navigation et réseaux sociaux -->
+
+<!-- Container obligatoire afin de passer le menu et son sous-menu en position absolute avec le thème transparent -->
+<div id="templateNavContainer">
+
+	<div id="templateNavWrapper">
+
+		<!-- Éditable et hover -->
+		<div id="templateNavWrapperHover" class="templateHover"></div>
+		<div id="templateNavWrapperEditable" class="templateEditable templateEditableNav">
+			<div class="displayTable height100 width100">
+				<div class="displayTableCell valignMiddle">
+					<p class="displayInlineBlock">Ajoutez un logo, un bouton, des réseaux sociaux</p>
+					<div class="templateEditableButton">Cliquez pour éditer</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- Réseaux sociaux -->
+		<div id="templateNavSocialWrapper">
+			                			                			                			                			                			                					</div>
+
+		<!-- Navigation -->
+		<nav id="templateNav">
+						<ul id="navVendorWrapper">
+				<!-- Nom & logo de l'organisation -->
+                				<li id="navVendorPicture">
+					<div class="displayTable height100"><!-- displayTable = fix #8392 -->
+						<a class="displayTableCell width100 valignMiddle" href="https://www.abeille-olivetaine.fr/">
+							<img src="./Agenda _ L&#39;Abeille Olivetaine_files/logo 2017_blanc.small.jpg" alt="L&#39;Abeille Olivetaine" data-cmp-ab="2" data-cmp-info="10">
+						</a>
+					</div>
+				</li>
+			</ul>
+			<ul>
+                                                                                                                        <li data-templatesubnav="3011161" class="
+                                                                                    templateNavResponsiveToggleChildren
+                                                                                                                            active
+                                                                            ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/2626976-accueil" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Accueil                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                                                                                    <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2626976-accueil">
+                                                        Accueil                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2626954-qui-sommes-nous">
+                                                        Qui sommes-nous                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/3009331-un-rucher-ecole">
+                                                        Un Rucher Ecole                                                    </a>
+                                                </li>
+                                                                                            <li class="active">
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2641155-agenda">
+                                                        Agenda                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2638326-liens-utiles">
+                                                        Liens utiles                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="2640941" class="
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/2954583-formulaires-d-adhesions" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Adhésion                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                            </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="3081328" class="
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/3081329-news" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Les News                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                            </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="2638127" class="
+                                                                                    templateNavResponsiveToggleChildren
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/2929293-saison-2020-et-avant" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Photos                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                                                                                    <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2929293-saison-2020-et-avant">
+                                                        Saison 2020 et avant                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2929291-saison-2021">
+                                                        Saison 2021                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2928815-saison-2022">
+                                                        Saison 2022                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2638126-saison-2023">
+                                                        Saison 2023                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2638128-saison-2024">
+                                                        Saison 2024                                                    </a>
+                                                </li>
+                                                                                            <li>
+                                                    <a href="https://www.abeille-olivetaine.fr/page/2928824-saison-2025">
+                                                        Saison 2025                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="2703415" class="
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/2703727-vers-les-videos" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Vidéos                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                            </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="3556970" class="
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/3556972-recettes-faites-avec-des-produits-de-la-ruche" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Recettes                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                            </ul>
+                                </li>
+                                                                                                                <li data-templatesubnav="2906517" class="
+                                                                                                                    ">
+                                    <a href="https://www.abeille-olivetaine.fr/page/2929295-blog-de-l-abeille-olivetaine" class="displayTable height100">
+                                        <div class="displayTableCell valignMiddle">
+                                                                                    </div>
+                                        <div class="displayTableCell valignMiddle">
+                                            Blog                                            <span class="arrowTop">▴</span><span class="arrowDown">▾</span>
+                                        </div>
+                                    </a>
+                                    <ul>
+                                                                            </ul>
+                                </li>
+                                                                                        				<!-- Mon compte -->
+								<!-- Panier -->
+								<!-- Boutons -->
+				<li id="templateNavButton1Container" class="hideHover displayNone">
+																					<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda" class="height100 displayTable">
+						<!-- displayTableCell valignMiddle dans une div wrapper pour fix #6921 -->
+						<div class="displayTableCell valignMiddle">
+							
+            <div id="templateNavButton1Button" class="
+                    button
+                    textAlignCenter
+                    buttonBlue
+                    buttonLarge
+                    
+                    valignMiddle
+                "><span class="valignInitial"></span></div>						</div>
+					</a>
+				</li>
+				<li id="templateNavButton2Container" class="hideHover displayNone">
+																					<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda" class="height100 displayTable">
+						<!-- displayTableCell valignMiddle dans une div wrapper pour fix #6921 -->
+						<div class="displayTableCell valignMiddle">
+							
+            <div id="templateNavButton2Button" class="
+                    button
+                    textAlignCenter
+                    buttonBlue
+                    buttonLarge
+                    
+                    valignMiddle
+                "><span class="valignInitial"></span></div>						</div>
+					</a>
+				</li>
+				<!-- Connexion -->
+				<li id="templateNavButtonLoginContainer" class="hideHover ">
+					<a href="https://www.abeille-olivetaine.fr/contacts/login?redirect=%2Fpage%2F2641155-agenda" class="height100 displayTable">
+						<!-- displayTableCell valignMiddle dans une div wrapper pour fix #6921 et #7665 -->
+						<div class="displayTableCell valignMiddle">
+							
+            <div id="templateNavButtonLoginButton" class="
+                    button
+                    textAlignCenter
+                    buttonBlue
+                    buttonLarge
+                    
+                    valignMiddle
+                "><span class="valignInitial">Se connecter</span></div>						</div>
+					</a>
+				</li>
+			</ul>
+		</nav>
+
+	</div>
+
+	<div id="templateSubNavWrapper">
+
+		<div id="templateSubNav">
+												<ul data-templatesubnav="3011161" style="display: block;">
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2626976-accueil">
+									Accueil								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2626954-qui-sommes-nous">
+									Qui sommes-nous								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/3009331-un-rucher-ecole">
+									Un Rucher Ecole								</a>
+							</li>
+													<li class="active">
+								<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda">
+									Agenda								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2638326-liens-utiles">
+									Liens utiles								</a>
+							</li>
+											</ul>
+																														<ul data-templatesubnav="2638127">
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2929293-saison-2020-et-avant">
+									Saison 2020 et avant								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2929291-saison-2021">
+									Saison 2021								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2928815-saison-2022">
+									Saison 2022								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2638126-saison-2023">
+									Saison 2023								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2638128-saison-2024">
+									Saison 2024								</a>
+							</li>
+													<li>
+								<a href="https://www.abeille-olivetaine.fr/page/2928824-saison-2025">
+									Saison 2025								</a>
+							</li>
+											</ul>
+																															
+		</div>
+
+	</div>
+
+</div>
+
+<!-- Header bottom (importe également le header en mode édition si header none mais le cache avec un if dans le fichier inc.DESKTOP.public.header.php) -->
+
+<!-- Page -->
+<article id="templatePageWrapper" class="layout-md">
+	<div id="templatePage" style="min-height:379.20799999999997px">
+		<!-- #templateIframe permet de mesurer la hauteur de la page pour afficher le site dans une iframe -->
+		<div id="templateIframe">
+			<!-- Tabulations -->
+    <!-- Affiche les onglets pour les organisation dépendantes -->
+    
+    <!-- Importe les tabulations, sauf pour le layout admin qui les importes dans son layout afin d'afficher le titre des pages dans le menu mobile -->
+                
+    <!-- Tabulations en mode Fil d'Ariane -->
+            <!-- Une tabulation, juste le titre s'affiche -->
+                    <div class="templatePageHeader" data-id="component_Header">
+                <div>
+                    <div id="templateTitle" class="templatePageHeaderPart">
+                                                                        <span class="displayInlineBlock valignMiddle"></span>
+                                            </div>
+                                    </div>
+            </div>
+            <div id="templateTabulationWrapper">
+                <div>
+                    <div id="templateTabulation">
+                        
+                        
+                                                                            <a id="tab_page-accueil" href="https://www.abeille-olivetaine.fr/page/2626976-accueil" class="">
+                                Accueil                            </a>
+                                                                                <a id="tab_page-qui-sommes-nous" href="https://www.abeille-olivetaine.fr/page/2626954-qui-sommes-nous" class="">
+                                Qui sommes-nous                            </a>
+                                                                                <a id="tab_page-un-rucher-ecole" href="https://www.abeille-olivetaine.fr/page/3009331-un-rucher-ecole" class="">
+                                Un Rucher Ecole                            </a>
+                                                                                <a id="tab_page-agenda" href="https://www.abeille-olivetaine.fr/page/2641155-agenda" class="active">
+                                Agenda                            </a>
+                                                                                <a id="tab_page-liens-utiles" href="https://www.abeille-olivetaine.fr/page/2638326-liens-utiles" class="">
+                                Liens utiles                            </a>
+                                                                        </div>
+                </div>
+            </div>
+                <!-- Titre uniquement -->
+        <!-- Titre uniquement -->
+<!-- Empêche un bug d'affichage du menu admin (https://github.com/sylfabre/buypacker-dev/issues/6376) -->
+<div class="clearBoth"></div>
+<!-- Template -->
+<div class="templatePageWrapper layout-md">
+        <div class="templatePageContent ">
+                    <div class="templatePageContentHeader">
+                            </div>
+                
+
+
+
+
+<!-- Configurer -->
+
+<div class="row">
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+		<div id="agendaWrapper">
+			<div id="agendaList" class="agenda">
+				<h1 class="agendaDate">Lundi </h1>
+				<h1 class="agendaDate">4 mai 2026 </h1>
+								<h3 class="colorBodyOrWhite">Aujourd'hui</h3>
+<ul>
+	        Il n'y a pas d'événement dans la journée	</ul>
+<h3 class="colorBodyOrWhite">À venir dans le mois</h3>
+<ul>
+						<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="340878">
+					Journée des CM2 animations développement durable et environnement, ile Charlemagne, Arzagot				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="398473">
+					Saint Jean le Blanc				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#223f93"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="381706">
+					Animation Dolines de Limère				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="411050">
+					Animation avec les mariniers à la Capitainerie, bord de Loire				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#223f93"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="381711">
+					Animation Courtils de Mauves Meung sur Loire				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="397405">
+					Animation ECOlivetaine aux Martin eys				</a>
+			</li>
+			</ul>
+<h3 class="colorBodyOrWhite">À venir le mois prochain</h3>
+<ul>
+						<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="397336">
+					Caisse d'Epargne, 18 bénévoles				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="397388">
+					Marché producteur Saint Pryvé				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#223f93"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="377323">
+					Conférence Bonmatin				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#008b4f"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="390070">
+					GDS 45 distribution APIVAR, ....à MDA				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="401078">
+					Festiv'Assos La Source				</a>
+			</li>
+					<li>
+				<div class="eventColor colorBodyOrWhite radioAlt" style="background-color:#663399"></div>
+				<a href="https://www.abeille-olivetaine.fr/page/2641155-agenda#" class="agendaListEvent colorBodyOrWhite" data-id="390675">
+					Animation Saint Denis en Val				</a>
+			</li>
+			</ul>
+
+			</div>
+			<div id="agendaEvent" class="agenda">
+				<div id="agendaEventReturn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24px" height="24px">
+  <path d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm189.1 129.9L123.7 264.5c-4.7-4.7-4.7-12.3 0-17l121.4-121.4c4.7-4.7 12.3-4.7 17 0l19.6 19.6c4.8 4.8 4.7 12.5-.2 17.2L211.2 230H372c6.6 0 12 5.4 12 12v28c0 6.6-5.4 12-12 12H211.2l70.3 67.1c4.9 4.7 5 12.4.2 17.2l-19.6 19.6c-4.7 4.7-12.3 4.7-17 0z"></path>
+</svg>
+					<div>Les autres événements</div>
+				</div>
+				<h1 id="agendaEventName" style="text-align: left"></h1>
+				<p id="agendaEventDate"></p>
+				<p id="agendaEventDescription"></p>
+				<p id="agendaEventAddress"></p>
+				<div id="agendaEventButtonWrapper">
+					
+            <div id="agendaEventButton" class="
+                    button
+                    textAlignCenter
+                    buttonBlue
+                    buttonLarge
+                    
+                    valignMiddle
+                "><span class="valignInitial"></span></div>				</div>
+			</div>
+		</div>
+	</div>
+	<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+		<div id="calendar" class="fc fc-unthemed fc-ltr"><div class="fc-toolbar fc-header-toolbar"><div class="fc-left"><div class="fc-button-group"><button type="button" class="fc-prev-button fc-button fc-state-default fc-corner-left" aria-label="prev"><span class="fc-icon fc-icon-left-single-arrow"></span></button><button type="button" class="fc-next-button fc-button fc-state-default fc-corner-right" aria-label="next"><span class="fc-icon fc-icon-right-single-arrow"></span></button></div><button type="button" class="fc-today-button fc-button fc-state-default fc-corner-left fc-corner-right fc-state-disabled" disabled="">Aujourd'hui</button></div><div class="fc-right"><div class="fc-button-group"><button type="button" class="fc-month-button fc-button fc-state-default fc-corner-left fc-state-active">Mois</button><button type="button" class="fc-agendaWeek-button fc-button fc-state-default">Semaine</button><button type="button" class="fc-agendaDay-button fc-button fc-state-default fc-corner-right">Jour</button></div></div><div class="fc-center"><h2>mai 2026</h2></div><div class="fc-clear"></div></div><div class="fc-view-container" style=""><div class="fc-view fc-month-view fc-basic-view" style=""><table class=""><thead class="fc-head"><tr><td class="fc-head-container fc-widget-header"><div class="fc-row fc-widget-header"><table class=""><thead><tr><th class="fc-day-header fc-widget-header fc-mon"><span>lun.</span></th><th class="fc-day-header fc-widget-header fc-tue"><span>mar.</span></th><th class="fc-day-header fc-widget-header fc-wed"><span>mer.</span></th><th class="fc-day-header fc-widget-header fc-thu"><span>jeu.</span></th><th class="fc-day-header fc-widget-header fc-fri"><span>ven.</span></th><th class="fc-day-header fc-widget-header fc-sat"><span>sam.</span></th><th class="fc-day-header fc-widget-header fc-sun"><span>dim.</span></th></tr></thead></table></div></td></tr></thead><tbody class="fc-body"><tr><td class="fc-widget-content"><div class="fc-scroller fc-day-grid-container" style="overflow: hidden; height: 517.802px;"><div class="fc-day-grid fc-unselectable"><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 86px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-other-month fc-past" data-date="2026-04-27"></td><td class="fc-day fc-widget-content fc-tue fc-other-month fc-past" data-date="2026-04-28"></td><td class="fc-day fc-widget-content fc-wed fc-other-month fc-past" data-date="2026-04-29"></td><td class="fc-day fc-widget-content fc-thu fc-other-month fc-past" data-date="2026-04-30"></td><td class="fc-day fc-widget-content fc-fri fc-past" data-date="2026-05-01"></td><td class="fc-day fc-widget-content fc-sat fc-past" data-date="2026-05-02"></td><td class="fc-day fc-widget-content fc-sun fc-past" data-date="2026-05-03"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-other-month fc-past" data-date="2026-04-27"><span class="fc-day-number">27</span></td><td class="fc-day-top fc-tue fc-other-month fc-past" data-date="2026-04-28"><span class="fc-day-number">28</span></td><td class="fc-day-top fc-wed fc-other-month fc-past" data-date="2026-04-29"><span class="fc-day-number">29</span></td><td class="fc-day-top fc-thu fc-other-month fc-past" data-date="2026-04-30"><span class="fc-day-number">30</span></td><td class="fc-day-top fc-fri fc-past" data-date="2026-05-01"><span class="fc-day-number">1</span></td><td class="fc-day-top fc-sat fc-past" data-date="2026-05-02"><span class="fc-day-number">2</span></td><td class="fc-day-top fc-sun fc-past" data-date="2026-05-03"><span class="fc-day-number">3</span></td></tr></thead><tbody><tr><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td class="fc-event-container" rowspan="2"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#223f93"><div class="fc-content"><span class="fc-time">10:00 - 15:58</span> <span class="fc-title">Bistrot AO repas partagé</span></div></a></td><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#223f93"><div class="fc-content"><span class="fc-time">08:00 - 19:58</span> <span class="fc-title">Marché aux fleurs Martinets</span></div></a></td></tr><tr><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">08:30 - 17:59</span> <span class="fc-title">Vide Jardin Saint Jean le Blanc</span></div></a></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 86px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-today " data-date="2026-05-04"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-05-05"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-05-06"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-05-07"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-05-08"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-05-09"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-05-10"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-today " data-date="2026-05-04"><span class="fc-day-number">4</span></td><td class="fc-day-top fc-tue fc-future" data-date="2026-05-05"><span class="fc-day-number">5</span></td><td class="fc-day-top fc-wed fc-future" data-date="2026-05-06"><span class="fc-day-number">6</span></td><td class="fc-day-top fc-thu fc-future" data-date="2026-05-07"><span class="fc-day-number">7</span></td><td class="fc-day-top fc-fri fc-future" data-date="2026-05-08"><span class="fc-day-number">8</span></td><td class="fc-day-top fc-sat fc-future" data-date="2026-05-09"><span class="fc-day-number">9</span></td><td class="fc-day-top fc-sun fc-future" data-date="2026-05-10"><span class="fc-day-number">10</span></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 86px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-05-11"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-05-12"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-05-13"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-05-14"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-05-15"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-05-16"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-05-17"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-future" data-date="2026-05-11"><span class="fc-day-number">11</span></td><td class="fc-day-top fc-tue fc-future" data-date="2026-05-12"><span class="fc-day-number">12</span></td><td class="fc-day-top fc-wed fc-future" data-date="2026-05-13"><span class="fc-day-number">13</span></td><td class="fc-day-top fc-thu fc-future" data-date="2026-05-14"><span class="fc-day-number">14</span></td><td class="fc-day-top fc-fri fc-future" data-date="2026-05-15"><span class="fc-day-number">15</span></td><td class="fc-day-top fc-sat fc-future" data-date="2026-05-16"><span class="fc-day-number">16</span></td><td class="fc-day-top fc-sun fc-future" data-date="2026-05-17"><span class="fc-day-number">17</span></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 86px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-05-18"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-05-19"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-05-20"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-05-21"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-05-22"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-05-23"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-05-24"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-future" data-date="2026-05-18"><span class="fc-day-number">18</span></td><td class="fc-day-top fc-tue fc-future" data-date="2026-05-19"><span class="fc-day-number">19</span></td><td class="fc-day-top fc-wed fc-future" data-date="2026-05-20"><span class="fc-day-number">20</span></td><td class="fc-day-top fc-thu fc-future" data-date="2026-05-21"><span class="fc-day-number">21</span></td><td class="fc-day-top fc-fri fc-future" data-date="2026-05-22"><span class="fc-day-number">22</span></td><td class="fc-day-top fc-sat fc-future" data-date="2026-05-23"><span class="fc-day-number">23</span></td><td class="fc-day-top fc-sun fc-future" data-date="2026-05-24"><span class="fc-day-number">24</span></td></tr></thead><tbody><tr><td rowspan="2"></td><td rowspan="2"></td><td rowspan="2"></td><td class="fc-event-container" rowspan="2"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">08:00 - 15:59</span> <span class="fc-title">Journée des CM2 animations développement durable et environnement, ile Charlemagne, Arzagot</span></div></a></td><td rowspan="2"></td><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">09:00 - 15:58</span> <span class="fc-title">Saint Jean le Blanc</span></div></a></td><td class="fc-event-container" rowspan="2"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">10:00 - 19:58</span> <span class="fc-title">Animation avec les mariniers à la Capitainerie, bord de Loire</span></div></a></td></tr><tr><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#223f93"><div class="fc-content"><span class="fc-time">15:00 - 17:29</span> <span class="fc-title">Animation Dolines de Limère</span></div></a></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 86px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-future" data-date="2026-05-25"></td><td class="fc-day fc-widget-content fc-tue fc-future" data-date="2026-05-26"></td><td class="fc-day fc-widget-content fc-wed fc-future" data-date="2026-05-27"></td><td class="fc-day fc-widget-content fc-thu fc-future" data-date="2026-05-28"></td><td class="fc-day fc-widget-content fc-fri fc-future" data-date="2026-05-29"></td><td class="fc-day fc-widget-content fc-sat fc-future" data-date="2026-05-30"></td><td class="fc-day fc-widget-content fc-sun fc-future" data-date="2026-05-31"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-future" data-date="2026-05-25"><span class="fc-day-number">25</span></td><td class="fc-day-top fc-tue fc-future" data-date="2026-05-26"><span class="fc-day-number">26</span></td><td class="fc-day-top fc-wed fc-future" data-date="2026-05-27"><span class="fc-day-number">27</span></td><td class="fc-day-top fc-thu fc-future" data-date="2026-05-28"><span class="fc-day-number">28</span></td><td class="fc-day-top fc-fri fc-future" data-date="2026-05-29"><span class="fc-day-number">29</span></td><td class="fc-day-top fc-sat fc-future" data-date="2026-05-30"><span class="fc-day-number">30</span></td><td class="fc-day-top fc-sun fc-future" data-date="2026-05-31"><span class="fc-day-number">31</span></td></tr></thead><tbody><tr><td></td><td></td><td></td><td></td><td></td><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#223f93"><div class="fc-content"><span class="fc-time">15:00 - 17:29</span> <span class="fc-title">Animation Courtils de Mauves Meung sur Loire</span></div></a></td><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">08:30 - 17:59</span> <span class="fc-title">Animation ECOlivetaine aux Martin eys</span></div></a></td></tr></tbody></table></div></div><div class="fc-row fc-week fc-widget-content fc-rigid" style="height: 87px;"><div class="fc-bg"><table class=""><tbody><tr><td class="fc-day fc-widget-content fc-mon fc-other-month fc-future" data-date="2026-06-01"></td><td class="fc-day fc-widget-content fc-tue fc-other-month fc-future" data-date="2026-06-02"></td><td class="fc-day fc-widget-content fc-wed fc-other-month fc-future" data-date="2026-06-03"></td><td class="fc-day fc-widget-content fc-thu fc-other-month fc-future" data-date="2026-06-04"></td><td class="fc-day fc-widget-content fc-fri fc-other-month fc-future" data-date="2026-06-05"></td><td class="fc-day fc-widget-content fc-sat fc-other-month fc-future" data-date="2026-06-06"></td><td class="fc-day fc-widget-content fc-sun fc-other-month fc-future" data-date="2026-06-07"></td></tr></tbody></table></div><div class="fc-content-skeleton"><table><thead><tr><td class="fc-day-top fc-mon fc-other-month fc-future" data-date="2026-06-01"><span class="fc-day-number">1</span></td><td class="fc-day-top fc-tue fc-other-month fc-future" data-date="2026-06-02"><span class="fc-day-number">2</span></td><td class="fc-day-top fc-wed fc-other-month fc-future" data-date="2026-06-03"><span class="fc-day-number">3</span></td><td class="fc-day-top fc-thu fc-other-month fc-future" data-date="2026-06-04"><span class="fc-day-number">4</span></td><td class="fc-day-top fc-fri fc-other-month fc-future" data-date="2026-06-05"><span class="fc-day-number">5</span></td><td class="fc-day-top fc-sat fc-other-month fc-future" data-date="2026-06-06"><span class="fc-day-number">6</span></td><td class="fc-day-top fc-sun fc-other-month fc-future" data-date="2026-06-07"><span class="fc-day-number">7</span></td></tr></thead><tbody><tr><td rowspan="3"></td><td rowspan="3"></td><td rowspan="3"></td><td rowspan="3"></td><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">08:30 - 17:29</span> <span class="fc-title">Caisse d'Epargne, 18 bénévoles</span></div></a></td><td rowspan="3"></td><td rowspan="3"></td></tr><tr><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#663399"><div class="fc-content"><span class="fc-time">09:00 - 17:58</span> <span class="fc-title">Marché producteur Saint Pryvé</span></div></a></td></tr><tr><td class="fc-event-container"><a class="fc-day-grid-event fc-h-event fc-event fc-start fc-end" style="background-color:#223f93"><div class="fc-content"><span class="fc-time">18:00 - 20:58</span> <span class="fc-title">Conférence Bonmatin</span></div></a></td></tr></tbody></table></div></div></div></div></td></tr></tbody></table></div></div></div>
+	</div>
+</div>    </div>
+</div>
+		</div>
+	</div>
+</article>
+
+<!-- Footer -->
+<footer id="templateFooterWrapper" style="display: block;">
+	            <div id="templateFooter">
+                        <div id="templateFooterBlockContainer">
+                <div class="row">
+                    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
+                        <div id="templateFooterBlockWrapper" class="row">
+                            <!-- Liste des pages de l'organisation principal -->
+                                                    </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <form id="templateFooterNewsletterForm" method="POST" class="newsletterRegister"><input type="hidden" name="_form" value="templateFooterNewsletter"><input type="hidden" name="_origin" value="/page/2641155-agenda"><input type="hidden" name="_formMulti" value="69f8a20101611|b3f5aa14d405ca310efb1442b571ec0117723d78"><script nonce="" data-cmp-info="13" data-cmp-ab="1">
+            $("#templateFooterNewsletterForm").on("submit", function(){
+                var _this = $(this);
+                var renable = true;
+                if(_this.data("multi-submit-protection")){
+                    return false;
+                }
+                else{
+                    // Blocage à la prochaine soumission
+                    _this.data("multi-submit-protection", true);
+                    // Blocage & chargement sur les boutons
+                    _this.find("button[type='submit']").each(function(){
+                        var text = $(this).text();
+                        var buttonDOM = $(this);
+                        var buttonInterval;
+                        buttonDOM
+                            .addClass("disabled")
+                            .prop("disabled", true)
+                            .css("width", buttonDOM.outerWidth() + "px")
+                            .text(".")
+                            .inDOM(function() {
+                                // Il ne faut pas utiliser de gif car Safari est incompatible (fix #12514)
+                                buttonInterval = setInterval(function() {
+                                    if(buttonDOM.text().length === 3) {
+                                        buttonDOM.text(".");
+                                    }
+                                    else {
+                                        buttonDOM.text(buttonDOM.text() + ".");
+                                    }
+                                }, 300);
+                            });
+                        // Déblocage au bout de 1 seconde
+                        if(renable){
+                            window.setTimeout(function(){
+                                clearInterval(buttonInterval);
+                                buttonDOM
+                                    .prop("disabled", false)
+                                    .removeClass("disabled")
+                                    .removeAttr("style")
+                                    .text(text);
+                            }, 1000);
+                        }
+                    });
+                    // Déblocage au bout de 1 seconde
+                    if(renable){
+                        window.setTimeout(function(){
+                            _this.data("multi-submit-protection", false);
+                        }, 1000);
+                    }
+                    // Retour
+                    return true;
+                }
+            });
+        </script>                            <div class="row colsMiddle">
+                                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                    <div class="mailInputWrapper isSecondaryWrapper"><div class="notice fontBold" id="templateFooterBlocNewsletterEmailNotice"></div>
+                <label id="templateFooterBlocNewsletterEmailLabel" for="templateFooterBlocNewsletterEmail">
+                Je m'abonne à la newsletter
+                
+                
+                </label>
+                <input type="email" data-typo-check="true" name="templateFooterBlocNewsletterEmail" class="" value="" placeholder="Renseignez votre email" autocomplete="email" id="templateFooterBlocNewsletterEmail">
+                
+                <div class="clearBoth"></div>
+            </div>
+            <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                $("#templateFooterBlocNewsletterEmail").on("change", function() {
+                    _spark.form.mail.check("templateFooterBlocNewsletterEmail");
+                });
+            </script>
+                                        </div>
+                                <div class="col-lg-2 col-md-2 col-sm-3 col-xs-12 valignBottom">
+                                    
+            <button type="submit" id="templateFooterBlocNewsletterSubmit" class="
+                    button
+                    buttonOrange
+                    textAlignCenter
+                    buttonLarge
+                    
+                    
+                ">
+                
+                <span class="valignInitial">OK</span>
+            </button>
+                                        </div>
+                            </div>
+                        </form>
+                <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                    $("#templateFooterNewsletterForm")
+                        // Init
+                        .data("dirty", 0)
+                        // Form submit is possible
+                        .on("submit", function(){
+                            window.onbeforeunload = null;
+                        })
+                        // On change
+                        .find("input, textarea").on("change", function(){
+                            if(document.readyState === "complete"){
+                                $("#templateFooterNewsletterForm").data().dirty++;
+                            }
+                        });
+                    // Ajout
+                    _spark.dirty.push(function(){
+                        return $("#templateFooterNewsletterForm").data("dirty") > 0;
+                    });
+                </script>
+            
+                <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+                    _spark.form.mail.initMailGroup("templateFooterNewsletter");
+                </script>
+                                        <div id="templateFooterSocialWrapper">
+                                                                                                                                                                                                                                                                                                                                                                                                                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    	<div id="templateFooterInformation">
+		<ul>
+			<!-- Plan du site -->
+			<li>
+				<a href="https://www.abeille-olivetaine.fr/infos/plan/436781">Plan du site</a>
+			</li>
+
+			<!-- Licences -->
+			<li>
+				<a href="https://www.abeille-olivetaine.fr/infos/licenses">Licences</a>
+			</li>
+
+			<!-- CGU -->
+							<li>
+					<a href="https://www.abeille-olivetaine.fr/infos/legal-notice">Mentions légales</a>
+				</li>
+							<li>
+					<a href="https://www.abeille-olivetaine.fr/infos/tos">CGUV</a>
+				</li>
+			
+			<!-- CGU -->
+			<li>
+				<a id="configureCookies" href="https://www.abeille-olivetaine.fr/page/2641155-agenda#">Paramétrer vos cookies</a>
+			</li>
+
+			<!-- Connexion/déconnexion et mon compte -->
+							<li>
+					
+                <a id="templateNavButtonLoginButtonLink" href="https://www.abeille-olivetaine.fr/contacts/login?redirect=%2Fpage%2F2641155-agenda" class="" target="" rel="noopener">
+            <div id="templateNavButtonLoginButton" class="
+                    button
+                    textAlignCenter
+                    buttonBlue
+                    buttonLarge
+                    valignMiddle margin0
+                    valignMiddle
+                "><span class="valignInitial">Se connecter</span></div></a>
+            				</li>
+					</ul>
+					<ul>
+				<li class="paddingTop0">
+                                                                <a href="https://www.assoconnect.com/associations/logiciel-association-environnement/" target="_blank">
+                            Propulsé par AssoConnect, le logiciel des associations Environnementales                        </a>
+                    				</li>
+			</ul>
+			</div>
+	</footer>
+
+<!-- Footer - Global -->
+		</div>
+		
+		<!-- JS -->
+		    <script nonce="" data-cmp-info="13" data-cmp-ab="1">
+        
+window.translations = Object.assign({"template.text.participate":"Je participe"}, window.translations);
+
+/**
+ * Événements indexés par ID (pour la liste du jour)
+ */
+var events = {};
+events[340878] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1779371998,"id":340878,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1779343200,"street1":"","street2":"","title":"Journ\u00e9e des CM2 animations d\u00e9veloppement durable et environnement, ile Charlemagne, Arzagot","type":"event","vendorIds":[]};
+events[398473] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1779544738,"id":398473,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1779519600,"street1":"","street2":"","title":"Saint Jean le Blanc","type":"event","vendorIds":[]};
+events[381706] = {"address":"","allDay":false,"backgroundColor":"#223f93","buttonText":"","buttonUrl":"","city":"","color":1,"country":"","description":"","end":1779550199,"id":381706,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1779541200,"street1":"","street2":"","title":"Animation Dolines de Lim\u00e8re","type":"event","vendorIds":[]};
+events[411050] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1779645539,"id":411050,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1779609600,"street1":"","street2":"","title":"Animation avec les mariniers \u00e0 la Capitainerie, bord de Loire","type":"event","vendorIds":[]};
+events[381711] = {"address":"","allDay":false,"backgroundColor":"#223f93","buttonText":"","buttonUrl":"","city":"","color":1,"country":"","description":"","end":1780154999,"id":381711,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1780146000,"street1":"","street2":"","title":"Animation Courtils de Mauves Meung sur Loire","type":"event","vendorIds":[]};
+events[397405] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1780243199,"id":397405,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1780209000,"street1":"","street2":"","title":"Animation ECOlivetaine aux Martin eys","type":"event","vendorIds":[]};
+events[397336] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1780673396,"id":397336,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1780641000,"street1":"","street2":"","title":"Caisse d'Epargne, 18 b\u00e9n\u00e9voles","type":"event","vendorIds":[]};
+events[397388] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1780675138,"id":397388,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1780642800,"street1":"","street2":"","title":"March\u00e9 producteur Saint Pryv\u00e9","type":"event","vendorIds":[]};
+events[377323] = {"address":"","allDay":false,"backgroundColor":"#223f93","buttonText":"","buttonUrl":"","city":"","color":1,"country":"","description":"","end":1780685939,"id":377323,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1780675200,"street1":"","street2":"","title":"Conf\u00e9rence Bonmatin","type":"event","vendorIds":[]};
+events[390070] = {"address":"313 Rue de Lorette 45160 OLIVET France","allDay":false,"backgroundColor":"#008b4f","buttonText":"","buttonUrl":"","city":"Olivet","color":5,"country":"FR","description":"","end":1781107139,"id":390070,"latitude":47.851098,"location":"","longitude":1.920853,"postal":"45160","privacy":0,"start":1781096400,"street1":"313 Rue de Lorette","street2":"","title":"GDS 45 distribution APIVAR, ....\u00e0 MDA","type":"event","vendorIds":[]};
+events[401078] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1781366399,"id":401078,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1781276400,"street1":"","street2":"","title":"Festiv'Assos La Source","type":"event","vendorIds":[]};
+events[390675] = {"address":"","allDay":false,"backgroundColor":"#663399","buttonText":"","buttonUrl":"","city":"","color":3,"country":"","description":"","end":1781355539,"id":390675,"latitude":null,"location":"","longitude":null,"postal":"","privacy":0,"start":1781330400,"street1":"","street2":"","title":"Animation Saint Denis en Val","type":"event","vendorIds":[]};
+events[390071] = {"address":"","allDay":false,"backgroundColor":"#008b4f","buttonText":"","buttonUrl":"","city":"","color":5,"country":"","description":"","end":1782917399,"id":390071,"latitude":null,"location":"141 all\u00e9e Marcel  Lerouge 45770 Saran","longitude":null,"postal":"","privacy":0,"start":1782889200,"street1":"","street2":"","title":"Portes ouvertes GDS 45","type":"event","vendorIds":[]};
+
+/**
+ * Affiche l'aperçu de l'événement
+ */
+function agendaEvent(eventData) {
+    $("#agendaList").fadeOut(function () {
+        $("#agendaEvent").fadeIn();
+    });
+
+    // Informations
+    $("#agendaEventName").text(eventData.title || "");
+    $("#agendaEventDescription").xss(eventData.description || "");
+    $("#agendaEventAddress").text(eventData.address || "");
+
+    // start/end peuvent être des timestamps (secondes)
+    var startValue = eventData.start;
+    if ($.isNumeric(startValue)) {
+        startValue = new Date(startValue * 1000);
+    }
+
+    var endValue = eventData.end;
+    if (endValue === null) {
+        endValue = startValue;
+    } else if ($.isNumeric(endValue)) {
+        endValue = new Date(endValue * 1000);
+    }
+
+    var startTimestamp = new Date(startValue).getTime();
+
+    if (eventData.type === "birthday") {
+        $("#agendaEventDate").text(window.transDate(startTimestamp));
+    } else if (eventData.allDay) {
+        $("#agendaEventDate").text(
+            window.transDateFromYMD(eventData.startAbsoluteDate) + " - " +
+            window.transDateFromYMD(eventData.endAbsoluteDate)
+        );
+    } else {
+        var endTimestamp = new Date(endValue).getTime();
+        $("#agendaEventDate").text(
+            window.transDateTime(startTimestamp) + " - " + window.transDateTime(endTimestamp)
+        );
+    }
+
+    // Bouton d'action
+    if (eventData.type === "deal") {
+        if (new Date(endValue).getTime() > new Date().getTime()) {
+            $("#agendaEventButtonWrapper").show();
+            $("#agendaEventButton")
+                .text(window.trans("template.text.participate"))
+                .off("click")
+                .on("click", function () {
+                    window.open(eventData.dealUrl);
+                });
+        } else {
+            $("#agendaEventButtonWrapper").hide();
+        }
+    } else if (eventData.buttonText && eventData.buttonUrl) {
+        $("#agendaEventButtonWrapper").show();
+        $("#agendaEventButton")
+            .text(eventData.buttonText)
+            .off("click")
+            .on("click", function () {
+                window.open(eventData.buttonUrl);
+            });
+    } else {
+        $("#agendaEventButtonWrapper").hide();
+    }
+}
+
+/**
+ * Sélection de la vue semaine (fallback DayGrid si FC < 3.10.2)
+ */
+function pickWeekView() {
+    var versionString = ($.fullCalendar && $.fullCalendar.version) ? $.fullCalendar.version : "0.0.0";
+
+    function versionToNumber(semver) {
+        var parts = String(semver).split(".");
+        var major = parseInt(parts[0] || 0, 10);
+        var minor = parseInt(parts[1] || 0, 10);
+        var patch = parseInt(parts[2] || 0, 10);
+        return (major * 10000) + (minor * 100) + patch;
+    }
+
+    var supportsAgendaWeek = versionToNumber(versionString) >= versionToNumber("3.10.2");
+    return supportsAgendaWeek ? "agendaWeek" : "basicWeek";
+}
+
+/**
+ * Calendrier
+ */
+$("#calendar").fullCalendar({
+    eventSources: [{
+        url: "/page/ressources/agenda-events",
+        type: "POST",
+        data: {
+            id: 436781            , pageId: 2641155        }
+    }],
+
+    locale: _spark.misc.getShortLocale("fr_FR", [
+        "en-au",
+        "en-ca",
+        "en-gb",
+        "en-ie",
+        "en-nz",
+        "en-do",
+        "en-us",
+        "fr-ca",
+        "fr-ch"
+    ], true),
+
+    header: {
+        left: "prev,next today",
+        center: "title",
+        right: "month," + pickWeekView() + ",agendaDay"
+    },
+
+    timezone: "local",
+    displayEventEnd: true,
+    nextDayThreshold: "00:00:00",
+    timeFormat: (typeof I18N_LOCALE !== "undefined" && I18N_LOCALE === "fr-FR") ? "HH:mm" : "hh(:mm) A",
+    eventLimit: true,
+
+    // Aperçu d'un événement
+    eventClick: agendaEvent,
+
+    /**
+     * Normalisation côté front (évite les segments invalides en vue Semaine)
+     * - allDay : "YYYY-MM-DD" + end EXCLUSIF (si fin inclusive fournie)
+     * - timed  : jamais de date "nue" (ajout d'une heure si besoin), " " -> "T"
+     * - end < start : supprime end (fin ouverte)
+     * - supprime les champs internes/piégeux (el/segment/range, color numérique)
+     * NB: retourner FALSE (pas null) pour ignorer un événement
+     */
+    eventDataTransform: function (eventData) {
+        if (!eventData || typeof eventData !== "object") {
+            return false;
+        }
+
+        // Titre en string
+        if (eventData.title == null) {
+            eventData.title = "";
+        }
+        if (typeof eventData.title !== "string") {
+            eventData.title = String(eventData.title);
+        }
+
+        // Champs à risque / internes
+        if (eventData.color && typeof eventData.color !== "string") {
+            delete eventData.color;
+        }
+        delete eventData.el;
+        delete eventData.segment;
+        delete eventData.range;
+
+        // Helpers
+        function isDateOnlyString(value) {
+            return (typeof value === "string") && /^\d{4}-\d{2}-\d{2}$/.test(value);
+        }
+
+        function toIsoDateTime(value) {
+            if (typeof value === "string" && value.indexOf(" ") > -1) {
+                return value.replace(" ", "T");
+            }
+            return value;
+        }
+
+        function addOneDayToYmd(ymd) {
+            var date = new Date(ymd + "T00:00:00Z");
+            date.setUTCDate(date.getUTCDate() + 1);
+            var year = date.getUTCFullYear();
+            var month = ("0" + (date.getUTCMonth() + 1)).slice(-2);
+            var day = ("0" + date.getUTCDate()).slice(-2);
+            return year + "-" + month + "-" + day;
+        }
+
+        // All-day : dates pures + end exclusif
+        if (eventData.allDay === true) {
+            var startYmd =
+                eventData.startAbsoluteDate ||
+                (typeof eventData.start === "string" ? eventData.start.slice(0, 10) : null);
+
+            if (!startYmd) {
+                return false;
+            }
+
+            var inclusiveEndYmd =
+                eventData.endAbsoluteDate ||
+                (typeof eventData.end === "string" ? eventData.end.slice(0, 10) : null);
+
+            if (inclusiveEndYmd) {
+                eventData.end = addOneDayToYmd(inclusiveEndYmd); // exclusif
+            } else {
+                eventData.end = null;
+            }
+
+            eventData.start = startYmd; // "YYYY-MM-DD"
+            return eventData;
+        }
+
+        // Timed : normaliser
+        if (typeof eventData.start === "string") {
+            eventData.start = toIsoDateTime(eventData.start);
+        }
+        if (typeof eventData.end === "string") {
+            eventData.end = toIsoDateTime(eventData.end);
+        }
+
+        if (isDateOnlyString(eventData.start)) {
+            eventData.start = eventData.start + "T00:00:00";
+        }
+        if (eventData.end && isDateOnlyString(eventData.end)) {
+            eventData.end = eventData.end + "T23:59:59";
+        }
+
+        var startMillis = Date.parse(eventData.start);
+        if (isNaN(startMillis)) {
+            return false;
+        }
+
+        if (eventData.end != null) {
+            var endMillis = Date.parse(eventData.end);
+            if (isNaN(endMillis) || endMillis < startMillis) {
+                eventData.end = null; // fin ouverte
+            }
+        }
+
+        return eventData;
+    }
+});
+
+/**
+ * Ferme l'aperçu de l'événement
+ */
+$("#agendaEventReturn").on("click", function () {
+    $("#agendaEvent").fadeOut(function () {
+        $("#agendaList").fadeIn();
+    });
+});
+
+/**
+ * Aperçu au clic sur un événement de l'agenda du jour
+ */
+$(".agendaListEvent").on("click", function () {
+    var eventId = $(this).data("id");
+    agendaEvent(events[eventId]);
+    return false;
+});
+
+    </script>
+<script nonce="" data-cmp-info="13" data-cmp-ab="1">
+    if(window.console && window.console.log){
+        // Affichage des notices non capturées
+            }
+</script>
+
+		
+					<script nonce="" src="./Agenda _ L&#39;Abeille Olivetaine_files/widget-loader.js.télécharger" data-teamblue-footer="" data-footer="hidden" data-cmp-info="13" data-cmp-ab="2"></script>
+			
+
+
+<div id="teamblue-widget-container"><iframe src="./Agenda _ L&#39;Abeille Olivetaine_files/index.html" loading="eager" fetchpriority="low" sandbox="allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-forms" allow="autoplay; fullscreen" referrerpolicy="no-referrer-when-downgrade" title="Team Blue Widget" aria-hidden="true" style="width: 100%; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; display: block; overflow: hidden; height: 0px;" data-cmp-ab="2" data-cmp-info="8"></iframe></div><iframe data-cmp-ab="2" aria-hidden="true" title="GPP Locator" name="__gppLocator" data-cmp-info="7" style="display: none;" src="./Agenda _ L&#39;Abeille Olivetaine_files/saved_resource.html"></iframe></body><div id="MAIA" style="position: fixed; z-index: 9999999; width: 100%;"><template shadowrootmode="open"><style>:host { all: initial; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }</style><div></div><style data-styled="active" data-styled-version="6.3.12"></style></template></div></html>
