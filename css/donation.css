@@ -1,0 +1,65 @@
+/* ============================================================
+   MISE EN PAGE PAGE DON (deal.html)
+   Styles spécifiques à la page de donation iframe.
+   ============================================================ */
+
+body {
+    background: #eff0f2;
+}
+
+body #layoutWrapper {
+    height: 100%;
+}
+
+#donationPicture {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100%;
+}
+
+@media screen and (max-width: 667px) {
+    #donationPicture {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+#donationPicture #donationInfoWrapper {
+    float: right;
+    display: table;
+    text-align: center;
+    height: 100%;
+    width: 360px;
+    background: #eff0f2;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo .money,
+#donationPicture #donationInfoWrapper #donationInfo .button {
+    margin: 12px 0;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo .buttonLighten {
+    background: #c1d2fb;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo .buttonLighten:hover {
+    background: #91b0f8;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo #donationPriceWrapper,
+#donationPicture #donationInfoWrapper #donationInfo #donationRecurrentPriceWrapper {
+    width: 60%;
+    margin: auto;
+}
+
+#donationPicture #donationInfoWrapper #donationInfo #donationReceipt {
+    background: rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    padding: 15px;
+}

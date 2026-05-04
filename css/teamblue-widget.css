@@ -1,0 +1,13 @@
+/* ============================================================
+   WIDGET TEAMBLUE
+   Conteneur du widget en position fixe, masqué par défaut.
+   ============================================================ */
+
+#teamblue-widget-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+}

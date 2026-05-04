@@ -1,0 +1,504 @@
+/* ============================================================
+   COULEUR PRINCIPALE
+   ============================================================ */
+
+h1,
+h3,
+.textImportant,
+a,
+a:link,
+a:visited,
+a:active,
+.colorBlue,
+.checkbox input[type="checkbox"].custom-checkbox:checked + .icons,
+.checkbox input[type="checkbox"].custom-checkbox:checked + .icons .icon-checked,
+.radio input[type="radio"].custom-radio:checked + .icons,
+.radio input[type="radio"].custom-radio:checked + .icons .icon-checked,
+.accordion .accordionContent.accordionColor .accordionTitleWrapper .accordionTitle,
+.buttonWhite,
+.buttonWhiteAlt:active,
+.buttonWhiteBlue,
+.buttonTransparent:hover,
+.radioAlt.colorWhite.radioAltSelected,
+#thumbPostSlider .thumbPostSlide .thumbPostSlideContent h2,
+.thumbPostWrapper h2,
+.thumbWrapper .thumbCommon .thumbDetails .thumbName,
+.thumbWrapper .thumbCommon .thumbDetails .thumbMore,
+#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep:not(.button):hover,
+#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep .breadCrumbItem.breadCrumbActive,
+#templateTabulation .active,
+#messagesWrapper .message .messageContent .messageIcon svg {
+    color: #121517;
+}
+
+#agendaWrapper,
+div:not(#agendaWrapper) > #agendaEvent,
+#agendaWrapper #agendaEvent #agendaEventName,
+div:not(#agendaWrapper) > #agendaEvent #agendaEventName,
+#agendaWrapper #agendaList .agendaDate,
+#donationPicture #donationInfoWrapper #donationInfo #donationSubmitButton {
+    color: #ffffff;
+}
+
+#agendaEvent #agendaEventDate,
+#agendaEvent #agendaEventDescription,
+#agendaEvent #agendaEventAddress {
+    color: #ffffff;
+}
+
+#agendaEventReturn svg path {
+    fill: #121517;
+}
+
+#templateNavWrapper #templateNav ul li,
+#templateNavWrapper #templateNav ul li a,
+#templateNavBar,
+#templateNavSubBarWrapper,
+#templateNavSubBarWrapper #templateNavSubBar a,
+#templateSubNavWrapper ul li a,
+#agendaWrapper #agendaList .agendaListEvent.colorBodyOrWhite,
+#agendaWrapper #agendaList h3.colorBodyOrWhite,
+#agendaWrapper #agendaList .eventColor.colorBodyOrWhite,
+#eventWrapper #eventDateLeftWrapper {
+    color: #ffffff;
+}
+
+#eventWrapper #eventPicture #eventCountdownWrapper #eventButton {
+    color: #ffffff;
+}
+
+.buttonWhiteBlue:hover {
+    color: #101214;
+}
+
+.buttonWhiteBlue:active,
+.buttonTransparent:active {
+    color: #0f1113;
+}
+
+#agendaWrapper #agendaList h3.colorBodyOrWhite,
+#agendaWrapper #agendaList .eventColor.colorBodyOrWhite {
+    border-color: #ffffff;
+}
+
+.buttonBlue,
+.backgroundBlue {
+    color: #ffffff;
+}
+
+.backgroundTheme {
+    background-color: #4183d7;
+    color: #ffffff;
+}
+
+/* ============================================================
+   BACKGROUND
+   ============================================================ */
+
+.backgroundBlue,
+.accordion .accordionContent.accordionColor .accordionTitleWrapper .accordionTitleNumber,
+.buttonBlue,
+.dialogDotWrapper .dialogDot.dialogDotCurrent,
+.progressbar-blue div,
+.radioAlt.colorBlue:not(.eventColor),
+#messagesWrapper .message,
+#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper,
+#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper,
+#eventWrapper #eventPicture #eventCountdownWrapper #eventButton,
+#templateNavWrapper #templateNav #navBasket {
+    background-color: #121517;
+}
+
+.formUpload .formUploadInputWrapper input:hover ~ div,
+.buttonBlue:hover,
+.radioAlt.colorBlue.radioAltSelected,
+#messagesWrapper .message,
+#eventWrapper #eventPicture #eventCountdownWrapper #eventButton:hover,
+#templateNavWrapper #templateNav #navBasket:hover {
+    background-color: #0f1113;
+}
+
+.radioAlt.colorBlue:hover:not(.radioAltSelected):not(.eventColor) {
+    background-color: #14181a;
+}
+
+.dialogDotWrapper .dialogDot:hover {
+    background-color: #15191b;
+}
+
+.buttonBlue:active,
+#eventWrapper #eventPicture #eventCountdownWrapper #eventButton:active {
+    background-color: #0e1012;
+}
+
+.dialogDotWrapper .dialogDot {
+    background-color: #171b1d;
+}
+
+.buttonWhiteBlue:active {
+    background-color: #181c1f;
+}
+
+.buttonWhiteBlue:hover {
+    background-color: #191d20;
+}
+
+/* ============================================================
+   BORDER
+   ============================================================ */
+
+.backgroundBlueLight,
+input[type="text"]:hover,
+input[type="search"]:hover:not(.choices__input),
+.choices:hover,
+input[type="password"]:hover,
+input[type="date"]:hover,
+input[type="tel"]:hover,
+input[type="number"]:hover,
+input[type="datetime-local"]:hover,
+input[type="email"]:hover,
+input[type="url"]:hover,
+textarea:hover,
+select:hover,
+input[type="text"]:focus,
+input[type="search"]:focus:not(.choices__input),
+.choices.is-focused,
+input[type="password"]:focus,
+input[type="date"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="datetime-local"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+textarea:focus,
+select:focus,
+.radioImageWrapper.radioImageChecked,
+.accordion .accordionContent.accordionColor .accordionTitleWrapper,
+.buttonWhiteBlue,
+.dropdownMenu div h2,
+.radioAlt.colorWhite.radioAltSelected,
+#templateBreadcrumb #breadCrumbItems .breadCrumbNextStep .breadCrumbItem.breadCrumbActive,
+#postViewMore {
+    border-color: #121517;
+}
+
+#agendaWrapper #agendaEvent #agendaEventReturn,
+div:not(#agendaWrapper) > #agendaEvent #agendaEventReturn {
+    border-color: #ffffff;
+}
+
+.buttonWhiteBlue:hover {
+    border-color: #131719;
+}
+
+.buttonWhiteBlue:active {
+    border-color: #14181a;
+}
+
+.radioAlt.colorWhite:hover:not(.radioAltSelected),
+.radioAlt.colorBlue:hover:not(.radioAltSelected):not(.eventColor) {
+    border-color: #15191b;
+}
+
+.radioAlt.colorBlue.radioAltSelected {
+    border-color: #0c0e10;
+}
+
+.buttonWhiteAlt:active {
+    outline-color: #121517;
+}
+
+.buttonWhiteAlt:hover {
+    border-color: #15191b;
+}
+
+/* ============================================================
+   COULEUR DU MENU
+   ============================================================ */
+
+@media (min-width: 1151px) {
+    #templateNavWrapper,
+    #templateNavWrapper:before,
+    #templateNavBar {
+        background-color: #4183d7;
+    }
+
+    #templateSubNavWrapper {
+        background-color: #4489e1;
+    }
+
+    #templateHeaderWrapper #templateHeader #templateHeaderMargin {
+        display: none;
+    }
+}
+
+@media (max-width: 1150px) {
+    #templateNavWrapper,
+    #templateNavWrapper:before,
+    #templateNavBar,
+    #templateSubNavWrapper {
+        background-color: #4183d7;
+    }
+}
+
+#templateNavSubBarWrapper,
+#templateNavSubBarWrapper #templateNavSubBarLeft,
+#templateNavSubBarWrapper #templateNavSubBarRight {
+    background-color: #4489e1;
+}
+
+#agendaWrapper,
+div:not(#agendaWrapper) > #agendaEvent,
+#donationPicture #donationInfoWrapper #donationInfo #donationSubmitButton,
+#eventWrapper #eventDateLeftWrapper {
+    background-color: #4183d7;
+}
+
+#eventWrapper #eventPicture #eventInfos #eventName {
+    border-color: #4183d7;
+}
+
+#templateNavWrapper #templateNav ul li.active,
+#templateNavWrapper #templateNav ul li:not(.hideHover):hover {
+    background-color: #3a75c1;
+}
+
+@media (min-width: 1151px) {
+    #templateSubNavWrapper ul li.active,
+    #templateSubNavWrapper ul li:hover {
+        background: #3a75c1;
+    }
+}
+
+@media (max-width: 1150px) {
+    #templateNavSubBarWrapper #templateNavSubBar li.active {
+        background: #3a75c1;
+    }
+}
+
+/* ============================================================
+   COULEUR DU FOND & BAS DE PAGE
+   ============================================================ */
+
+body {
+    background-color: #ffffff;
+}
+
+#templateFooterWrapper {
+    background-color: #47505a;
+}
+
+/* ============================================================
+   TEXTURES
+   ============================================================ */
+
+#templateNavWrapper,
+#templateNavWrapper:before,
+#templateSubNavWrapper,
+#templateNavBar,
+#templateNavSubBarWrapper,
+#templateNavSubBarWrapper #templateNavSubBarLeft,
+#templateNavSubBarWrapper #templateNavSubBarRight {
+    background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/tweed.png");
+}
+
+body {
+    background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/_blank.png");
+}
+
+#templateFooterWrapper {
+    background-image: url("https://webcdnprodas-software-f0h9ewgjhra7effp.z01.azurefd.net/legacy/common/image/layout/public/textures/60-lines.png");
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+
+#templateHeaderWrapper {
+    display: none;
+    height: 200px;
+}
+
+#templateHeaderWrapper #templateHeaderVendorPictureWrapper #templateHeaderVendorPicture {
+    text-align: left;
+}
+
+#templateHeaderBlockTitleWrapper {
+    font-size: 26px;
+}
+
+#templateHeaderBlockVendorPictureWrapper img {
+    width: 0px;
+}
+
+#templateHeaderWrapper #templateHeader #templateHeaderBlockContainer {
+    background-color: rgba(248, 209, 204, .5);
+}
+
+/* ============================================================
+   LAYOUT DESKTOP (≥ 1151px)
+   ============================================================ */
+
+@media (min-width: 1151px) {
+    #templateNavWrapper #templateNav #navVendorWrapper {
+        float: left;
+    }
+
+    #templateNavWrapper #templateNav > ul > li {
+        height: 50px;
+    }
+
+    #templateSubNavWrapper ul li {
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #templateNavWrapper #templateNav > ul > #navVendorPicture > div > a > img {
+        max-height: 50px;
+    }
+
+    #templateNavWrapper,
+    #templateSubNavWrapper,
+    #templateHeaderWrapper {
+        max-width: 1131px;
+        margin-left: -webkit-calc(50% - 565.5px);
+        margin-left: calc(50% - 565.5px);
+    }
+
+    #templateNavWrapper,
+    #templateHeaderWrapper,
+    #templateNavWrapper #templateNav ul li ul,
+    #templateSubNavWrapper,
+    #templateSubNavWrapper ul {
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    #templateNavSocialWrapper {
+        -moz-border-radius: 15px 15px 0 0;
+        -webkit-border-radius: 15px 15px 0 0;
+        border-radius: 15px 15px 0 0;
+    }
+
+    #templatePageWrapper:before {
+        -moz-border-radius: 15px;
+        -webkit-border-radius: 15px;
+        border-radius: 15px;
+        background: #FFF;
+    }
+
+    #templateNavWrapper,
+    #templateSubNavWrapper ul,
+    #templateHeaderWrapper,
+    #templatePageWrapper:before,
+    #templatePage,
+    #templateFooterWrapper {
+        margin-top: 30px;
+    }
+
+    #templateNavWrapper #templateNav,
+    #templateSubNavWrapper {
+        text-transform: uppercase;
+    }
+
+    #templateNav ._gif:not(.noHide) {
+        display: none;
+    }
+
+    #templateNavWrapper #templateNav ul li a,
+    #templateNavWrapper #templateNav ul li ul li a,
+    #templateSubNavWrapper ul li a {
+        padding: 0 15px;
+    }
+
+    #templateNavWrapper #templateNav,
+    #templateSubNavWrapper {
+        text-align: center;
+    }
+
+    #templateHeaderWrapper #templateHeaderVendorPictureWrapper #templateHeaderVendorPicture img {
+        height: 200px;
+    }
+}
+
+/* ============================================================
+   LAYOUT MOBILE (≤ 1150px)
+   ============================================================ */
+
+@media (max-width: 1150px) {
+    #templateHeaderWrapper #templateHeader #templateHeaderBlockContainer {
+        display: none;
+    }
+
+    #templateNavWrapper {
+        top: 55px;
+    }
+}
+
+/* ============================================================
+   PAGE FULLSCREEN & CONTENU
+   ============================================================ */
+
+#layoutWrapper #templatePageWrapper,
+#layoutWrapper #templatePageWrapper::before,
+#boxes .boxLandmarkBackground {
+    max-width: none;
+}
+
+#layoutWrapper #templatePageWrapper #templatePage {
+    padding: 0;
+}
+
+#templateTabulationWrapper {
+    max-width: 1131px;
+    margin: 20px auto;
+    padding-left: 13.5px;
+    padding-right: 13.5px;
+}
+
+#editButton {
+    position: absolute;
+    right: 10px;
+    z-index: 151;
+}
+
+/* ============================================================
+   FORMULAIRES (arrondi des champs)
+   ============================================================ */
+
+input[type="text"],
+input[type="search"]:not(.choices__input),
+.choices,
+input[type="password"],
+input[type="date"],
+input[type="tel"],
+input[type="number"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="url"],
+textarea {
+    border-radius: 5px;
+    padding: 9px;
+}
+
+select {
+    border-radius: 5px;
+}
+
+.selected-flag,
+.buttonBig,
+.buttonLarge,
+.buttonSmall,
+.bootstrap-switch,
+#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper,
+#gridWrapper .box .buttonDIYContainer .buttonDIYWrapper .buttonDIY,
+#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper,
+#boxes .box[data-type="button"] .buttonDIYContainer .buttonDIYWrapper .buttonDIY {
+    border-radius: 5px;
+}
+
+.buttonLarge {
+    padding: 10px;
+}
