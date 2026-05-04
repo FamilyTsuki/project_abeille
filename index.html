@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="L'Abeille Olivetaine - Association d'apiculture engagée pour la protection des abeilles et la biodiversité à Olivet.">
+    <title>L'Abeille Olivetaine | Accueil</title>
+    
+    <!-- Modern typography from system fonts, but we could add Inter if needed -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="container nav-content">
+            <a class="nav-logo" onclick="appRouter.navigate('home')">
+                <img src="logo.png" alt="Logo" width="40" height="40" style="object-fit: contain;">
+                <span>L'Abeille Olivetaine</span>
+            </a>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-expanded="false" aria-label="Menu">
+                <svg class="icon-menu" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+                <svg class="icon-close" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+
+            <nav>
+                <ul class="nav-links" id="navLinks">
+                    <li><a class="nav-item active" data-target="home">Accueil</a></li>
+                    <li><a class="nav-item" data-target="about">Qui sommes-nous</a></li>
+                    <li><a class="nav-item" data-target="news">Actualités</a></li>
+                    <li><a class="nav-item" data-target="donate">Faire un don</a></li>
+                    <li><a class="nav-item" data-target="contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="nav-overlay" id="navOverlay"></div>
+
+    <main class="container">
+        
+        <!-- SECTION: ACCUEIL -->
+        <section id="home" class="view-section active">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>Agissons ensemble pour nos <span class="text-gradient">abeilles</span></h1>
+                    <p>
+                        L'Abeille Olivetaine est une association engagée pour la promotion de l'apiculture durable et la préservation de la biodiversité locale à Olivet et ses environs.
+                    </p>
+                    <div class="btn-group">
+                        <button class="btn btn-primary" onclick="appRouter.navigate('donate')">Soutenir nos actions</button>
+                        <button class="btn btn-outline" onclick="appRouter.navigate('about')">En savoir plus</button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="hero.png" alt="Abeille sur une fleur">
+                </div>
+            </div>
+
+            <div class="grid" style="margin-top: 4rem;">
+                <div class="card">
+                    <div style="background: rgba(217, 119, 6, 0.1); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                    </div>
+                    <h3>Protection</h3>
+                    <p>Sensibilisation du public et actions concrètes pour la sauvegarde des pollinisateurs en milieu urbain.</p>
+                </div>
+                <div class="card">
+                    <div style="background: rgba(217, 119, 6, 0.1); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                            <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>
+                        </svg>
+                    </div>
+                    <h3>Formation</h3>
+                    <p>Apprentissage des techniques apicoles au sein de notre Rucher Ecole pour tous les niveaux.</p>
+                </div>
+                <div class="card">
+                    <div style="background: rgba(217, 119, 6, 0.1); width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem;">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h3>Communauté</h3>
+                    <p>Un réseau de passionnés partageant expériences et conseils pour une apiculture respectueuse.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: QUI SOMMES-NOUS -->
+        <section id="about" class="view-section">
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <h1 style="font-size: 3rem; margin-bottom: 1.5rem;">Notre Mission</h1>
+                <p style="font-size: 1.25rem; color: var(--color-text-muted);">
+                    Depuis notre création, nous œuvrons pour que l'abeille retrouve sa place au cœur de notre écosystème local.
+                </p>
+            </div>
+            
+            <div class="grid" style="margin-top: 4rem;">
+                <div class="card">
+                    <h3>Une Équipe Passionnée</h3>
+                    <p>Composée de bénévoles, d'apiculteurs amateurs et de professionnels, notre équipe partage une vision commune de l'apiculture solidaire.</p>
+                </div>
+                <div class="card">
+                    <h3>Le Rucher Ecole</h3>
+                    <p>Véritable centre de formation, notre rucher école accueille chaque année des stagiaires pour leur transmettre les gestes essentiels.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: ACTUALITÉS -->
+        <section id="news" class="view-section">
+            <h1 class="text-center" style="font-size: 3rem; margin-bottom: 3rem;">Actualités du Rucher</h1>
+            <div class="grid">
+                <article class="card">
+                    <span class="card-date">12 Mai 2026</span>
+                    <h3>Récolte de printemps</h3>
+                    <p>Venez assister à l'extraction du miel de printemps ce samedi à partir de 14h à la Maison des Associations.</p>
+                </article>
+                <article class="card">
+                    <span class="card-date">04 Mai 2026</span>
+                    <h3>Lutte contre le Frelon Asiatique</h3>
+                    <p>Campagne de piégeage sélectif : distribution de kits gratuits pour les habitants d'Olivet.</p>
+                </article>
+                <article class="card">
+                    <span class="card-date">28 Avril 2026</span>
+                    <h3>Inscriptions 2026-2027</h3>
+                    <p>Les inscriptions pour la nouvelle promotion du Rucher Ecole sont ouvertes. Téléchargez le dossier dès maintenant.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- SECTION: DONATION -->
+        <section id="donate" class="view-section">
+            <div style="max-width: 650px; margin: 0 auto;">
+                <h1 class="text-center" style="font-size: 3rem; margin-bottom: 1.5rem;">Soutenir l'Association</h1>
+                <p class="text-center" style="margin-bottom: 3rem; color: var(--color-text-muted);">
+                    Vos dons permettent l'entretien des ruches pédagogiques et le financement de nos actions de sensibilisation.
+                </p>
+
+                <div class="card" style="padding: 2.5rem;">
+                    <form id="donationForm" onsubmit="donationController.submit(event)">
+                        
+                        <div class="form-group">
+                            <span class="form-label">Type de don</span>
+                            <div class="btn-group" style="display: flex; gap: 0.5rem;">
+                                <button type="button" class="btn btn-primary" id="btn-onetime" onclick="donationController.setFrequency('onetime')" style="flex:1; padding: 0.75rem;">Ponctuel</button>
+                                <button type="button" class="btn btn-outline" id="btn-monthly" onclick="donationController.setFrequency('monthly')" style="flex:1; padding: 0.75rem;">Mensuel</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" style="margin-top: 2rem;">
+                            <span class="form-label">Montant du don</span>
+                            <div class="amount-selector">
+                                <button type="button" class="amount-btn selected" data-amount="25">25€</button>
+                                <button type="button" class="amount-btn" data-amount="50">50€</button>
+                                <button type="button" class="amount-btn" data-amount="100">100€</button>
+                                <button type="button" class="amount-btn" data-amount="custom">Libre</button>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="customAmountGroup" style="display: none; margin-bottom: 1.5rem;">
+                            <label for="customAmount" class="form-label">Montant personnalisé (€)</label>
+                            <input type="number" id="customAmount" class="form-input" min="1" placeholder="Ex: 30">
+                        </div>
+
+                        <div style="background-color: var(--color-bg); padding: 1.25rem; border-radius: var(--radius-md); border: 1px dashed var(--color-border); margin: 2rem 0;">
+                            <p style="font-size: 0.9rem; margin: 0; display: flex; align-items: center; gap: 0.5rem;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                                <span id="taxDeductionText">Un don de 25€ ne vous coûte que 8,50€ après réduction d'impôt (66%).</span>
+                            </p>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1rem; font-size: 1.2rem;">
+                            Confirmer mon don de <span id="submitAmount">25</span>€
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: CONTACT -->
+        <section id="contact" class="view-section">
+            <div style="max-width: 900px; margin: 0 auto;">
+                <h1 class="text-center" style="font-size: 3rem; margin-bottom: 3rem;">Nous contacter</h1>
+                <div class="grid">
+                    <div class="card" style="display: flex; flex-direction: column; gap: 1.5rem;">
+                        <h3>Coordonnées</h3>
+                        <p style="display: flex; gap: 1rem; align-items: flex-start;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Maison des Associations<br>45160 Olivet, France
+                        </p>
+                        <p style="display: flex; gap: 1rem; align-items: center;">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            contact@abeille-olivetaine.fr
+                        </p>
+                    </div>
+                    <div class="card">
+                        <form id="contactForm" onsubmit="formController.submit(event)">
+                            <div class="form-group">
+                                <label class="form-label" for="contactName">Nom complet</label>
+                                <input type="text" id="contactName" class="form-input" placeholder="Votre nom" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contactEmail">Adresse email</label>
+                                <input type="email" id="contactEmail" class="form-input" placeholder="email@exemple.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="contactMessage">Message</label>
+                                <textarea id="contactMessage" class="form-input" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Envoyer le message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION: LEGAL -->
+        <section id="legal" class="view-section">
+            <div style="max-width: 800px; margin: 0 auto;">
+                <h1 class="text-center" style="margin-bottom: 2rem;">Mentions Légales</h1>
+                <div class="card">
+                    <p><strong>Éditeur</strong> : L'Abeille Olivetaine (Association Loi 1901)</p>
+                    <p><strong>Siège social</strong> : Maison des Associations, 45160 Olivet</p>
+                    <hr style="margin: 1.5rem 0; border: 0; border-top: 1px solid var(--color-border);">
+                    <p><strong>Engagement Éco-responsable</strong> : Ce site est conçu pour minimiser son empreinte carbone (Hackathon CODA 2026). Pas de bibliothèques tierces lourdes, pas de traçage, et un poids total optimisé.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 L'Abeille Olivetaine. Tous droits réservés.</p>
+            <p style="font-size: 0.8rem; opacity: 0.7;">Site éco-conçu à faible empreinte carbone.</p>
+            <nav style="margin-top: 1rem;">
+                <a class="nav-item" data-target="legal" style="font-size: 0.8rem;">Mentions Légales</a>
+            </nav>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
