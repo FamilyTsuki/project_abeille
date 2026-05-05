@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="L'Abeille Olivetaine - Protection des abeilles et biodiversité à Olivet.">
     <title>L'Abeille Olivetaine</title>
-    <!-- Font optimization: loading only necessary weights -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
@@ -15,14 +14,14 @@
 
     <header class="navbar" id="navbar">
         <div class="container nav-content">
-            <a href="#" class="nav-logo" data-target="home">
-                <img src="logo.png" alt="Logo" width="48" height="48" loading="lazy">
+            <a href="#" class="nav-logo" data-target="home" aria-label="L'Abeille Olivetaine - Accueil">
+                <img src="logo.png" alt="Logo L'Abeille Olivetaine" width="48" height="48" loading="lazy">
                 <span>L'Abeille Olivetaine</span>
             </a>
             
-            <nav class="desktop-nav">
+            <nav class="desktop-nav" aria-label="Navigation principale">
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="#" class="nav-item active" data-target="home">Accueil</a></li>
+                    <li><a href="#" class="nav-item active" data-target="home" aria-current="page">Accueil</a></li>
                     <li><a href="#" class="nav-item" data-target="about">Qui sommes-nous</a></li>
                     <li><a href="#" class="nav-item" data-target="apiculture">Conseils Apicoles</a></li>
                     <li><a href="#" class="nav-item" data-target="news">Actualités</a></li>
@@ -34,8 +33,8 @@
 
             <div class="nav-actions">
                 <a href="#" class="btn btn-primary nav-item" data-target="donate" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Faire un don</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="navLinks">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -49,7 +48,6 @@
 
     <main class="container">
         
-        <!-- SECTION: ACCUEIL -->
         <section id="home" class="view-section active">
             <div class="hero">
                 <div class="hero-content">
@@ -62,7 +60,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="hero.png" alt="Abeille sur une fleur" width="550" height="550" loading="lazy">
+                    <img src="hero.png" alt="Abeille butinant une fleur de lavande" width="550" height="550" loading="lazy">
                 </div>
             </div>
 
@@ -82,7 +80,6 @@
             </div>
         </section>
 
-        <!-- SECTION: QUI SOMMES-NOUS -->
         <section id="about" class="view-section">
             <div class="text-center mb-4">
                 <h1>Notre Histoire</h1>
@@ -121,7 +118,6 @@
             </div>
         </section>
 
-        <!-- SECTION: CONSEILS APICOLES -->
         <section id="apiculture" class="view-section">
             <div class="text-center mb-4">
                 <h1>Conseils Apicoles</h1>
@@ -132,12 +128,43 @@
                 <article class="card">
                     <h3>Code Couleur International</h3>
                     <p>Les apiculteurs utilisent un marquage normalisé pour identifier l'année de naissance de la reine.</p>
-                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.5rem; margin-top: 1rem;">
-                        <div class="color-card" style="background: #ffffff; border: 1px solid #ddd; color: #333;">0 & 5 : Blanc</div>
-                        <div class="color-card" style="background: #fbbf24; color: #000;">1 & 6 : Jaune</div>
-                        <div class="color-card" style="background: #ef4444; color: #fff;">2 & 7 : Rouge</div>
-                        <div class="color-card" style="background: #10b981; color: #fff;">3 & 8 : Vert</div>
-                        <div class="color-card" style="background: #3b82f6; color: #fff;">4 & 9 : Bleu</div>
+                    
+                    <div class="color-grid">
+                        <div class="color-chip">
+                            <div class="color-swatch" style="background: #ffffff;"></div>
+                            <div class="color-info">
+                                <span class="color-years">0 & 5</span>
+                                <span class="color-name">Blanc</span>
+                            </div>
+                        </div>
+                        <div class="color-chip">
+                            <div class="color-swatch" style="background: #fbbf24;"></div>
+                            <div class="color-info">
+                                <span class="color-years">1 & 6</span>
+                                <span class="color-name">Jaune</span>
+                            </div>
+                        </div>
+                        <div class="color-chip">
+                            <div class="color-swatch" style="background: #ef4444;"></div>
+                            <div class="color-info">
+                                <span class="color-years">2 & 7</span>
+                                <span class="color-name">Rouge</span>
+                            </div>
+                        </div>
+                        <div class="color-chip">
+                            <div class="color-swatch" style="background: #10b981;"></div>
+                            <div class="color-info">
+                                <span class="color-years">3 & 8</span>
+                                <span class="color-name">Vert</span>
+                            </div>
+                        </div>
+                        <div class="color-chip">
+                            <div class="color-swatch" style="background: #3b82f6;"></div>
+                            <div class="color-info">
+                                <span class="color-years">4 & 9</span>
+                                <span class="color-name">Bleu</span>
+                            </div>
+                        </div>
                     </div>
                 </article>
                 <article class="card">
@@ -150,17 +177,16 @@
             </div>
         </section>
 
-        <!-- SECTION: ACTUALITÉS -->
         <section id="news" class="view-section">
             <h1 class="text-center mb-4">Actualités du Rucher</h1>
             
             <div class="alert-news reveal">
-                <span style="font-size: 4rem;">🐝</span>
+                <span style="font-size: 4rem;" aria-hidden="true">🐝</span>
                 <div>
                     <h3>Déclaration Obligatoire 2025</h3>
                     <p class="mb-2">La période de déclaration annuelle des ruches est ouverte. C'est un acte citoyen et obligatoire.</p>
                     <div class="flex gap-1 flex-wrap">
-                        <a href="https://mesdemarches.agriculture.gouv.fr" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Déclarer mes ruches</a>
+                        <a href="https://mesdemarches.agriculture.gouv.fr" target="_blank" rel="noopener" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Déclarer mes ruches</a>
                     </div>
                 </div>
             </div>
@@ -184,7 +210,6 @@
             </div>
         </section>
 
-        <!-- SECTION: ADHÉSION -->
         <section id="membership" class="view-section">
             <div class="text-center mb-4">
                 <h1>Rejoignez l'Association</h1>
@@ -207,7 +232,6 @@
             </div>
         </section>
 
-        <!-- SECTION: DONATION -->
         <section id="donate" class="view-section">
             <div class="text-center mb-4">
                 <h1>Soutenir nos actions</h1>
@@ -229,7 +253,7 @@
                     </div>
 
                     <div id="customAmountGroup" class="mb-2" style="display:none;">
-                        <label class="form-label">Montant libre (€)</label>
+                        <label class="form-label" for="customAmount">Montant libre (€)</label>
                         <input type="number" id="customAmount" class="form-input" placeholder="Ex: 40">
                     </div>
 
@@ -244,9 +268,8 @@
             </div>
         </section>
 
-        <!-- SECTION: CONTACT -->
         <section id="contact" class="view-section">
-            <div class="text-center mb-5">
+            <div class="text-center">
                 <h1>Nous contacter</h1>
                 <p class="text-muted">Une question ? Une envie de nous rejoindre ? Contactez-nous !</p>
             </div>
@@ -255,7 +278,7 @@
                 <div class="contact-info reveal">
                     <div class="contact-method">
                         <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                         </div>
                         <div>
                             <h4>Notre Siège</h4>
@@ -264,7 +287,7 @@
                     </div>
                     <div class="contact-method">
                         <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                         </div>
                         <div>
                             <h4>Email</h4>
@@ -273,7 +296,7 @@
                     </div>
                     <div class="contact-method">
                         <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         </div>
                         <div>
                             <h4>Permanence</h4>
@@ -285,16 +308,16 @@
                 <div class="contact-form-wrapper card reveal">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label class="form-label">Nom complet</label>
-                            <input type="text" class="form-input" placeholder="Jean Dupont" required>
+                            <label class="form-label" for="contactName">Nom complet</label>
+                            <input type="text" id="contactName" class="form-input" placeholder="Jean Dupont" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-input" placeholder="jean@exemple.fr" required>
+                            <label class="form-label" for="contactEmail">Email</label>
+                            <input type="email" id="contactEmail" class="form-input" placeholder="jean@exemple.fr" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-input" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            <label class="form-label" for="contactMessage">Message</label>
+                            <textarea id="contactMessage" class="form-input" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
                         </div>
                         <button type="submit" class="btn btn-primary w-full" style="padding: 1.25rem;">Envoyer le message</button>
                     </form>
@@ -308,13 +331,13 @@
         <div class="container">
             <h3>L'Abeille Olivetaine</h3>
             <p>© 2010 - 2026 Association pour la protection des abeilles.</p>
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Liens de pied de page">
                 <a href="#" class="footer-link nav-item" data-target="legal">Mentions Légales</a>
                 <a href="#" class="footer-link nav-item" data-target="contact">Plan du site</a>
-            </div>
+            </nav>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
