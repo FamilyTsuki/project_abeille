@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="L'Abeille Olivetaine - Protection des abeilles et biodiversité à Olivet.">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fbbf24">
     <title>L'Abeille Olivetaine</title>
-    <!-- Font optimization: loading only necessary weights -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -16,26 +14,26 @@
     <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#" class="nav-logo" data-target="home">
-                <img src="logo.png" alt="Logo" width="48" height="48" loading="lazy">
+                <img src="logo.png" alt="Logo L'Abeille Olivetaine" width="48" height="48" fetchpriority="high">
                 <span>L'Abeille Olivetaine</span>
             </a>
             
             <nav class="desktop-nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#" class="nav-item active" data-target="home">Accueil</a></li>
-                    <li><a href="#" class="nav-item" data-target="about">Qui sommes-nous</a></li>
-                    <li><a href="#" class="nav-item" data-target="apiculture">Conseils Apicoles</a></li>
+                    <li><a href="#" class="nav-item" data-target="about">L'association</a></li>
+                    <li><a href="#" class="nav-item" data-target="apiculture">Conseils</a></li>
                     <li><a href="#" class="nav-item" data-target="news">Actualités</a></li>
                     <li><a href="#" class="nav-item" data-target="membership">Adhésion</a></li>
-                    <li><a href="#" class="nav-item" data-target="donate">Don</a></li>
+                    <li><a href="#" class="nav-item" data-target="donate">Faire un don</a></li>
                     <li><a href="#" class="nav-item" data-target="contact">Contact</a></li>
                 </ul>
             </nav>
 
             <div class="nav-actions">
-                <a href="#" class="btn btn-primary nav-item" data-target="donate" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Faire un don</a>
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <a href="#" class="btn btn-primary nav-item btn-donate" data-target="donate">Soutenir</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <line x1="3" y1="12" x2="21" y2="12"></line>
                         <line x1="3" y1="6" x2="21" y2="6"></line>
                         <line x1="3" y1="18" x2="21" y2="18"></line>
@@ -49,46 +47,42 @@
 
     <main class="container">
         
-        <!-- SECTION: ACCUEIL -->
         <section id="home" class="view-section active">
             <div class="hero">
                 <div class="hero-content">
                     <h1>Bienvenue à <span class="text-gradient">L'Abeille Olivetaine</span></h1>
                     <p>Créée en 2010 à Olivet (Loiret), notre association vous accueille sur son site internet et son rucher-école.</p>
-                    <p class="mt-1 text-muted">Notre mission est de vous informer sur nos formations, nos activités et de vous apporter conseils et assistance technique.</p>
+                    <p class="text-muted">Notre mission est de vous informer sur nos formations, nos activités et de vous apporter conseils et assistance technique.</p>
                     <div class="hero-actions">
-                        <a href="#" class="btn btn-primary nav-item" data-target="membership">Devenir Adhérent</a>
-                        <a href="#" class="btn btn-outline nav-item" data-target="about">Notre Mission</a>
+                        <a href="#" class="btn btn-primary nav-item" data-target="membership">Nous rejoindre</a>
+                        <a href="#" class="btn btn-outline nav-item" data-target="about">Notre mission</a>
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="hero.png" alt="Abeille sur une fleur" width="550" height="550" loading="lazy">
+                    <img src="hero.png" alt="" width="550" height="550" loading="lazy" decoding="async">
                 </div>
             </div>
 
-            <div class="grid">
+            <div class="grid features-grid">
                 <div class="card reveal">
                     <h3>Protection</h3>
-                    <p>Nous installons et entretenons des ruches pédagogiques pour favoriser la pollinisation locale et la biodiversité.</p>
+                    <p>Installation et entretien de ruches pédagogiques pour favoriser la pollinisation locale.</p>
                 </div>
                 <div class="card reveal">
                     <h3>Formation</h3>
-                    <p>Notre Rucher École forme chaque année de nouveaux passionnés aux gestes précis et respectueux de l'apiculteur.</p>
+                    <p>Notre Rucher École forme chaque année de nouveaux passionnés aux bonnes pratiques apicoles.</p>
                 </div>
                 <div class="card reveal">
                     <h3>Pédagogie</h3>
-                    <p>Sensibilisation dans les écoles et lors d'événements publics pour faire connaître le monde fascinant des abeilles.</p>
+                    <p>Sensibilisation dans les écoles et lors d'événements publics sur le monde des abeilles.</p>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: QUI SOMMES-NOUS -->
-        <section id="about" class="view-section">
-            <div class="text-center mb-4">
-                <h1>Notre Histoire</h1>
-                <p class="text-muted max-w-800" style="margin: 0 auto; font-size: 1.2rem;">
-                    Fondée en 2010, l'Abeille Olivetaine est née de la volonté de protéger les abeilles en milieu urbain et péri-urbain.
-                </p>
+        <section id="about" class="view-section hidden">
+            <div class="section-header text-center">
+                <h2>Notre Histoire</h2>
+                <p class="subtitle">Fondée en 2010, l'Abeille Olivetaine est née de la volonté de protéger les abeilles en milieu urbain et péri-urbain.</p>
             </div>
             
             <div class="grid">
@@ -98,127 +92,115 @@
                 </div>
                 <div class="card">
                     <h3>Le Rucher École</h3>
-                    <p>Situé à Olivet, notre rucher pédagogique est le cœur de notre activité de transmission du savoir apicole.</p>
+                    <p>Situé à Olivet, notre rucher pédagogique est le cœur de notre activité de transmission.</p>
                 </div>
             </div>
 
-            <div class="card mt-5 reveal">
-                <h2 class="mb-2">Nos Valeurs Fondamentales</h2>
-                <div class="grid" style="margin-top: 0; text-align: left;">
-                    <div>
-                        <h4 class="text-primary mb-1">🌿 Écologie</h4>
+            <div class="card mt-5 reveal values-card">
+                <h2>Nos Valeurs</h2>
+                <div class="grid values-grid">
+                    <div class="value-item">
+                        <h4>🌿 Écologie</h4>
                         <p>Respect de l'environnement et utilisation de méthodes apicoles douces.</p>
                     </div>
-                    <div>
-                        <h4 class="text-primary mb-1">🤝 Solidarité</h4>
+                    <div class="value-item">
+                        <h4>🤝 Solidarité</h4>
                         <p>Création d'un lien social fort entre passionnés et entraide technique.</p>
                     </div>
-                    <div>
-                        <h4 class="text-primary mb-1">📚 Transmission</h4>
+                    <div class="value-item">
+                        <h4>📚 Transmission</h4>
                         <p>Éduquer les générations futures sur l'importance vitale des pollinisateurs.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION: CONSEILS APICOLES -->
-        <section id="apiculture" class="view-section">
-            <div class="text-center mb-4">
-                <h1>Conseils Apicoles</h1>
-                <p class="text-muted">Le marquage des reines : un outil indispensable pour le suivi de vos colonies.</p>
+        <section id="apiculture" class="view-section hidden">
+            <div class="section-header text-center">
+                <h2>Conseils Apicoles</h2>
+                <p class="subtitle">Le marquage des reines : un outil indispensable pour le suivi de vos colonies.</p>
             </div>
             
             <div class="grid">
                 <article class="card">
                     <h3>Code Couleur International</h3>
-                    <p>Les apiculteurs utilisent un marquage normalisé pour identifier l'année de naissance de la reine.</p>
-                    <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 0.5rem; margin-top: 1rem;">
-                        <div class="color-card" style="background: #ffffff; border: 1px solid #ddd; color: #333;">0 & 5 : Blanc</div>
-                        <div class="color-card" style="background: #fbbf24; color: #000;">1 & 6 : Jaune</div>
-                        <div class="color-card" style="background: #ef4444; color: #fff;">2 & 7 : Rouge</div>
-                        <div class="color-card" style="background: #10b981; color: #fff;">3 & 8 : Vert</div>
-                        <div class="color-card" style="background: #3b82f6; color: #fff;">4 & 9 : Bleu</div>
-                    </div>
+                    <p>Le marquage normalisé permet d'identifier l'année de naissance de la reine.</p>
+                    <ul class="color-codes-list">
+                        <li class="color-white">0 & 5 : Blanc</li>
+                        <li class="color-yellow">1 & 6 : Jaune</li>
+                        <li class="color-red">2 & 7 : Rouge</li>
+                        <li class="color-green">3 & 8 : Vert</li>
+                        <li class="color-blue">4 & 9 : Bleu</li>
+                    </ul>
                 </article>
-                <article class="card">
+                <article class="card highlight-card">
                     <h3>Focus 2026</h3>
-                    <p>Le cycle des couleurs revient tous les 5 ans pour simplifier le repérage au sein de la ruche.</p>
-                    <p class="mt-2" style="font-size: 1.5rem; font-weight: 700;">
-                        En <span class="text-primary">2026</span>, la couleur est le <span style="color: #fbbf24; text-shadow: 0 1px 2px rgba(0,0,0,0.1);">JAUNE</span>.
-                    </p>
+                    <p>Le cycle revient tous les 5 ans.</p>
+                    <p class="year-highlight">En 2026, la couleur est le <strong>JAUNE</strong>.</p>
                 </article>
             </div>
         </section>
 
-        <!-- SECTION: ACTUALITÉS -->
-        <section id="news" class="view-section">
-            <h1 class="text-center mb-4">Actualités du Rucher</h1>
+        <section id="news" class="view-section hidden">
+            <h2 class="text-center mb-4">Actualités du Rucher</h2>
             
-            <div class="alert-news reveal">
-                <span style="font-size: 4rem;">🐝</span>
-                <div>
-                    <h3>Déclaration Obligatoire 2025</h3>
-                    <p class="mb-2">La période de déclaration annuelle des ruches est ouverte. C'est un acte citoyen et obligatoire.</p>
-                    <div class="flex gap-1 flex-wrap">
-                        <a href="https://mesdemarches.agriculture.gouv.fr" target="_blank" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Déclarer mes ruches</a>
-                    </div>
+            <div class="alert-box reveal">
+                <div class="alert-icon">🐝</div>
+                <div class="alert-content">
+                    <h3>Déclaration Obligatoire</h3>
+                    <p>La période de déclaration annuelle des ruches est ouverte. C'est un acte citoyen et obligatoire.</p>
+                    <a href="https://mesdemarches.agriculture.gouv.fr" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">Déclarer mes ruches</a>
                 </div>
             </div>
 
-            <div class="grid">
-                <article class="card">
-                    <span class="text-primary" style="font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">12 MAI 2026</span>
+            <div class="grid news-grid">
+                <article class="card news-card">
+                    <time datetime="2026-05-12">12 Mai 2026</time>
                     <h3>Récolte de Printemps</h3>
                     <p>Les hausses sont prêtes ! Séance d'extraction collective au rucher ce samedi dès 14h.</p>
                 </article>
-                <article class="card">
-                    <span class="text-primary" style="font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">04 MAI 2026</span>
+                <article class="card news-card">
+                    <time datetime="2026-05-04">04 Mai 2026</time>
                     <h3>Lutte contre le Frelon</h3>
                     <p>Campagne de piégeage sélectif. Pensez à relever vos pièges et transmettre les données.</p>
                 </article>
-                <article class="card">
-                    <span class="text-primary" style="font-weight: 800; font-size: 0.8rem; letter-spacing: 0.1em; text-transform: uppercase;">28 AVRIL 2026</span>
+                <article class="card news-card">
+                    <time datetime="2026-04-28">28 Avril 2026</time>
                     <h3>Conférence Mairie</h3>
-                    <p>Intervention sur l'aménagement de jardins mellifères pour favoriser la biodiversité urbaine.</p>
+                    <p>Intervention sur l'aménagement de jardins mellifères pour la biodiversité urbaine.</p>
                 </article>
             </div>
         </section>
 
-        <!-- SECTION: ADHÉSION -->
-        <section id="membership" class="view-section">
-            <div class="text-center mb-4">
-                <h1>Rejoignez l'Association</h1>
-                <p class="text-muted">Participez activement à la vie de notre rucher-école.</p>
+        <section id="membership" class="view-section hidden">
+            <div class="section-header text-center">
+                <h2>Rejoignez l'Association</h2>
+                <p class="subtitle">Participez activement à la vie de notre rucher-école.</p>
             </div>
             
-            <div class="donation-container reveal">
-                <div class="grid" style="grid-template-columns: 1fr; margin-top: 0;">
-                    <div>
-                        <h3 class="mb-1">Pourquoi adhérer ?</h3>
-                        <p class="mb-2">L'adhésion vous donne accès aux formations pratiques, au prêt de matériel et à une assurance pour vos propres ruches.</p>
-                        <ul style="list-style: none; display: grid; gap: 1rem; margin-bottom: 2rem;">
-                            <li>✅ Accès illimité au rucher-école</li>
-                            <li>✅ Formations théoriques et pratiques</li>
-                            <li>✅ Tarifs préférentiels sur le matériel</li>
-                        </ul>
-                        <button class="btn btn-primary w-full">Commencer mon adhésion</button>
-                    </div>
-                </div>
+            <div class="card reveal center-content">
+                <h3>Pourquoi adhérer ?</h3>
+                <p>L'adhésion vous donne accès aux formations pratiques, au prêt de matériel et à une assurance pour vos propres ruches.</p>
+                <ul class="benefits-list">
+                    <li>Accès illimité au rucher-école</li>
+                    <li>Formations théoriques et pratiques</li>
+                    <li>Tarifs préférentiels sur le matériel</li>
+                </ul>
+                <button class="btn btn-primary mt-3">Commencer mon adhésion</button>
             </div>
         </section>
 
-        <!-- SECTION: DONATION -->
-        <section id="donate" class="view-section">
-            <div class="text-center mb-4">
-                <h1>Soutenir nos actions</h1>
-                <p class="text-muted">Vos dons permettent d'entretenir le rucher et de sensibiliser le public.</p>
+        <section id="donate" class="view-section hidden">
+            <div class="section-header text-center">
+                <h2>Soutenir nos actions</h2>
+                <p class="subtitle">Vos dons permettent d'entretenir le rucher et de sensibiliser le public.</p>
             </div>
             
             <div class="donation-container">
-                <form id="donationForm">
+                <form id="donationForm" class="card">
                     <div class="donation-freq">
-                        <button type="button" id="btn-onetime" class="btn btn-primary" data-freq="onetime">Don Ponctuel</button>
-                        <button type="button" id="btn-monthly" class="btn btn-outline" data-freq="monthly">Don Mensuel</button>
+                        <button type="button" id="btn-onetime" class="btn btn-primary" data-freq="onetime">Ponctuel</button>
+                        <button type="button" id="btn-monthly" class="btn btn-outline" data-freq="monthly">Mensuel</button>
                     </div>
                     
                     <div class="amount-selector">
@@ -228,56 +210,49 @@
                         <button type="button" class="amount-btn" data-amount="custom">Libre</button>
                     </div>
 
-                    <div id="customAmountGroup" class="mb-2" style="display:none;">
-                        <label class="form-label">Montant libre (€)</label>
-                        <input type="number" id="customAmount" class="form-input" placeholder="Ex: 40">
+                    <div id="customAmountGroup" class="form-group hidden">
+                        <label for="customAmount">Montant libre (€)</label>
+                        <input type="number" id="customAmount" class="form-input" placeholder="Ex: 40" min="1">
                     </div>
 
                     <div class="donation-summary">
-                        <p id="taxDeductionText">Un don de 25€ ne vous coûte que 8,50€ après réduction fiscale (66%).</p>
+                        <p id="taxDeductionText" class="text-sm">Un don de 25€ ne vous coûte que 8,50€ après déduction fiscale.</p>
                     </div>
 
-                    <button type="submit" class="btn btn-primary w-full" style="padding: 1.5rem;">
+                    <button type="submit" class="btn btn-primary btn-large w-full">
                         Confirmer mon don de <span id="submitAmount">25</span>€
                     </button>
                 </form>
             </div>
         </section>
 
-        <!-- SECTION: CONTACT -->
-        <section id="contact" class="view-section">
-            <div class="text-center mb-5">
-                <h1>Nous contacter</h1>
-                <p class="text-muted">Une question ? Une envie de nous rejoindre ? Contactez-nous !</p>
+        <section id="contact" class="view-section hidden">
+            <div class="section-header text-center">
+                <h2>Nous contacter</h2>
+                <p class="subtitle">Une question ? Envie de nous rejoindre ? Écrivez-nous !</p>
             </div>
             
             <div class="contact-layout">
                 <div class="contact-info reveal">
                     <div class="contact-method">
-                        <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
+                        <div class="icon">📍</div>
                         <div>
-                            <h4>Notre Siège</h4>
-                            <p>Maison des Associations<br>45160 Olivet, France</p>
+                            <h4>Siège Social</h4>
+                            <address>Maison des Associations<br>45160 Olivet, France</address>
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                        </div>
+                        <div class="icon">✉️</div>
                         <div>
                             <h4>Email</h4>
-                            <p>contact@abeille-olivetaine.fr</p>
+                            <p><a href="mailto:contact@abeille-olivetaine.fr">contact@abeille-olivetaine.fr</a></p>
                         </div>
                     </div>
                     <div class="contact-method">
-                        <div class="contact-icon-wrapper">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                        </div>
+                        <div class="icon">🕒</div>
                         <div>
                             <h4>Permanence</h4>
-                            <p>Samedi de 14h à 17h<br>au Rucher École d'Olivet</p>
+                            <p>Samedi : 14h - 17h<br>au Rucher École</p>
                         </div>
                     </div>
                 </div>
@@ -285,18 +260,18 @@
                 <div class="contact-form-wrapper card reveal">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label class="form-label">Nom complet</label>
-                            <input type="text" class="form-input" placeholder="Jean Dupont" required>
+                            <label for="name">Nom / Prénom</label>
+                            <input type="text" id="name" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Email</label>
-                            <input type="email" class="form-input" placeholder="jean@exemple.fr" required>
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-input" required>
                         </div>
                         <div class="form-group">
-                            <label class="form-label">Message</label>
-                            <textarea class="form-input" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-input" rows="5" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-full" style="padding: 1.25rem;">Envoyer le message</button>
+                        <button type="submit" class="btn btn-primary w-full">Envoyer</button>
                     </form>
                 </div>
             </div>
@@ -305,16 +280,18 @@
     </main>
 
     <footer>
-        <div class="container">
-            <h3>L'Abeille Olivetaine</h3>
-            <p>© 2010 - 2026 Association pour la protection des abeilles.</p>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>L'Abeille Olivetaine</h3>
+                <p>© 2010 - 2026 Association de protection des abeilles.</p>
+            </div>
             <div class="footer-links">
-                <a href="#" class="footer-link nav-item" data-target="legal">Mentions Légales</a>
-                <a href="#" class="footer-link nav-item" data-target="contact">Plan du site</a>
+                <a href="#" data-target="legal">Mentions Légales</a>
+                <a href="#" data-target="contact">Plan du site</a>
             </div>
         </div>
     </footer>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 </html>

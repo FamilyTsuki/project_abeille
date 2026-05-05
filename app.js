@@ -1,8 +1,3 @@
-/**
- * L'Abeille Olivetaine - Core Application Logic
- * Optimized for Eco-Conception, Performance, and Premium UX.
- */
-
 class MenuController {
     constructor() {
         this.menuButton = document.getElementById('mobileMenuBtn');
@@ -22,7 +17,6 @@ class MenuController {
         
         this.navOverlay?.addEventListener('click', () => this.closeMenu());
         
-        // Close menu on link click for mobile
         this.navLinks?.querySelectorAll('.nav-item').forEach(link => {
             link.addEventListener('click', () => this.closeMenu());
         });
@@ -95,7 +89,6 @@ class AppRouter {
         if (oldView) oldView.classList.remove('active');
         newView.classList.add('active');
         
-        // Trigger reveal check for the new view
         setTimeout(() => RevealObserver.checkAll(), 50);
     }
 
@@ -205,9 +198,6 @@ class DonationController {
     }
 }
 
-/**
- * Handles scroll-reveal animations using Intersection Observer.
- */
 class RevealObserver {
     static init() {
         const options = {
@@ -267,7 +257,6 @@ class UIHandler {
     }
 }
 
-// Application Orchestrator
 document.addEventListener('DOMContentLoaded', () => {
     const menuController = new MenuController();
     const appRouter = new AppRouter(menuController);
@@ -278,6 +267,5 @@ document.addEventListener('DOMContentLoaded', () => {
     UIHandler.init();
     ScrollHandler.init();
 
-    // Export for debugging if needed
     window.app = { menuController, appRouter, donationController };
 });
