@@ -1,33 +1,27 @@
-/* L'Abeille Olivetaine - Eco-Conception Styles */
-
 :root {
-    /* Color Palette - Artisanal & Premium */
-    --color-primary: #d97706; /* Honey Gold */
+    --color-primary: #d97706;
     --color-primary-soft: #fef3c7;
     --color-primary-hover: #b45309;
-    --color-secondary: #065f46; /* Deep Forest Green */
+    --color-secondary: #065f46;
     --color-secondary-soft: #ecfdf5;
     --color-secondary-hover: #064e3b;
-    --color-bg: #fafaf9; /* Stone-white for warmth */
+    --color-bg: #fafaf9;
     --color-surface: #ffffff;
-    --color-text: #1c1917; /* Stone-900 */
-    --color-text-muted: #57534e; /* Stone-600 */
+    --color-text: #1c1917;
+    --color-text-muted: #57534e;
     --color-border: rgba(0, 0, 0, 0.08);
     
-    /* Spacing & Sizing */
     --radius-full: 9999px;
     --radius-2xl: 2rem;
     --radius-xl: 1.5rem;
     --radius-lg: 1rem;
     --radius-md: 0.75rem;
     
-    /* Shadows - Layered & Subtle */
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
     --shadow-lg: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
     --shadow-premium: 0 25px 50px -12px rgba(217, 119, 6, 0.15);
     
-    /* Transitions */
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-base: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-slow: 0.7s cubic-bezier(0.4, 0, 0.2, 1);
@@ -35,16 +29,15 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg: #000000; /* True black for OLED power savings */
-        --color-surface: #121212; /* Very deep grey */
-        --color-text: #e7e5e4; /* Soft stone white to reduce eye strain/contrast */
+        --color-bg: #000000;
+        --color-surface: #121212;
+        --color-text: #e7e5e4;
         --color-text-muted: #a1a1aa;
         --color-border: rgba(255, 255, 255, 0.08);
         --color-primary-soft: rgba(217, 119, 6, 0.1);
         --color-secondary-soft: rgba(6, 95, 70, 0.1);
     }
     
-    /* Accessibility/Eco: Reduce brightness of images in dark mode */
     img { filter: brightness(0.85) contrast(1.1); }
 }
 
@@ -94,7 +87,6 @@ img {
     padding: 0 2rem; 
 }
 
-/* --- NAVBAR --- */
 .navbar {
     background: rgba(var(--color-bg), 0.7);
     backdrop-filter: saturate(180%) blur(20px);
@@ -198,7 +190,6 @@ img {
     left: 0;
 }
 
-/* Mobile Menu Button */
 .mobile-menu-btn { 
     display: none; 
     background: var(--color-primary-soft);
@@ -216,29 +207,31 @@ img {
 }
 
 @media (max-width: 1024px) {
+    .nav-actions .btn-donate { display: none; }
     .mobile-menu-btn { display: flex; }
     .nav-links {
         position: fixed;
         top: 0; right: 0; 
         width: 100%; height: 100vh;
-        background: var(--color-surface);
+        background: var(--color-bg);
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 2.5rem;
-        z-index: 1999;
+        padding: 4rem 2rem;
+        gap: 2rem;
+        z-index: 2100;
         transform: translateX(100%);
         transition: transform var(--transition-slow);
         visibility: hidden;
+        overflow-y: auto;
     }
     .nav-links.active { 
         transform: translateX(0); 
         visibility: visible;
     }
-    .nav-item { font-size: 2rem; }
+    .nav-item { font-size: 1.75rem; }
 }
 
-/* --- SECTIONS --- */
 .view-section {
     display: none;
     padding-top: 9rem;
@@ -256,7 +249,6 @@ img {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* --- HERO --- */
 .hero { 
     display: flex; 
     align-items: center; 
@@ -312,12 +304,6 @@ img {
     z-index: -1;
     top: -5%;
     left: -5%;
-    animation: pulse 4s infinite ease-in-out;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.5; }
-    50% { transform: scale(1.1); opacity: 0.8; }
 }
 
 .hero-image img { 
@@ -325,16 +311,8 @@ img {
     max-width: 550px;
     aspect-ratio: 1/1;
     object-fit: cover;
-    border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%;
+    border-radius: var(--radius-2xl);
     box-shadow: var(--shadow-lg);
-    animation: blobMorph 15s infinite alternate ease-in-out;
-}
-
-@keyframes blobMorph {
-    0% { border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%; }
-    33% { border-radius: 40% 60% 70% 30% / 45% 55% 45% 55%; }
-    66% { border-radius: 54% 46% 38% 62% / 63% 37% 63% 37%; }
-    100% { border-radius: 63% 37% 30% 70% / 50% 45% 55% 50%; }
 }
 
 .hero-actions {
@@ -349,7 +327,6 @@ img {
     .hero-actions { justify-content: center; }
 }
 
-/* --- COMPONENTS --- */
 .grid { 
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
@@ -401,7 +378,6 @@ img {
     line-height: 1.7;
 }
 
-/* Buttons */
 .btn { 
     display: inline-flex; 
     align-items: center;
@@ -440,7 +416,6 @@ img {
     transform: translateY(-4px);
 }
 
-/* --- DONATION FORM --- */
 .donation-container {
     max-width: 800px;
     margin: 0 auto;
@@ -497,7 +472,6 @@ img {
     transform: scale(1.05);
 }
 
-/* --- CONTACT SECTION --- */
 .contact-layout {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
@@ -541,7 +515,6 @@ img {
     color: var(--color-text-muted);
 }
 
-/* Form Enhancements */
 .form-group {
     position: relative;
     margin-bottom: 2rem;
@@ -582,7 +555,6 @@ img {
     font-weight: 600;
 }
 
-/* --- NEWS & ALERTS --- */
 .alert-news {
     background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
     border: 1px solid #fde68a;
@@ -598,7 +570,6 @@ img {
 .alert-news h3 { color: #92400e; font-size: 1.8rem; }
 .alert-news p { color: #b45309; }
 
-/* --- FOOTER --- */
 footer { 
     background: var(--color-secondary); 
     color: white; 
@@ -614,6 +585,7 @@ footer p { opacity: 0.7; font-weight: 300; }
     display: flex;
     justify-content: center;
     gap: 2rem;
+    flex-wrap: wrap;
 }
 
 footer a, .footer-link, footer .nav-item {
@@ -627,20 +599,34 @@ footer a, .footer-link, footer .nav-item {
 footer a:hover, .footer-link:hover, footer .nav-item:hover { opacity: 1; }
 footer .nav-item::after { display: none; }
 
-/* --- UTILITIES --- */
 .text-center { text-align: center; }
 .text-muted { color: var(--color-text-muted); }
 .mt-5 { margin-top: 5rem; }
 .mb-2 { margin-bottom: 2rem; }
 .w-full { width: 100%; }
 
-@media (max-width: 640px) {
-    .container { padding: 0 1.5rem; }
-    .hero-content h1 { font-size: 3rem; }
-    .view-section { padding-top: 8rem; }
+@media (max-width: 768px) {
+    .container { padding: 0 1.25rem; }
+    .nav-content { height: 4.5rem; }
+    .nav-logo span { font-size: 1.1rem; }
+    .nav-logo img { width: 36px; height: 36px; }
+    .hero { gap: 3rem; padding: 1rem 0; }
+    .hero-content h1 { font-size: 2.5rem; }
+    .view-section { padding-top: 6rem; padding-bottom: 3rem; }
+    .grid { gap: 2rem; margin-top: 3rem; }
+    .card { padding: 2.5rem 1.5rem; }
+    .donation-container { padding: 2rem 1.5rem; }
+    .alert-news { padding: 2rem; gap: 1.5rem; flex-direction: column; text-align: center; }
+    .alert-news span { font-size: 3rem !important; }
 }
 
-/* --- REVEAL ANIMATIONS --- */
+@media (max-width: 480px) {
+    .nav-logo span { display: none; }
+    .hero-content h1 { font-size: 2.2rem; }
+    .hero-actions { flex-direction: column; width: 100%; }
+    .btn { width: 100%; padding: 1rem; }
+}
+
 .reveal {
     opacity: 0;
     transform: translateY(30px);
