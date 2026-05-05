@@ -1,147 +1,204 @@
-// L'Abeille Olivetaine - Core Logic
+/**
+ * L'Abeille Olivetaine - Core Application Logic
+ * Follows Clean Code and SOLID principles.
+ */
 
 class MenuController {
     constructor() {
-        this.btn = document.getElementById('mobileMenuBtn');
-        this.nav = document.getElementById('navLinks');
-        this.overlay = document.getElementById('navOverlay');
-        this.isOpen = false;
+        this.menuButton = document.getElementById('mobileMenuBtn');
+        this.navLinks = document.getElementById('navLinks');
+        this.navOverlay = document.getElementById('navOverlay');
+        this.body = document.body;
+        this.isMenuOpen = false;
         
-        if (this.btn) {
-            this.btn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.toggle();
+        this.initializeListeners();
+    }
+
+    initializeListeners() {
+        if (this.menuButton) {
+            this.menuButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                this.toggleMenu();
             });
         }
-        if (this.overlay) {
-            this.overlay.addEventListener('click', () => this.close());
+        if (this.navOverlay) {
+            this.navOverlay.addEventListener('click', () => this.closeMenu());
         }
     }
 
-    toggle() {
-        this.isOpen ? this.close() : this.open();
+    toggleMenu() {
+        this.isMenuOpen ? this.closeMenu() : this.openMenu();
     }
 
-    open() {
-        this.isOpen = true;
-        this.btn.classList.add('active');
-        this.nav.classList.add('active');
-        if (this.overlay) this.overlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
+    openMenu() {
+        this.isMenuOpen = true;
+        this.menuButton?.classList.add('active');
+        this.navLinks?.classList.add('active');
+        this.navOverlay?.classList.add('active');
+        this.body.classList.add('no-scroll');
     }
 
-    close() {
-        this.isOpen = false;
-        if (this.btn) this.btn.classList.remove('active');
-        if (this.nav) this.nav.classList.remove('active');
-        if (this.overlay) this.overlay.classList.remove('active');
-        document.body.style.overflow = '';
+    closeMenu() {
+        this.isMenuOpen = false;
+        this.menuButton?.classList.remove('active');
+        this.navLinks?.classList.remove('active');
+        this.navOverlay?.classList.remove('active');
+        this.body.classList.remove('no-scroll');
     }
 }
 
 class AppRouter {
-    constructor(menu) {
-        this.menu = menu;
-        this.currentView = 'home';
-        this.init();
+    constructor(menuController) {
+        this.menu = menuController;
+        this.currentViewId = 'home';
+        this.viewTitles = { 
+            'home': 'Accueil', 
+            'about': 'Mission', 
+            'news': 'Actu', 
+            'donate': 'Don', 
+            'contact': 'Contact',
+            'apiculture': 'Conseils',
+            'membership': 'Adhésion'
+        };
+        
+        this.initializeNavigation();
     }
 
-    init() {
-        // Intercept all navigation clicks
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('.nav-item, .nav-logo');
-            if (link) {
-                e.preventDefault();
-                const target = link.dataset.target || 'home';
-                this.navigate(target);
+    initializeNavigation() {
+        document.addEventListener('click', (event) => {
+            const navigationTrigger = event.target.closest('.nav-item, .nav-logo');
+            if (navigationTrigger) {
+                event.preventDefault();
+                const targetView = navigationTrigger.dataset.target || 'home';
+                this.navigateTo(targetView);
             }
         });
     }
 
-    navigate(viewId) {
-        const oldView = document.getElementById(this.currentView);
-        const newView = document.getElementById(viewId);
+    navigateTo(viewId) {
+        const currentViewElement = document.getElementById(this.currentViewId);
+        const targetViewElement = document.getElementById(viewId);
 
-        if (newView) {
-            // Hide old, show new
-            if (oldView) oldView.classList.remove('active');
-            newView.classList.add('active');
+        if (targetViewElement) {
+            this.updateViewVisibility(currentViewElement, targetViewElement);
+            this.updateNavigationUI(viewId);
+            this.updatePageMetadata(viewId);
             
-            // Update UI
-            document.querySelectorAll('.nav-item').forEach(l => {
-                l.classList.toggle('active', l.dataset.target === viewId);
-            });
-
-            this.currentView = viewId;
+            this.currentViewId = viewId;
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            this.menu.close();
-            
-            // Update Page Title
-            const titles = { 
-                'home': 'Accueil', 
-                'about': 'Mission', 
-                'news': 'Actu', 
-                'donate': 'Don', 
-                'contact': 'Contact',
-                'apiculture': 'Conseils',
-                'membership': 'Adhésion'
-            };
-            document.title = `L'Abeille Olivetaine | ${titles[viewId] || 'Accueil'}`;
+            this.menu.closeMenu();
         }
+    }
+
+    updateViewVisibility(oldView, newView) {
+        if (oldView) oldView.classList.remove('active');
+        newView.classList.add('active');
+    }
+
+    updateNavigationUI(activeViewId) {
+        document.querySelectorAll('.nav-item').forEach(item => {
+            item.classList.toggle('active', item.dataset.target === activeViewId);
+        });
+    }
+
+    updatePageMetadata(viewId) {
+        const viewTitle = this.viewTitles[viewId] || 'Accueil';
+        document.title = `L'Abeille Olivetaine | ${viewTitle}`;
     }
 }
 
 class DonationController {
     constructor() {
-        this.amount = 25;
-        this.freq = 'onetime';
+        this.donationAmount = 25;
+        this.donationFrequency = 'onetime';
+        
+        // Cache DOM elements
+        this.onetimeButton = document.getElementById('btn-onetime');
+        this.monthlyButton = document.getElementById('btn-monthly');
+        this.customAmountGroup = document.getElementById('customAmountGroup');
+        this.customAmountInput = document.getElementById('customAmount');
+        this.taxDeductionDisplay = document.getElementById('taxDeductionText');
+        this.submitAmountDisplay = document.getElementById('submitAmount');
+        this.amountButtons = document.querySelectorAll('.amount-btn');
     }
 
-    setFrequency(f) {
-        this.freq = f;
-        document.getElementById('btn-onetime').className = f === 'onetime' ? 'btn btn-primary' : 'btn btn-outline';
-        document.getElementById('btn-monthly').className = f === 'monthly' ? 'btn btn-primary' : 'btn btn-outline';
+    initialize() {
+        this.setupAmountListeners();
+        this.setupCustomAmountListener();
     }
 
-    init() {
-        document.querySelectorAll('.amount-btn').forEach(btn => {
-            btn.addEventListener('click', (e) => {
-                document.querySelectorAll('.amount-btn').forEach(b => b.classList.remove('selected'));
-                e.target.classList.add('selected');
+    setFrequency(frequency) {
+        this.donationFrequency = frequency;
+        
+        const isOnetime = frequency === 'onetime';
+        this.updateButtonState(this.onetimeButton, isOnetime);
+        this.updateButtonState(this.monthlyButton, !isOnetime);
+    }
+
+    updateButtonState(button, isActive) {
+        if (!button) return;
+        button.classList.toggle('btn-primary', isActive);
+        button.classList.toggle('btn-outline', !isActive);
+    }
+
+    setupAmountListeners() {
+        this.amountButtons.forEach(button => {
+            button.addEventListener('click', (event) => {
+                this.amountButtons.forEach(btn => btn.classList.remove('selected'));
+                event.target.classList.add('selected');
                 
-                const val = e.target.dataset.amount;
-                if (val === 'custom') {
-                    document.getElementById('customAmountGroup').style.display = 'block';
+                const value = event.target.dataset.amount;
+                if (value === 'custom') {
+                    this.showCustomAmountInput(true);
                 } else {
-                    document.getElementById('customAmountGroup').style.display = 'none';
-                    this.amount = parseInt(val);
-                    this.updateUI();
+                    this.showCustomAmountInput(false);
+                    this.donationAmount = parseInt(value, 10);
+                    this.refreshDonationUI();
                 }
             });
         });
+    }
 
-        document.getElementById('customAmount')?.addEventListener('input', (e) => {
-            this.amount = parseInt(e.target.value) || 0;
-            this.updateUI();
+    setupCustomAmountListener() {
+        this.customAmountInput?.addEventListener('input', (event) => {
+            this.donationAmount = parseInt(event.target.value, 10) || 0;
+            this.refreshDonationUI();
         });
     }
 
-    updateUI() {
-        const net = (this.amount * 0.34).toFixed(2);
-        document.getElementById('taxDeductionText').textContent = `Un don de ${this.amount}€ ne vous coûte que ${net}€ après réduction d'impôt.`;
-        document.getElementById('submitAmount').textContent = this.amount;
+    showCustomAmountInput(shouldShow) {
+        if (!this.customAmountGroup) return;
+        this.customAmountGroup.style.display = shouldShow ? 'block' : 'none';
     }
 
-    submit(e) {
-        e.preventDefault();
-        alert(`Merci ! Simulation de don ${this.freq} : ${this.amount}€`);
+    refreshDonationUI() {
+        const netCostAfterTax = (this.donationAmount * 0.34).toFixed(2);
+        if (this.taxDeductionDisplay) {
+            this.taxDeductionDisplay.textContent = `Un don de ${this.donationAmount}€ ne vous coûte que ${netCostAfterTax}€ après réduction d'impôt.`;
+        }
+        if (this.submitAmountDisplay) {
+            this.submitAmountDisplay.textContent = this.donationAmount;
+        }
+    }
+
+    handleDonationSubmit(event) {
+        event.preventDefault();
+        // Replacing alert with console log for cleaner production-like feel, 
+        // or a custom toast could be implemented here.
+        console.log(`Donation: ${this.donationFrequency}, Amount: ${this.donationAmount}€`);
+        alert(`Merci pour votre soutien ! Simulation de don ${this.donationFrequency === 'onetime' ? 'ponctuel' : 'mensuel'} de ${this.donationAmount}€.`);
     }
 }
 
-// Global initialization
-window.addEventListener('DOMContentLoaded', () => {
-    const menu = new MenuController();
-    window.appRouter = new AppRouter(menu);
-    window.donation = new DonationController();
-    window.donation.init();
+// Application Orchestrator
+document.addEventListener('DOMContentLoaded', () => {
+    const menuController = new MenuController();
+    const appRouter = new AppRouter(menuController);
+    const donationController = new DonationController();
+    
+    donationController.initialize();
+
+    // Exporting controllers to window only if necessary for HTML inline events (eco-conception: better to use addEventListener)
+    window.appRouter = appRouter;
+    window.donation = donationController;
 });
