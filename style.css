@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Inter:wght@300;400;500;600;700;800&display=swap');
+/* L'Abeille Olivetaine - Eco-Conception Styles */
 
 :root {
     /* Color Palette - Artisanal & Premium */
@@ -35,14 +35,17 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --color-bg: #0c0a09; /* Stone-950 */
-        --color-surface: #1c1917; /* Stone-900 */
-        --color-text: #f5f5f4; /* Stone-100 */
-        --color-text-muted: #a8a29e; /* Stone-400 */
-        --color-border: rgba(255, 255, 255, 0.1);
-        --color-primary-soft: rgba(217, 119, 6, 0.15);
-        --color-secondary-soft: rgba(6, 95, 70, 0.15);
+        --color-bg: #000000; /* True black for OLED power savings */
+        --color-surface: #121212; /* Very deep grey */
+        --color-text: #e7e5e4; /* Soft stone white to reduce eye strain/contrast */
+        --color-text-muted: #a1a1aa;
+        --color-border: rgba(255, 255, 255, 0.08);
+        --color-primary-soft: rgba(217, 119, 6, 0.1);
+        --color-secondary-soft: rgba(6, 95, 70, 0.1);
     }
+    
+    /* Accessibility/Eco: Reduce brightness of images in dark mode */
+    img { filter: brightness(0.85) contrast(1.1); }
 }
 
 html {
@@ -93,23 +96,34 @@ img {
 
 /* --- NAVBAR --- */
 .navbar {
-    background: rgba(var(--color-bg), 0.8);
+    background: rgba(var(--color-bg), 0.7);
     backdrop-filter: saturate(180%) blur(20px);
     -webkit-backdrop-filter: saturate(180%) blur(20px);
-    border-bottom: 1px solid var(--color-border);
+    border-bottom: 1px solid transparent;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 2000;
-    transition: background var(--transition-fast), padding var(--transition-fast);
+    transition: all var(--transition-base);
+}
+
+.navbar.scrolled {
+    background: rgba(var(--color-bg), 0.9);
+    padding: 0.5rem 0;
+    border-bottom-color: var(--color-border);
+    box-shadow: var(--shadow-md);
 }
 
 .nav-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.75rem 0;
-    min-height: 4.5rem;
+    height: 5.5rem;
+    transition: height var(--transition-base);
+}
+
+.navbar.scrolled .nav-content {
+    height: 4.5rem;
 }
 
 .nav-logo {
@@ -128,7 +142,12 @@ img {
     width: 48px;
     height: 48px;
     object-fit: contain;
-    transition: transform var(--transition-base);
+    transition: all var(--transition-base);
+}
+
+.navbar.scrolled .nav-logo img {
+    width: 40px;
+    height: 40px;
 }
 
 .nav-logo:hover img {
@@ -476,6 +495,80 @@ img {
     background: var(--color-primary); 
     color: white; 
     transform: scale(1.05);
+}
+
+/* --- CONTACT SECTION --- */
+.contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+@media (max-width: 992px) {
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+}
+
+.contact-info {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.contact-method {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.contact-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary-soft);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-lg);
+    flex-shrink: 0;
+}
+
+.contact-method h4 {
+    font-size: 1.2rem;
+    margin-bottom: 0.25rem;
+}
+
+.contact-method p {
+    color: var(--color-text-muted);
+}
+
+/* Form Enhancements */
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--color-bg);
+    border: 2px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    transition: all var(--transition-fast);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    background: var(--color-surface);
+    box-shadow: 0 0 0 4px var(--color-primary-soft);
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text);
 }
 
 .donation-summary {

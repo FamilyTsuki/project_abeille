@@ -1,6 +1,6 @@
 /**
  * L'Abeille Olivetaine - Core Application Logic
- * Clean Code, SOLID principles, and Premium UX.
+ * Optimized for Eco-Conception, Performance, and Premium UX.
  */
 
 class MenuController {
@@ -237,10 +237,27 @@ class RevealObserver {
     }
 }
 
-// Global UI Handlers
+class ScrollHandler {
+    static init() {
+        const navbar = document.getElementById('navbar');
+        let lastScrollY = window.scrollY;
+        let ticking = false;
+
+        window.addEventListener('scroll', () => {
+            lastScrollY = window.scrollY;
+            if (!ticking) {
+                window.requestAnimationFrame(() => {
+                    navbar?.classList.toggle('scrolled', lastScrollY > 50);
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        }, { passive: true });
+    }
+}
+
 class UIHandler {
     static init() {
-        // Handle contact form
         const contactForm = document.getElementById('contactForm');
         contactForm?.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -259,6 +276,7 @@ document.addEventListener('DOMContentLoaded', () => {
     donationController.initialize();
     RevealObserver.init();
     UIHandler.init();
+    ScrollHandler.init();
 
     // Export for debugging if needed
     window.app = { menuController, appRouter, donationController };

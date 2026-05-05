@@ -5,26 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="L'Abeille Olivetaine - Protection des abeilles et biodiversité à Olivet.">
     <title>L'Abeille Olivetaine</title>
+    <!-- Font optimization: loading only necessary weights -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header class="navbar">
+    <header class="navbar" id="navbar">
         <div class="container nav-content">
             <a href="#" class="nav-logo" data-target="home">
-                <img src="logo.png" alt="Logo" width="48" height="48">
+                <img src="logo.png" alt="Logo" width="48" height="48" loading="lazy">
                 <span>L'Abeille Olivetaine</span>
             </a>
             
-            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-            </button>
-
-            <nav>
+            <nav class="desktop-nav">
                 <ul class="nav-links" id="navLinks">
                     <li><a href="#" class="nav-item active" data-target="home">Accueil</a></li>
                     <li><a href="#" class="nav-item" data-target="about">Qui sommes-nous</a></li>
@@ -35,6 +31,17 @@
                     <li><a href="#" class="nav-item" data-target="contact">Contact</a></li>
                 </ul>
             </nav>
+
+            <div class="nav-actions">
+                <a href="#" class="btn btn-primary nav-item" data-target="donate" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Faire un don</a>
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Ouvrir le menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
         </div>
     </header>
 
@@ -55,7 +62,7 @@
                     </div>
                 </div>
                 <div class="hero-image">
-                    <img src="hero.png" alt="Abeille sur une fleur" width="550" height="550">
+                    <img src="hero.png" alt="Abeille sur une fleur" width="550" height="550" loading="lazy">
                 </div>
             </div>
 
@@ -239,31 +246,57 @@
 
         <!-- SECTION: CONTACT -->
         <section id="contact" class="view-section">
-            <h1 class="text-center mb-4">Nous contacter</h1>
-            <div class="grid">
-                <div class="card">
-                    <h3>Coordonnées</h3>
-                    <div style="display: grid; gap: 1.5rem; margin-top: 1rem;">
-                        <p>📍 <strong>Siège social</strong><br>Maison des Associations, 45160 Olivet</p>
-                        <p>📧 <strong>Email</strong><br>contact@abeille-olivetaine.fr</p>
-                        <p>🕒 <strong>Permanence</strong><br>Samedi de 14h à 17h au Rucher École.</p>
+            <div class="text-center mb-5">
+                <h1>Nous contacter</h1>
+                <p class="text-muted">Une question ? Une envie de nous rejoindre ? Contactez-nous !</p>
+            </div>
+            
+            <div class="contact-layout">
+                <div class="contact-info reveal">
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        </div>
+                        <div>
+                            <h4>Notre Siège</h4>
+                            <p>Maison des Associations<br>45160 Olivet, France</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        </div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contact@abeille-olivetaine.fr</p>
+                        </div>
+                    </div>
+                    <div class="contact-method">
+                        <div class="contact-icon-wrapper">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <div>
+                            <h4>Permanence</h4>
+                            <p>Samedi de 14h à 17h<br>au Rucher École d'Olivet</p>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
+
+                <div class="contact-form-wrapper card reveal">
                     <form id="contactForm">
                         <div class="form-group">
                             <label class="form-label">Nom complet</label>
-                            <input type="text" class="form-input" required>
+                            <input type="text" class="form-input" placeholder="Jean Dupont" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-input" required>
+                            <input type="email" class="form-input" placeholder="jean@exemple.fr" required>
                         </div>
                         <div class="form-group">
                             <label class="form-label">Message</label>
-                            <textarea class="form-input" rows="4" required></textarea>
+                            <textarea class="form-input" rows="5" placeholder="Comment pouvons-nous vous aider ?" required></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary w-full">Envoyer le message</button>
+                        <button type="submit" class="btn btn-primary w-full" style="padding: 1.25rem;">Envoyer le message</button>
                     </form>
                 </div>
             </div>
