@@ -1,6 +1,6 @@
 /**
  * L'Abeille Olivetaine - Core Application Logic
- * Follows Clean Code and SOLID principles.
+ * Clean Code, SOLID principles, and Premium UX.
  */
 
 class MenuController {
@@ -15,15 +15,17 @@ class MenuController {
     }
 
     initializeListeners() {
-        if (this.menuButton) {
-            this.menuButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                this.toggleMenu();
-            });
-        }
-        if (this.navOverlay) {
-            this.navOverlay.addEventListener('click', () => this.closeMenu());
-        }
+        this.menuButton?.addEventListener('click', (e) => {
+            e.preventDefault();
+            this.toggleMenu();
+        });
+        
+        this.navOverlay?.addEventListener('click', () => this.closeMenu());
+        
+        // Close menu on link click for mobile
+        this.navLinks?.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', () => this.closeMenu());
+        });
     }
 
     toggleMenu() {
@@ -32,7 +34,6 @@ class MenuController {
 
     openMenu() {
         this.isMenuOpen = true;
-        this.menuButton?.classList.add('active');
         this.navLinks?.classList.add('active');
         this.navOverlay?.classList.add('active');
         this.body.classList.add('no-scroll');
@@ -40,7 +41,6 @@ class MenuController {
 
     closeMenu() {
         this.isMenuOpen = false;
-        this.menuButton?.classList.remove('active');
         this.navLinks?.classList.remove('active');
         this.navOverlay?.classList.remove('active');
         this.body.classList.remove('no-scroll');
@@ -69,13 +69,15 @@ class AppRouter {
             const navigationTrigger = event.target.closest('.nav-item, .nav-logo');
             if (navigationTrigger) {
                 event.preventDefault();
-                const targetView = navigationTrigger.dataset.target || 'home';
-                this.navigateTo(targetView);
+                const targetView = navigationTrigger.dataset.target;
+                if (targetView) this.navigateTo(targetView);
             }
         });
     }
 
     navigateTo(viewId) {
+        if (viewId === this.currentViewId) return;
+
         const currentViewElement = document.getElementById(this.currentViewId);
         const targetViewElement = document.getElementById(viewId);
 
@@ -86,17 +88,19 @@ class AppRouter {
             
             this.currentViewId = viewId;
             window.scrollTo({ top: 0, behavior: 'smooth' });
-            this.menu.closeMenu();
         }
     }
 
     updateViewVisibility(oldView, newView) {
         if (oldView) oldView.classList.remove('active');
         newView.classList.add('active');
+        
+        // Trigger reveal check for the new view
+        setTimeout(() => RevealObserver.checkAll(), 50);
     }
 
     updateNavigationUI(activeViewId) {
-        document.querySelectorAll('.nav-item').forEach(item => {
+        document.querySelectorAll('.nav-links .nav-item').forEach(item => {
             item.classList.toggle('active', item.dataset.target === activeViewId);
         });
     }
@@ -112,7 +116,7 @@ class DonationController {
         this.donationAmount = 25;
         this.donationFrequency = 'onetime';
         
-        // Cache DOM elements
+        this.form = document.getElementById('donationForm');
         this.onetimeButton = document.getElementById('btn-onetime');
         this.monthlyButton = document.getElementById('btn-monthly');
         this.customAmountGroup = document.getElementById('customAmountGroup');
@@ -123,31 +127,40 @@ class DonationController {
     }
 
     initialize() {
+        if (!this.form) return;
+
+        this.setupFrequencyListeners();
         this.setupAmountListeners();
         this.setupCustomAmountListener();
+        this.setupSubmitListener();
+    }
+
+    setupFrequencyListeners() {
+        [this.onetimeButton, this.monthlyButton].forEach(btn => {
+            btn?.addEventListener('click', () => {
+                this.setFrequency(btn.dataset.freq);
+            });
+        });
     }
 
     setFrequency(frequency) {
         this.donationFrequency = frequency;
-        
         const isOnetime = frequency === 'onetime';
-        this.updateButtonState(this.onetimeButton, isOnetime);
-        this.updateButtonState(this.monthlyButton, !isOnetime);
-    }
-
-    updateButtonState(button, isActive) {
-        if (!button) return;
-        button.classList.toggle('btn-primary', isActive);
-        button.classList.toggle('btn-outline', !isActive);
+        
+        this.onetimeButton?.classList.toggle('btn-primary', isOnetime);
+        this.onetimeButton?.classList.toggle('btn-outline', !isOnetime);
+        
+        this.monthlyButton?.classList.toggle('btn-primary', !isOnetime);
+        this.monthlyButton?.classList.toggle('btn-outline', isOnetime);
     }
 
     setupAmountListeners() {
         this.amountButtons.forEach(button => {
-            button.addEventListener('click', (event) => {
+            button.addEventListener('click', (e) => {
                 this.amountButtons.forEach(btn => btn.classList.remove('selected'));
-                event.target.classList.add('selected');
+                button.classList.add('selected');
                 
-                const value = event.target.dataset.amount;
+                const value = button.dataset.amount;
                 if (value === 'custom') {
                     this.showCustomAmountInput(true);
                 } else {
@@ -160,33 +173,80 @@ class DonationController {
     }
 
     setupCustomAmountListener() {
-        this.customAmountInput?.addEventListener('input', (event) => {
-            this.donationAmount = parseInt(event.target.value, 10) || 0;
+        this.customAmountInput?.addEventListener('input', (e) => {
+            this.donationAmount = parseInt(e.target.value, 10) || 0;
             this.refreshDonationUI();
         });
     }
 
     showCustomAmountInput(shouldShow) {
-        if (!this.customAmountGroup) return;
-        this.customAmountGroup.style.display = shouldShow ? 'block' : 'none';
+        if (this.customAmountGroup) {
+            this.customAmountGroup.style.display = shouldShow ? 'block' : 'none';
+            if (shouldShow) this.customAmountInput?.focus();
+        }
     }
 
     refreshDonationUI() {
-        const netCostAfterTax = (this.donationAmount * 0.34).toFixed(2);
+        const netCost = (this.donationAmount * 0.34).toFixed(2);
         if (this.taxDeductionDisplay) {
-            this.taxDeductionDisplay.textContent = `Un don de ${this.donationAmount}€ ne vous coûte que ${netCostAfterTax}€ après réduction d'impôt.`;
+            this.taxDeductionDisplay.textContent = `Un don de ${this.donationAmount}€ ne vous coûte que ${netCost}€ après réduction d'impôt.`;
         }
         if (this.submitAmountDisplay) {
             this.submitAmountDisplay.textContent = this.donationAmount;
         }
     }
 
-    handleDonationSubmit(event) {
-        event.preventDefault();
-        // Replacing alert with console log for cleaner production-like feel, 
-        // or a custom toast could be implemented here.
-        console.log(`Donation: ${this.donationFrequency}, Amount: ${this.donationAmount}€`);
-        alert(`Merci pour votre soutien ! Simulation de don ${this.donationFrequency === 'onetime' ? 'ponctuel' : 'mensuel'} de ${this.donationAmount}€.`);
+    setupSubmitListener() {
+        this.form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            console.log(`Donation: ${this.donationFrequency}, Amount: ${this.donationAmount}€`);
+            alert(`Merci pour votre soutien ! Simulation de don ${this.donationFrequency === 'onetime' ? 'ponctuel' : 'mensuel'} de ${this.donationAmount}€.`);
+        });
+    }
+}
+
+/**
+ * Handles scroll-reveal animations using Intersection Observer.
+ */
+class RevealObserver {
+    static init() {
+        const options = {
+            threshold: 0.15
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        this.observer = observer;
+    }
+
+    static checkAll() {
+        document.querySelectorAll('.reveal').forEach(el => {
+            const rect = el.getBoundingClientRect();
+            if (rect.top < window.innerHeight) {
+                el.classList.add('visible');
+            }
+        });
+    }
+}
+
+// Global UI Handlers
+class UIHandler {
+    static init() {
+        // Handle contact form
+        const contactForm = document.getElementById('contactForm');
+        contactForm?.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci ! Votre message a été envoyé.');
+            contactForm.reset();
+        });
     }
 }
 
@@ -197,8 +257,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const donationController = new DonationController();
     
     donationController.initialize();
+    RevealObserver.init();
+    UIHandler.init();
 
-    // Exporting controllers to window only if necessary for HTML inline events (eco-conception: better to use addEventListener)
-    window.appRouter = appRouter;
-    window.donation = donationController;
+    // Export for debugging if needed
+    window.app = { menuController, appRouter, donationController };
 });
